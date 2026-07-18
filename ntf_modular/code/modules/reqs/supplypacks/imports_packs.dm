@@ -877,6 +877,12 @@
 	faction_lock = list(FACTION_VSD)
 	cost = 600
 
+/datum/supply_packs/imports/kzifftag
+	name = "\improper Kaizoku Xenomorph IFF Tag"
+	contains = list(/obj/item/xeno_iff_tag/kz)
+	faction_lock = list(FACTION_VSD)
+	cost = 100
+
 /datum/supply_packs/medical/carpotoxin
 	name = "Carpotoxin Bottle (Faction Supply)"
 	contains = list(/obj/item/reagent_containers/glass/bottle/carpotoxin)
