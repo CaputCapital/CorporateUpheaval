@@ -38,6 +38,10 @@
 	name = "Cult xenomorph IFF tag"
 	carried_iff = CLF_IFF
 
+/obj/item/xeno_iff_tag/kz
+	name = "Kaizoku Zaibatsu xenomorph IFF tag"
+	carried_iff = VSD_IFF
+
 /obj/item/xeno_iff_tag/deathsquad
 	name = "\[redacted\] xenomorph IFF tag"
 	carried_iff = DEATHSQUAD_IFF
