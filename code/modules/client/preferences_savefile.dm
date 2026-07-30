@@ -58,6 +58,18 @@
 				genitalia_cock = style
 				break
 
+/datum/preferences/proc/normalize_cock_storage_state()
+	if(genitalia_vagina == COCK_STORAGE_SLIT)
+		if(!genitalia_cock_storage)
+			genitalia_cock_storage = COCK_STORAGE_SLIT
+		genitalia_vagina = initial(genitalia_vagina)
+	genitalia_cock_storage = sanitize_inlist_assoc(genitalia_cock_storage, GLOB.possible_cock_storage, initial(genitalia_cock_storage))
+	genitalia_cock_state = sanitize_inlist_assoc(genitalia_cock_state, GLOB.possible_cock_states, initial(genitalia_cock_state))
+	if(!cock_style_supports_storage(genitalia_cock))
+		genitalia_cock_storage = initial(genitalia_cock_storage)
+	if((genitalia_cock_state in list(COCK_STATE_STORED, COCK_STATE_PARTIAL)) && !genitalia_cock_storage)
+		genitalia_cock_state = COCK_STATE_FLACCID
+
 /datum/preferences/proc/savefile_needs_update(savefile/S)
 	var/savefile_version
 	READ_FILE(S["version"], savefile_version)
@@ -258,8 +270,6 @@
 	READ_FILE(S["tgui_input"], tgui_input)
 	READ_FILE(S["tgui_input_big_buttons"], tgui_input_big_buttons)
 	READ_FILE(S["tgui_input_buttons_swap"], tgui_input_buttons_swap)
-
-	READ_FILE(S["quick_sex_toggle"], quick_sex_toggle)
 
 	//try to fix any outdated data if necessary
 	if(needs_update >= 0)
@@ -502,6 +512,21 @@
 	WRITE_FILE(S["key_bindings"], key_bindings)
 	WRITE_FILE(S["custom_emotes"], custom_emotes)
 
+/datum/preferences/proc/delete_character(slot)
+	if(!path)
+		return FALSE
+	if(!fexists(path))
+		return FALSE
+	var/savefile/S = new /savefile(path)
+	if(!S)
+		return FALSE
+	S.cd = "/"
+	slot = sanitize_integer(slot, 1, MAX_SAVE_SLOTS, default_slot)
+	default_slot = slot
+	WRITE_FILE(S["default_slot"], slot)
+	S.dir.Remove("character[slot]")
+	return TRUE
+
 /datum/preferences/proc/load_character(slot)
 	if(!path)
 		return FALSE
@@ -515,8 +540,8 @@
 		slot = default_slot
 	slot = sanitize_integer(slot, 1, MAX_SAVE_SLOTS, initial(default_slot))
 	if(slot != default_slot)
-		default_slot = slot
 		WRITE_FILE(S["default_slot"], slot)
+		default_slot = slot
 	S.cd = "/character[slot]"
 
 	READ_FILE(S["be_special"], be_special)
@@ -540,6 +565,7 @@
 	READ_FILE(S["age"], age)
 	READ_FILE(S["species"], species)
 	READ_FILE(S["ethnicity"], ethnicity)
+	READ_FILE(S["human_body_style"], human_body_style)
 	READ_FILE(S["good_eyesight"], good_eyesight)
 	READ_FILE(S["preferred_squad"], preferred_squad)
 	READ_FILE(S["preferred_squad_som"], preferred_squad_som)
@@ -571,6 +597,9 @@
 	READ_FILE(S["g_eyes"], g_eyes)
 	READ_FILE(S["b_eyes"], b_eyes)
 	READ_FILE(S["eye_emissive"], eye_emissive)
+	READ_FILE(S["quad_eyes"], quad_eyes)
+	READ_FILE(S["quad_eyes_offset"], quad_eyes_offset)
+	READ_FILE(S["quad_eyes_offset_width"], quad_eyes_offset_width)
 	READ_FILE(S["body_color"], body_color)
 
 	READ_FILE(S["moth_wings"], moth_wings)
@@ -613,6 +642,19 @@
 	READ_FILE(S["fluff_color_secondary"], fluff_color_secondary)
 	READ_FILE(S["fluff_color_tertiary"], fluff_color_tertiary)
 	READ_FILE(S["fluff_emissive"], fluff_emissive)
+	READ_FILE(S["taur_body"], taur_body)
+	READ_FILE(S["taur_body_color"], taur_body_color)
+	READ_FILE(S["taur_body_color_secondary"], taur_body_color_secondary)
+	READ_FILE(S["taur_body_color_tertiary"], taur_body_color_tertiary)
+	READ_FILE(S["taur_body_emissive"], taur_body_emissive)
+	READ_FILE(S["xenodorsal"], xenodorsal)
+	READ_FILE(S["xenodorsal_color"], xenodorsal_color)
+	READ_FILE(S["xenodorsal_emissive"], xenodorsal_emissive)
+	READ_FILE(S["xenohead"], xenohead)
+	READ_FILE(S["xenohead_color"], xenohead_color)
+	READ_FILE(S["xenohead_color_secondary"], xenohead_color_secondary)
+	READ_FILE(S["xenohead_color_tertiary"], xenohead_color_tertiary)
+	READ_FILE(S["xenohead_emissive"], xenohead_emissive)
 	READ_FILE(S["digitigrade_legs"], digitigrade_legs)
 	READ_FILE(S["body_markings"], body_markings)
 	READ_FILE(S["citizenship"], citizenship)
@@ -645,7 +687,10 @@
 	READ_FILE(S["genitalia_boobs_emissive"], genitalia_boobs_emissive)
 	READ_FILE(S["genitalia_cock"], genitalia_cock)
 	READ_FILE(S["genitalia_cock_size"], genitalia_cock_size)
+	READ_FILE(S["genitalia_cock_storage"], genitalia_cock_storage)
+	READ_FILE(S["genitalia_cock_state"], genitalia_cock_state)
 	READ_FILE(S["genitalia_cock_color"], genitalia_cock_color)
+	READ_FILE(S["genitalia_cock_color_secondary"], genitalia_cock_color_secondary)
 	READ_FILE(S["genitalia_cock_emissive"], genitalia_cock_emissive)
 	READ_FILE(S["genitalia_vagina"], genitalia_vagina)
 	READ_FILE(S["genitalia_vagina_color"], genitalia_vagina_color)
@@ -660,6 +705,7 @@
 	READ_FILE(S["genitalia_testicles_color_secondary"], genitalia_testicles_color_secondary)
 	READ_FILE(S["genitalia_testicles_emissive"], genitalia_testicles_emissive)
 	READ_FILE(S["harmful_sex_allowed"], harmful_sex_flags)
+	READ_FILE(S["quick_sex_allowed"], quick_sex_flags)
 	READ_FILE(S["burst_screams_enabled"], burst_screams_enabled)
 	READ_FILE(S["xeno_edible_jelly_name"], xeno_edible_jelly_name)
 	READ_FILE(S["r_jelly"], r_jelly)
@@ -674,13 +720,10 @@
 	READ_FILE(S["metadata_maybes"], metadata_maybes)
 	READ_FILE(S["metadata_favs"], metadata_favs)
 	READ_FILE(S["metadata_ooc_style"], metadata_ooc_style)
-	READ_FILE(S["quick_sex_toggle"], quick_sex_toggle)
 
 	be_special = sanitize_integer(be_special, NONE, MAX_BITFLAG, initial(be_special))
 
 	synthetic_name = reject_bad_name(synthetic_name, TRUE)
-	if(synthetic_type in list("Combat Robot", "Robot"))
-		synthetic_type = "Synthetic"
 	synthetic_type = sanitize_inlist(synthetic_type, SYNTH_TYPES, initial(synthetic_type))
 	synthetic_body_base = sanitize_inlist(synthetic_body_base, SYNTHETIC_BODY_BASES, initial(synthetic_body_base))
 	robot_type = sanitize_inlist(robot_type, ROBOT_TYPES, initial(robot_type))
@@ -700,6 +743,7 @@
 	age = sanitize_integer(age, AGE_MIN, AGE_MAX, initial(age))
 	species = sanitize_inlist(species, GLOB.all_species, initial(species))
 	ethnicity = sanitize_ethnicity(ethnicity)
+	human_body_style = sanitize_inlist(human_body_style, list(HUMAN_BODY_STYLE_SPLURT, HUMAN_BODY_STYLE_TGMC), initial(human_body_style))
 	good_eyesight = sanitize_integer(good_eyesight, FALSE, TRUE, initial(good_eyesight))
 	preferred_squad = sanitize_inlist(preferred_squad, SELECTABLE_SQUADS, initial(preferred_squad))
 	preferred_squad_som = sanitize_inlist(preferred_squad_som, SELECTABLE_SQUADS_SOM, initial(preferred_squad_som))
@@ -744,6 +788,9 @@
 	g_eyes = sanitize_integer(g_eyes, 0, 255, initial(g_eyes))
 	b_eyes = sanitize_integer(b_eyes, 0, 255, initial(b_eyes))
 	eye_emissive = sanitize_integer(eye_emissive, FALSE, TRUE, initial(eye_emissive))
+	quad_eyes = sanitize_integer(quad_eyes, FALSE, TRUE, initial(quad_eyes))
+	quad_eyes_offset = sanitize_integer(quad_eyes_offset, -2, 2, initial(quad_eyes_offset))
+	quad_eyes_offset_width = sanitize_integer(quad_eyes_offset_width, -2, 2, initial(quad_eyes_offset_width))
 	body_color = sanitize_hexcolor(body_color, 6, TRUE, initial(body_color))
 
 	moth_wings = sanitize_inlist(moth_wings, GLOB.moth_wings_list, initial(moth_wings))
@@ -798,6 +845,25 @@
 	fluff_color_secondary = sanitize_hexcolor(fluff_color_secondary, 6, TRUE, "#6BA36B")
 	fluff_color_tertiary = sanitize_hexcolor(fluff_color_tertiary, 6, TRUE, "#6BA36B")
 	fluff_emissive = sanitize_character_creator_emissive_list(fluff_emissive)
+	taur_body = sanitize_inlist(taur_body, GLOB.taur_bodies_list, initial(taur_body))
+	if(!taur_body)
+		taur_body = initial(taur_body)
+	taur_body_color = sanitize_hexcolor(taur_body_color, 6, TRUE, "#6BA36B")
+	taur_body_color_secondary = sanitize_hexcolor(taur_body_color_secondary, 6, TRUE, "#6BA36B")
+	taur_body_color_tertiary = sanitize_hexcolor(taur_body_color_tertiary, 6, TRUE, "#6BA36B")
+	taur_body_emissive = sanitize_character_creator_emissive_list(taur_body_emissive)
+	xenodorsal = sanitize_inlist(xenodorsal, GLOB.xenodorsals_list, initial(xenodorsal))
+	if(!xenodorsal)
+		xenodorsal = initial(xenodorsal)
+	xenodorsal_color = sanitize_hexcolor(xenodorsal_color, 6, TRUE, "#525288")
+	xenodorsal_emissive = sanitize_character_creator_emissive_list(xenodorsal_emissive)
+	xenohead = sanitize_inlist(xenohead, GLOB.xenoheads_list, initial(xenohead))
+	if(!xenohead)
+		xenohead = initial(xenohead)
+	xenohead_color = sanitize_hexcolor(xenohead_color, 6, TRUE, "#525288")
+	xenohead_color_secondary = sanitize_hexcolor(xenohead_color_secondary, 6, TRUE, "#525288")
+	xenohead_color_tertiary = sanitize_hexcolor(xenohead_color_tertiary, 6, TRUE, "#525288")
+	xenohead_emissive = sanitize_character_creator_emissive_list(xenohead_emissive)
 	digitigrade_legs = sanitize_inlist(digitigrade_legs, DIGITIGRADE_LEG_TYPES, initial(digitigrade_legs))
 	if(!(digitigrade_legs in digitigrade_leg_options()))
 		digitigrade_legs = initial(digitigrade_legs)
@@ -822,6 +888,7 @@
 	xenoprofile_pic = sanitize_text(xenoprofile_pic, initial(xenoprofile_pic))
 	xenogender = sanitize_integer(xenogender, 1, 4, initial(xenogender))
 	normalize_genital_style_and_size()
+	normalize_cock_storage_state()
 	genitalia_ass = sanitize_inlist_assoc(genitalia_ass, GLOB.possible_ass_sprites, initial(genitalia_ass))
 	genitalia_ass_size = sanitize_integer(genitalia_ass_size, 1, 8, initial(genitalia_ass_size))
 	genitalia_ass_color = sanitize_hexcolor(genitalia_ass_color, 6, TRUE, initial(genitalia_ass_color))
@@ -833,7 +900,9 @@
 	genitalia_boobs_emissive = sanitize_character_creator_emissive_list(genitalia_boobs_emissive)
 	genitalia_cock = sanitize_inlist_assoc(genitalia_cock, GLOB.possible_cock_sprites, initial(genitalia_cock))
 	genitalia_cock_size = sanitize_integer(genitalia_cock_size, 1, 7, initial(genitalia_cock_size))
+	normalize_cock_storage_state()
 	genitalia_cock_color = sanitize_hexcolor(genitalia_cock_color, 6, TRUE, initial(genitalia_cock_color))
+	genitalia_cock_color_secondary = sanitize_hexcolor(genitalia_cock_color_secondary, 6, TRUE, initial(genitalia_cock_color_secondary))
 	genitalia_cock_emissive = sanitize_character_creator_emissive_list(genitalia_cock_emissive)
 	genitalia_vagina = sanitize_inlist_assoc(genitalia_vagina, GLOB.possible_vagina_sprites, initial(genitalia_vagina))
 	genitalia_vagina_color = sanitize_hexcolor(genitalia_vagina_color, 6, TRUE, initial(genitalia_vagina_color))
@@ -847,8 +916,9 @@
 	genitalia_testicles_color = sanitize_hexcolor(genitalia_testicles_color, 6, TRUE, initial(genitalia_testicles_color))
 	genitalia_testicles_color_secondary = sanitize_hexcolor(genitalia_testicles_color_secondary, 6, TRUE, initial(genitalia_testicles_color_secondary))
 	genitalia_testicles_emissive = sanitize_character_creator_emissive_list(genitalia_testicles_emissive)
-	harmful_sex_flags = sanitize_text(harmful_sex_flags, initial(harmful_sex_flags))
-	burst_screams_enabled = sanitize_text(burst_screams_enabled, initial(burst_screams_enabled))
+	harmful_sex_flags = sanitize_integer(harmful_sex_flags, NONE, MAX_BITFLAG, initial(harmful_sex_flags))
+	quick_sex_flags = sanitize_integer(quick_sex_flags, NONE, MAX_BITFLAG, initial(quick_sex_flags))
+	burst_screams_enabled = sanitize_integer(burst_screams_enabled, NONE, MAX_BITFLAG, initial(burst_screams_enabled))
 
 	metadata = sanitize_text(metadata, initial(metadata))
 	metadata_likes = sanitize_text(metadata_likes, initial(metadata_likes))
@@ -919,6 +989,7 @@
 	age = sanitize_integer(age, AGE_MIN, AGE_MAX, initial(age))
 	species = sanitize_inlist(species, GLOB.all_species, initial(species))
 	ethnicity = sanitize_ethnicity(ethnicity)
+	human_body_style = sanitize_inlist(human_body_style, list(HUMAN_BODY_STYLE_SPLURT, HUMAN_BODY_STYLE_TGMC), initial(human_body_style))
 	good_eyesight = sanitize_integer(good_eyesight, FALSE, TRUE, initial(good_eyesight))
 	preferred_squad = sanitize_inlist(preferred_squad, SELECTABLE_SQUADS, initial(preferred_squad))
 	preferred_squad_som = sanitize_inlist(preferred_squad_som, SELECTABLE_SQUADS_SOM, initial(preferred_squad_som))
@@ -959,6 +1030,9 @@
 	g_eyes = sanitize_integer(g_eyes, 0, 255, initial(g_eyes))
 	b_eyes = sanitize_integer(b_eyes, 0, 255, initial(b_eyes))
 	eye_emissive = sanitize_integer(eye_emissive, FALSE, TRUE, initial(eye_emissive))
+	quad_eyes = sanitize_integer(quad_eyes, FALSE, TRUE, initial(quad_eyes))
+	quad_eyes_offset = sanitize_integer(quad_eyes_offset, -2, 2, initial(quad_eyes_offset))
+	quad_eyes_offset_width = sanitize_integer(quad_eyes_offset_width, -2, 2, initial(quad_eyes_offset_width))
 	body_color = sanitize_hexcolor(body_color, 6, TRUE, initial(body_color))
 
 	moth_wings = sanitize_inlist(moth_wings, GLOB.moth_wings_list, initial(moth_wings))
@@ -1037,6 +1111,7 @@
 	xenoprofile_pic = sanitize_text(xenoprofile_pic, initial(xenoprofile_pic))
 	xenogender = sanitize_integer(xenogender, 1, 4, initial(xenogender))
 	normalize_genital_style_and_size()
+	normalize_cock_storage_state()
 	genitalia_ass = sanitize_inlist_assoc(genitalia_ass, GLOB.possible_ass_sprites, initial(genitalia_ass))
 	genitalia_ass_size = sanitize_integer(genitalia_ass_size, 1, 8, initial(genitalia_ass_size))
 	genitalia_ass_color = sanitize_hexcolor(genitalia_ass_color, 6, TRUE, initial(genitalia_ass_color))
@@ -1048,7 +1123,9 @@
 	genitalia_boobs_emissive = sanitize_character_creator_emissive_list(genitalia_boobs_emissive)
 	genitalia_cock = sanitize_inlist_assoc(genitalia_cock, GLOB.possible_cock_sprites, initial(genitalia_cock))
 	genitalia_cock_size = sanitize_integer(genitalia_cock_size, 1, 7, initial(genitalia_cock_size))
+	normalize_cock_storage_state()
 	genitalia_cock_color = sanitize_hexcolor(genitalia_cock_color, 6, TRUE, initial(genitalia_cock_color))
+	genitalia_cock_color_secondary = sanitize_hexcolor(genitalia_cock_color_secondary, 6, TRUE, initial(genitalia_cock_color_secondary))
 	genitalia_cock_emissive = sanitize_character_creator_emissive_list(genitalia_cock_emissive)
 	genitalia_vagina = sanitize_inlist_assoc(genitalia_vagina, GLOB.possible_vagina_sprites, initial(genitalia_vagina))
 	genitalia_vagina_color = sanitize_hexcolor(genitalia_vagina_color, 6, TRUE, initial(genitalia_vagina_color))
@@ -1062,8 +1139,9 @@
 	genitalia_testicles_color = sanitize_hexcolor(genitalia_testicles_color, 6, TRUE, initial(genitalia_testicles_color))
 	genitalia_testicles_color_secondary = sanitize_hexcolor(genitalia_testicles_color_secondary, 6, TRUE, initial(genitalia_testicles_color_secondary))
 	genitalia_testicles_emissive = sanitize_character_creator_emissive_list(genitalia_testicles_emissive)
-	harmful_sex_flags = sanitize_text(harmful_sex_flags, initial(harmful_sex_flags))
-	burst_screams_enabled = sanitize_text(burst_screams_enabled, initial(burst_screams_enabled))
+	harmful_sex_flags = sanitize_integer(harmful_sex_flags, NONE, MAX_BITFLAG, initial(harmful_sex_flags))
+	quick_sex_flags = sanitize_integer(quick_sex_flags, NONE, MAX_BITFLAG, initial(quick_sex_flags))
+	burst_screams_enabled = sanitize_integer(burst_screams_enabled, NONE, MAX_BITFLAG, initial(burst_screams_enabled))
 
 	metadata = sanitize_text(metadata, initial(metadata))
 	metadata_likes = sanitize_text(metadata_likes, initial(metadata_likes))
@@ -1093,6 +1171,7 @@
 	WRITE_FILE(S["age"], age)
 	WRITE_FILE(S["species"], species)
 	WRITE_FILE(S["ethnicity"], ethnicity)
+	WRITE_FILE(S["human_body_style"], human_body_style)
 	WRITE_FILE(S["good_eyesight"], good_eyesight)
 	WRITE_FILE(S["preferred_squad"], preferred_squad)
 	WRITE_FILE(S["preferred_squad_som"], preferred_squad_som)
@@ -1124,6 +1203,9 @@
 	WRITE_FILE(S["g_eyes"], g_eyes)
 	WRITE_FILE(S["b_eyes"], b_eyes)
 	WRITE_FILE(S["eye_emissive"], eye_emissive)
+	WRITE_FILE(S["quad_eyes"], quad_eyes)
+	WRITE_FILE(S["quad_eyes_offset"], quad_eyes_offset)
+	WRITE_FILE(S["quad_eyes_offset_width"], quad_eyes_offset_width)
 	WRITE_FILE(S["body_color"], body_color)
 
 	WRITE_FILE(S["moth_wings"], moth_wings)
@@ -1166,6 +1248,19 @@
 	WRITE_FILE(S["fluff_color_secondary"], fluff_color_secondary)
 	WRITE_FILE(S["fluff_color_tertiary"], fluff_color_tertiary)
 	WRITE_FILE(S["fluff_emissive"], fluff_emissive)
+	WRITE_FILE(S["taur_body"], taur_body)
+	WRITE_FILE(S["taur_body_color"], taur_body_color)
+	WRITE_FILE(S["taur_body_color_secondary"], taur_body_color_secondary)
+	WRITE_FILE(S["taur_body_color_tertiary"], taur_body_color_tertiary)
+	WRITE_FILE(S["taur_body_emissive"], taur_body_emissive)
+	WRITE_FILE(S["xenodorsal"], xenodorsal)
+	WRITE_FILE(S["xenodorsal_color"], xenodorsal_color)
+	WRITE_FILE(S["xenodorsal_emissive"], xenodorsal_emissive)
+	WRITE_FILE(S["xenohead"], xenohead)
+	WRITE_FILE(S["xenohead_color"], xenohead_color)
+	WRITE_FILE(S["xenohead_color_secondary"], xenohead_color_secondary)
+	WRITE_FILE(S["xenohead_color_tertiary"], xenohead_color_tertiary)
+	WRITE_FILE(S["xenohead_emissive"], xenohead_emissive)
 	WRITE_FILE(S["digitigrade_legs"], digitigrade_legs)
 	WRITE_FILE(S["body_markings"], body_markings)
 
@@ -1199,7 +1294,10 @@
 	WRITE_FILE(S["genitalia_boobs_emissive"], genitalia_boobs_emissive)
 	WRITE_FILE(S["genitalia_cock"], genitalia_cock)
 	WRITE_FILE(S["genitalia_cock_size"], genitalia_cock_size)
+	WRITE_FILE(S["genitalia_cock_storage"], genitalia_cock_storage)
+	WRITE_FILE(S["genitalia_cock_state"], genitalia_cock_state)
 	WRITE_FILE(S["genitalia_cock_color"], genitalia_cock_color)
+	WRITE_FILE(S["genitalia_cock_color_secondary"], genitalia_cock_color_secondary)
 	WRITE_FILE(S["genitalia_cock_emissive"], genitalia_cock_emissive)
 	WRITE_FILE(S["genitalia_vagina"], genitalia_vagina)
 	WRITE_FILE(S["genitalia_vagina_color"], genitalia_vagina_color)
@@ -1214,6 +1312,7 @@
 	WRITE_FILE(S["genitalia_testicles_color_secondary"], genitalia_testicles_color_secondary)
 	WRITE_FILE(S["genitalia_testicles_emissive"], genitalia_testicles_emissive)
 	WRITE_FILE(S["harmful_sex_allowed"], harmful_sex_flags)
+	WRITE_FILE(S["quick_sex_allowed"], quick_sex_flags)
 	WRITE_FILE(S["burst_screams_enabled"], burst_screams_enabled)
 
 	WRITE_FILE(S["metadata"], metadata)
@@ -1228,7 +1327,6 @@
 	WRITE_FILE(S["b_jelly"], b_jelly)
 	WRITE_FILE(S["xeno_edible_jelly_desc"], xeno_edible_jelly_desc)
 	WRITE_FILE(S["xeno_edible_jelly_flavors"], xeno_edible_jelly_flavors)
-	WRITE_FILE(S["quick_sex_toggle"], quick_sex_toggle)
 
 	return TRUE
 

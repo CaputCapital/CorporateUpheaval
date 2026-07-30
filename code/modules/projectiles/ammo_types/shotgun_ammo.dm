@@ -146,10 +146,7 @@
 	handful_icon_state = "shotgun_tracker"
 	hud_state = "shotgun_tracker"
 	ammo_behavior_flags = AMMO_BALLISTIC
-	bonus_projectiles_type = /datum/ammo/bullet/shotgun/frag/frag_spread
-	bonus_projectiles_amount = 2
-	bonus_projectiles_scatter = 6
-	accuracy_variation = 8
+	accuracy_variation = 6
 	accuracy = -20
 	max_range = 15
 	damage = 10
@@ -194,6 +191,7 @@
 /datum/ammo/bullet/shotgun/heavy_buckshot
 	name = "heavy buckshot shell"
 	handful_icon_state = "heavy_shotgun_buckshot"
+	handful_icon = 'ntf_modular/icons/obj/items/ammo/handful.dmi'
 	icon_state = "buckshot"
 	hud_state = "shotgun_buckshot"
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/heavy_spread
@@ -233,6 +231,7 @@
 /datum/ammo/bullet/shotgun/barrikada_slug
 	name = "heavy metal slug"
 	handful_icon_state = "heavy_shotgun_barrikada"
+	handful_icon = 'ntf_modular/icons/obj/items/ammo/handful.dmi'
 	hud_state = "shotgun_slug"
 	ammo_behavior_flags = AMMO_BALLISTIC
 	shell_speed = 3
@@ -271,6 +270,7 @@
 /datum/ammo/bullet/shotgun/heavy_flechette
 	name = "heavy flechette shell"
 	handful_icon_state = "heavy_shotgun_flechette"
+	handful_icon = 'ntf_modular/icons/obj/items/ammo/handful.dmi'
 	icon_state = "flechette"
 	hud_state = "shotgun_flechette"
 	ammo_behavior_flags = AMMO_BALLISTIC
@@ -336,9 +336,9 @@
 	bonus_projectiles_amount = 4
 	bonus_projectiles_scatter = 2
 	max_range = 15
-	damage = 40
+	damage = 20
 	damage_falloff = 0.25
-	penetration = 20
+	penetration = 15
 	sundering = 1.5
 
 /datum/ammo/bullet/shotgun/tx15_flechette/spread

@@ -33,6 +33,7 @@
 		if(xeno_loc.xeno_caste.tier == XENO_TIER_MINION || xeno_loc.xeno_caste.caste_type_path == /datum/xeno_caste/larva || xeno_loc.xeno_caste.caste_type_path == /datum/xeno_caste/puppet || xeno_loc.xeno_caste.caste_type_path == /datum/xeno_caste/spiderling)
 			return INITIALIZE_HINT_QDEL //letting these be larva farms makes it too easy to get larva.
 	affected_mob = loc
+	ADD_TRAIT(affected_mob, TRAIT_XENO_HOST(hivenumber), src)
 	affected_mob.status_flags |= XENO_HOST
 	log_combat(affected_mob, null, "been infected with an embryo")
 	START_PROCESSING(SSobj, src)
@@ -42,6 +43,7 @@
 
 /obj/item/alien_embryo/Destroy()
 	if(affected_mob)
+		REMOVE_TRAIT(affected_mob, TRAIT_XENO_HOST(hivenumber), src)
 		log_combat(affected_mob, null, "had their embryo removed")
 		var/anyleft = FALSE
 		for(var/obj/item/alien_embryo/remainingembryo in affected_mob)
@@ -71,6 +73,7 @@
 		return FALSE
 
 	if(loc != affected_mob)
+		REMOVE_TRAIT(affected_mob, TRAIT_XENO_HOST(hivenumber), src)
 		var/anyleft = FALSE
 		for(var/obj/item/alien_embryo/remainingembryo in affected_mob)
 			if(!QDELETED(remainingembryo))
@@ -278,6 +281,7 @@
 			SSpoints.add_strategic_psy_points(embryo.hivenumber, embryo.psypoint_reward)
 			SSpoints.add_tactical_psy_points(embryo.hivenumber, embryo.psypoint_reward*0.25)
 			SSpoints.add_biomass_points(embryo.hivenumber, embryo.biomass_reward)
+	REMOVE_TRAIT(victim, TRAIT_XENO_HOST(embryo.hivenumber), embryo)
 	QDEL_NULL(embryo)
 
 	var/anyleft = FALSE
@@ -308,10 +312,17 @@
 			monkey.take_overall_damage(140, BRUTE, MELEE)
 		monkey.take_overall_damage(20, BURN, MELEE)
 	if(ishuman(victim) && !(SSticker.mode.round_type_flags2 & MODE_2_CHILL_RULES))
-		if(victim.getCloneLoss() < 30)
-			victim.adjustCloneLoss(45)
-			if(!(CHECK_BITFIELD(victim.restrained_flags, RESTRAINED_XENO_NEST)))
-				victim.death(FALSE)
+		var/mob/living/carbon/human/human_victim = victim
+		if(isxenohybrid(human_victim))
+			var/clone_damage = CHECK_BITFIELD(victim.restrained_flags, RESTRAINED_XENO_NEST) ? 5 : 10
+			victim.adjustCloneLoss(clone_damage)
+			victim.visible_message(span_warning("[victim]'s hybrid body strains, but adapts to the larva's birth."))
+		else
+			if(victim.getCloneLoss() < 30)
+				victim.adjustCloneLoss(45)
+			if(!(CHECK_BITFIELD(victim.restrained_flags, RESTRAINED_XENO_NEST)) || issynth(victim)) //synth dont have cloneloss so only option is to outright kill them.
+				//victim.death(FALSE)
+				victim.adjustCloneLoss(75) //more if not nested
 			victim.visible_message(span_warning("[victim]'s body and hole are devastated by the birth."))
 
 	if(((locate(/obj/structure/bed/nest) in loc) || loc_weeds_type) && !mind)

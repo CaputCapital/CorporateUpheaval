@@ -89,6 +89,8 @@ GLOBAL_LIST_INIT(marking_zone_to_bitflag, list(
 
 	var/list/emissive_layers = list()
 	for(var/zone in GLOB.marking_zones)
+		if(visual_bodypart_hidden(zone))
+			continue
 		var/list/zone_markings = body_markings[zone]
 		if(!length(zone_markings))
 			continue
@@ -144,6 +146,15 @@ GLOBAL_LIST_INIT(marking_zone_to_bitflag, list(
 /datum/body_marking/other/monster_mouth
 	name = "Monster Mouth"
 	icon_state = "monster"
+	default_color = "#CCCCCC"
+	affected_bodyparts = HEAD
+
+/datum/body_marking/ntf
+	icon = 'ntf_modular/icons/customization/body_markings/markings.dmi'
+
+/datum/body_marking/ntf/xeno_fangs
+	name = "Xeno Fangs"
+	icon_state = "fangs"
 	default_color = "#CCCCCC"
 	affected_bodyparts = HEAD
 
@@ -324,6 +335,8 @@ GLOBAL_LIST_INIT(marking_zone_to_bitflag, list(
 	ensure_body_marking_references()
 
 	for(var/zone in GLOB.marking_zones)
+		if(visual_bodypart_hidden(zone))
+			continue
 		var/list/zone_markings = body_markings[zone]
 		if(!length(zone_markings))
 			continue

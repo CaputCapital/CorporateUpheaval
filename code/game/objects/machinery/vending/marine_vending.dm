@@ -39,13 +39,14 @@
 			/obj/item/ammo_magazine/rifle/nt_halter/foxfire = 5,
 		),
 		"Energy Weapons" = list(
+			/obj/item/weapon/gun/energy/lasgun/lasrifle = 5,
 			/obj/item/cell/lasgun/lasrifle = -1,
-			/obj/item/cell/lasgun/volkite/powerpack/marine = -1,
-			/obj/item/cell/lasgun/volkite/powerpack/marine/backpack = -1,
-			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_rifle = -1,
-			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_sniper = -1,
-			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_carbine = -1,
-			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_mlaser = -1,
+			/obj/item/cell/lasgun/volkite/powerpack/marine = 10,
+			/obj/item/cell/lasgun/volkite/powerpack/marine/backpack = 5,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_rifle = 5,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_sniper = 3,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_carbine = 6,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_mlaser = 5,
 			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_pistol = -1,
 			/obj/item/weapon/gun/energy/lasgun/lasrifle/tesla = 2,
 		),
@@ -60,6 +61,13 @@
 			/obj/item/ammo_magazine/smg/standard_heavysmg = -1,
 			/obj/item/ammo_magazine/smg/standard_heavysmg/squashhead = -1,
 			/obj/item/ammo_magazine/smg/standard_heavysmg/rubber = -1,
+			/obj/item/weapon/gun/smg/vortex = -1,
+			/obj/item/ammo_magazine/smg/vortex = -1,
+			/obj/item/ammo_magazine/smg/vortex/rubber = -1,
+			/obj/item/ammo_magazine/smg/vortex/squashhead = -1,
+			/obj/item/ammo_magazine/smg/vortex/ap = 25,
+			/obj/item/ammo_magazine/smg/vortex/incendiary = 15,
+			/obj/item/ammo_magazine/smg/vortex/taser = 5,
 		),
 		"Marksman" = list(
 			/obj/item/weapon/gun/rifle/standard_dmr = -1,
@@ -184,6 +192,7 @@
 			/obj/item/explosive/grenade/smokebomb/aphrotoxin = 15,
 			/obj/item/explosive/grenade/flashbang/stun = 30,
 			/obj/item/explosive/grenade/smokebomb/sleep = 15,
+			/obj/item/explosive/grenade/chem_grenade/teargas = 15,
 			/obj/item/explosive/grenade/bullet/laser = 30,
 			/obj/item/explosive/grenade/bullet/hefa = 5,
 			/obj/item/explosive/grenade/emp = 5,
@@ -314,6 +323,8 @@
 			/obj/item/toy/dice/d20 = -1,
 			/obj/item/deployable_floodlight = 5,
 			/obj/item/plantable_flag/ntc = 10,
+			/obj/item/quikdeploy/cade = 30,
+			/obj/item/quikdeploy/cade/plasteel = 10,
 		),
 	)
 
@@ -350,13 +361,13 @@
 			/obj/item/ammo_magazine/rifle/nt_halter/foxfire = 5,
 		),
 		"Energy Weapons" = list(
-			/obj/item/cell/lasgun/lasrifle = -1,
-			/obj/item/cell/lasgun/volkite/powerpack/marine = -1,
-			/obj/item/cell/lasgun/volkite/powerpack/marine/backpack = -1,
-			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_rifle = -1,
-			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_sniper = -1,
-			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_carbine = -1,
-			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_mlaser = -1,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle = 5,
+			/obj/item/cell/lasgun/volkite/powerpack/marine = 10,
+			/obj/item/cell/lasgun/volkite/powerpack/marine/backpack = 5,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_rifle = 5,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_sniper = 3,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_carbine = 6,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_mlaser = 5,
 			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_pistol = -1,
 			/obj/item/weapon/gun/energy/lasgun/lasrifle/tesla = 2,
 		),
@@ -487,6 +498,7 @@
 			/obj/item/explosive/grenade/smokebomb/aphrotoxin = 15,
 			/obj/item/explosive/grenade/flashbang/stun = 30,
 			/obj/item/explosive/grenade/smokebomb/sleep = 15,
+			/obj/item/explosive/grenade/chem_grenade/teargas = 15,
 			/obj/item/explosive/grenade/bullet/laser = 30,
 			/obj/item/explosive/grenade/bullet/hefa = 5,
 			/obj/item/explosive/grenade/emp = 5,
@@ -603,6 +615,8 @@
 			/obj/item/explosive/plastique = 12,
 			/obj/item/xeno_iff_tag = -1,
 			/obj/structure/closet/secure_closet/xeno_cage = 10,
+			/obj/item/quikdeploy/cade = 30,
+			/obj/item/quikdeploy/cade/plasteel = 10,
 		),
 	)
 
@@ -632,7 +646,7 @@
 			/obj/item/ammo_magazine/packet/p4570 = -1,
 		),
 		"Energy Weapons" = list(
-			/obj/item/cell/lasgun/lasrifle = -1,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle = -1,
 			/obj/item/cell/lasgun/volkite/powerpack/marine = -1,
 			/obj/item/cell/lasgun/volkite/powerpack/marine/backpack = -1,
 			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_rifle = -1,
@@ -882,6 +896,8 @@
 			/obj/item/toy/dice/d20 = -1,
 			/obj/item/deployable_floodlight = -1,
 			/obj/item/plantable_flag = 10,
+			/obj/item/quikdeploy/cade = 30,
+			/obj/item/quikdeploy/cade/plasteel = 10,
 		),
 	)
 
@@ -1048,8 +1064,28 @@
 		)
 	)
 
+/obj/machinery/vending/reqtorio_supply
+	name = "\improper Factory Supplies Vendor"
+	desc = "A large vendor for dispensing factory supplies. Restricted to cargo personnel only."
+	icon_state = "robotics"
+	icon_vend = "robotics-vend"
+	icon_deny = "robotics-deny"
+	wrenchable = FALSE
+	req_one_access = list(ACCESS_MARINE_CARGO, ACCESS_MARINE_LOGISTICS)
+	products = list(
+			/obj/item/paper/factoryhowto = -1,
+			/obj/machinery/factory/cutter = 1,
+			/obj/machinery/factory/heater = 1,
+			/obj/machinery/factory/flatter = 1,
+			/obj/machinery/factory/former = 1,
+			/obj/machinery/factory/reconstructor = 1,
+			/obj/machinery/unboxer = 1,
+			/obj/item/stack/conveyor/thirty = 10,
+			/obj/item/conveyor_switch_construct = 10,
+	)
+
 /obj/machinery/vending/lasgun
-	name = "\improper Terra Experimental cell field charger"
+	name = "\improper old world cell field charger"
 	desc = "An automated power cell dispenser and charger. Used to recharge energy weapon power cells, including in the field. Has an internal battery that charges off the power grid when wrenched down."
 	icon_state = "lascharger"
 	icon_vend = "lascharger-vend"
@@ -1298,8 +1334,10 @@
 			/obj/item/clothing/head/modular/tdf/sg = -1,
 			/obj/item/clothing/suit/modular/xenonauten/light/bikini = -1,
 			/obj/item/clothing/suit/modular/xenonauten/bulletresistant = -1,
+			/obj/item/clothing/suit/modular/xenonauten/bulletresistant/vest = -1,
 			/obj/item/clothing/suit/modular/xenonauten/bulletresistant/bikini = -1,
 			/obj/item/clothing/suit/modular/xenonauten/ablative = -1,
+			/obj/item/clothing/suit/modular/xenonauten/ablative/vest = -1,
 			/obj/item/clothing/suit/modular/xenonauten/ablative/bikini = -1,
 			/obj/item/clothing/suit/modular/xenonauten/light = -1,
 			/obj/item/clothing/suit/modular/xenonauten = -1,
@@ -1379,9 +1417,9 @@
 			/obj/item/clothing/suit/modular/style/barrier/lightbarrier = -1,
 			/obj/item/clothing/suit/modular/style/barrier/mediumbarrier = -1,
 			/obj/item/clothing/suit/modular/style/barrier/heavybarrier = -1,
-			/obj/item/clothing/suit/modular/rownin/dermal = -1,
-			/obj/item/clothing/gloves/dermal = -1,
-			/obj/item/clothing/shoes/dermal = -1,
+			/obj/item/clothing/suit/modular/dermal = -1,
+			/obj/item/clothing/gloves/marine/dermal = -1,
+			/obj/item/clothing/shoes/marine/dermal = -1,
 			/obj/item/clothing/head/helmet/HoS/dermal = -1,
 			/obj/item/clothing/head/modular/marine/kabuto = -1,
 			/obj/item/armor_module/armor/chest/marine/kabuto = -1,
@@ -1509,9 +1547,9 @@
 		"Style Line" = list(
 			/obj/item/clothing/suit/modular/style/leather_jacket = -1,
 			/obj/item/clothing/suit/modular/style/duster = -1,
-			/obj/item/clothing/suit/modular/rownin/dermal = -1,
-			/obj/item/clothing/gloves/dermal = -1,
-			/obj/item/clothing/shoes/dermal = -1,
+			/obj/item/clothing/suit/modular/dermal = -1,
+			/obj/item/clothing/gloves/marine/dermal = -1,
+			/obj/item/clothing/shoes/marine/dermal = -1,
 			/obj/item/clothing/head/helmet/HoS/dermal = -1,
 		))
 
@@ -1609,7 +1647,6 @@
 			/obj/item/storage/pouch/tools/full = -1,
 			/obj/item/storage/pouch/field_pouch = -1,
 			/obj/item/storage/pouch/general/large = -1,
-			/obj/item/cell/lasgun/volkite/powerpack/marine = -1,
 			/obj/item/storage/pouch/general/medium = -1,
 			/obj/item/storage/pouch/protein_pack = -1,
 		),
@@ -1653,7 +1690,6 @@
 			/obj/item/storage/holster/m37 = -1,
 			/obj/item/storage/backpack/marine/smock/lite = -1,
 			/obj/item/storage/backpack/marine/duffelbag = -1,
-			/obj/item/cell/lasgun/volkite/powerpack/marine/backpack = -1,
 		),
 		"Instruments" = list(
 			/obj/item/instrument/violin = -1,
@@ -1914,13 +1950,21 @@
 			/obj/item/clothing/underwear/shirt/striped_blue = -1,
 			/obj/item/clothing/underwear/shirt/offshoulder = -1,
 			/obj/item/clothing/underwear/shirt/turtleneck = -1,
+			/obj/item/clothing/underwear/shirt/turtleneck_f = -1,
 			/obj/item/clothing/underwear/shirt/turtleneck_smooth = -1,
 			/obj/item/clothing/underwear/shirt/turtleneck_sleeveless = -1,
+			/obj/item/clothing/underwear/shirt/turtleneck_f_sleeveless = -1,
 			/obj/item/clothing/underwear/shirt/leotard_turtleneck = -1,
+			/obj/item/clothing/underwear/shirt/leotard_f_turtleneck = -1,
 			/obj/item/clothing/underwear/shirt/leotard_turtleneck_sleeveless = -1,
+			/obj/item/clothing/underwear/shirt/leotard_turtleneck_f_sleeveless = -1,
 			/obj/item/clothing/underwear/shirt/croptop_turtleneck = -1,
 			/obj/item/clothing/underwear/shirt/croptop_turtleneck_black = -1,
 			/obj/item/clothing/underwear/shirt/croptop_turtleneck_steel = -1,
+			/obj/item/clothing/underwear/shirt/croptop_turtleneck_window = -1,
+			/obj/item/clothing/underwear/shirt/croptop_turtleneck_window_black = -1,
+			/obj/item/clothing/underwear/shirt/croptop_turtleneck_full = -1,
+			/obj/item/clothing/underwear/shirt/croptop_turtleneck_full_black = -1,
 			/obj/item/clothing/underwear/shirt/buttondown = -1,
 			/obj/item/clothing/underwear/shirt/buttondown_short_sleeve = -1,
 			/obj/item/clothing/underwear/shirt/babydoll = -1,

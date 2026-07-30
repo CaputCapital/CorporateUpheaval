@@ -166,8 +166,8 @@
 	name = "\improper M5 riot control armor"
 	desc = "A heavily modified suit of M2 MP Armor used to supress riots from buckethead marines and their guns. Slows you down a lot."
 	icon_state = "marine_riot"
-	slowdown = 1.3
-	stamina_regen_mod = -0.4
+	slowdown = SLOWDOWN_ARMOR_HEAVY
+	stamina_regen_mod = -0.1
 	soft_armor = list(MELEE = 65, BULLET = 75, LASER = 75, ENERGY = 10, BOMB = 45, BIO = 10, FIRE = 10, ACID = 10)
 	allowed = list(
 		/obj/item/weapon/gun,
@@ -191,6 +191,7 @@
 	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	resistance_flags = UNACIDABLE
 	autobalance_monitor_value = B18_PRICE
+	anti_hug = 1 //binary for body
 
 /obj/item/clothing/suit/storage/marine/specialist/Initialize(mapload, ...)
 	. = ..()
@@ -563,7 +564,7 @@
 		/obj/item/armor_module/module/better_shoulder_lamp,
 		/obj/item/armor_module/storage/general,
 	)
-	
+
 /obj/item/clothing/suit/storage/marine/cmfreelancer/heavy
 	name = "\improper CM12 pattern cuirass"
 	desc = "Salvaged metal plates welded together on the CM3 armor for maximum survivability. Not many freelancer mercenaries enjoyed wearing this, but it found a place among Colonial Militia guardsmen as a suprisingly effective instrument in defenses and close quarters fights. Can only support a baldur module but can support storage modules."
@@ -584,7 +585,7 @@
 		/obj/item/armor_module/module/better_shoulder_lamp,
 		/obj/item/armor_module/storage/general,
 	)
-	
+
 /obj/item/clothing/suit/storage/marine/cmfreelancer/pyro
 	name = "\improper CMB08 pattern pyro suit"
 	desc = "A repurposed firefighter suit combined with additional flame retardant materials reinforced with metal plates. All of this allows the user to safely walk through fire. A complete psycho would wear the original freelance version, cuts had to be made with the new CMB08."
@@ -942,7 +943,7 @@
 	soft_armor = MARINE_ARMOR_MEDIUM
 
 /obj/item/clothing/suit/storage/marine/icc
-	name = "\improper Modelle/16 combat armor"
+	name = "\improper Modelle/16 medium combat armor"
 	desc = "A piece of ICC body armor, worn durning boarding actions by personnel in close quarters, as most ICC personnel serve dual purpose roles as ad-hoc marines, due to personnel shortages."
 	icon = 'icons/obj/clothing/suits/ert_suits.dmi'
 	worn_icon_list = list(
@@ -959,14 +960,14 @@
 	item_map_variant_flags = NONE
 
 /obj/item/clothing/suit/storage/marine/icc/guard
-	name = "\improper Modelle/19 combat armor"
+	name = "\improper Modelle/19 light combat armor"
 	desc = "A piece of ICCGF body armor, worn by specialized infantry. Most Infantry actions in the ICC forces are done by adhoc personnel due to constant shortages of manpower, however most real Infantry divisions are of high quality, and are better known as 'Guardsmen'."
 	icon_state = "icc_guard"
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	soft_armor = MARINE_ARMOR_LIGHT
 
 /obj/item/clothing/suit/storage/marine/icc/guard/heavy
-	name = "\improper Modelle/22 'Cuirassier' combat armor"
+	name = "\improper Modelle/22 'Cuirassier' heavy combat armor"
 	desc = "A piece of ICCGF body armor, worn by specialized infantry. Most Infantry actions in the ICC forces are done by adhoc personnel due to constant shortages of manpower, however most real Infantry divisions are of high quality, and are better known as 'Guardsmen'."
 	icon_state = "icc_guard_heavy"
 	slowdown = SLOWDOWN_ARMOR_HEAVY
@@ -1073,10 +1074,10 @@
 	desc = "The Kaizoku Corporation's juggernaut set, given to the best and trusted veterans. Protects the user from almost all bullet calibers."
 	icon = 'icons/mob/clothing/suits/ert_suits.dmi'
 	slowdown = SLOWDOWN_ARMOR_VERY_HEAVY
-	stamina_regen_mod = - 0.4
+	stamina_regen_mod = -0.2
 	icon_state = "vsd_juggernaut_ballistic"
 	worn_icon_state = "vsd_juggernaut_ballistic"
-	soft_armor = list(MELEE = 75, BULLET = 85, LASER = 75, ENERGY = 65, BOMB = 60, BIO = 55, FIRE = 60, ACID = 75)
+	soft_armor = list(MELEE = 60, BULLET = 85, LASER = 75, ENERGY = 65, BOMB = 65, BIO = 65, FIRE = 65, ACID = 70)
 
 /obj/item/clothing/suit/storage/marine/vsd/juggernaut/Initialize(mapload, ...)
 	. = ..()
@@ -1089,18 +1090,18 @@
 	desc = "The Kaizoku Corporation's EOD-based armor, protects the user from most threats and heavily protects them against explosives."
 	icon = 'icons/mob/clothing/suits/ert_suits.dmi'
 	slowdown = SLOWDOWN_ARMOR_VERY_HEAVY
-	stamina_regen_mod = - 0.4
+	stamina_regen_mod = -0.2
 	icon_state = "vsd_juggernaut_explosive"
 	worn_icon_state = "vsd_juggernaut_explosive"
-	soft_armor = list(MELEE = 70, BULLET = 75, LASER = 75, ENERGY = 65, BOMB = 90, BIO = 55, FIRE = 60, ACID = 75)
+	soft_armor = list(MELEE = 60, BULLET = 75, LASER = 75, ENERGY = 65, BOMB = 90, BIO = 60, FIRE = 60, ACID = 65)
 
 /obj/item/clothing/suit/storage/marine/vsd/flamer
 	name = "\improper Crasher MT-H/43 'Apollo' powered fire-protected armor"
 	desc = "The Kaizoku Corporation's flamer armor, protects the user from most threats and suits them against fire and heat."
 	icon = 'icons/mob/clothing/suits/ert_suits.dmi'
 	slowdown = SLOWDOWN_ARMOR_VERY_HEAVY
-	stamina_regen_mod = - 0.4
+	stamina_regen_mod = -0.2
 	icon_state = "vsd_juggernaut_flamer"
 	worn_icon_state = "vsd_juggernaut_flamer"
-	soft_armor = list(MELEE = 70, BULLET = 75, LASER = 75, ENERGY = 65, BOMB = 60, BIO = 40, FIRE = 90, ACID = 60)
+	soft_armor = list(MELEE = 60, BULLET = 75, LASER = 75, ENERGY = 65, BOMB = 60, BIO = 60, FIRE = 90, ACID = 65)
 	armor_features_flags = ARMOR_FIRE_RESISTANT

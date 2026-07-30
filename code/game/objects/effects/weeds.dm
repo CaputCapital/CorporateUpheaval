@@ -5,7 +5,7 @@
 
 //Stat defines
 #define RESTING_BUFF 1.2
-#define SLOWDOWN_NORMAL 0.5
+#define SLOWDOWN_NORMAL 0
 #define SLOWDOWN_RESTING 0
 #define SLOWDOWN_STICKY 2
 
@@ -34,8 +34,7 @@
 
 /obj/alien/weeds/on_loc_entered(datum/source, atom/movable/crosser)
 	. = ..()
-	if(cross_slowdown > 0)
-		slow_down_crosser(crosser, cross_slowdown)
+	slow_down_crosser(crosser, cross_slowdown)
 
 /obj/alien/weeds/deconstruct(disassembled = TRUE, mob/living/blame_mob)
 	GLOB.round_statistics.weeds_destroyed++

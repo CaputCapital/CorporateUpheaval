@@ -56,13 +56,6 @@
 	penetration = 30
 	sundering = 4.5
 
-/datum/ammo/bullet/rifle/vsd_mg_main
-	name = "heavy rifle bullet"
-	hud_state = "rifle_heavy"
-	damage = 15
-	penetration = 35
-	sundering = 0.85
-
 /datum/ammo/bullet/rifle/heavy/rubber
 	name = "heavy rifle rubber bullet"
 	damage = 33
@@ -261,3 +254,15 @@
 	damage = 50
 	penetration = 15
 	sundering = 2
+
+/datum/ammo/bullet/rifle/vsd_sbr
+	name = "heavy short rifle bullet"
+	hud_state = "rifle_heavy"
+	damage_falloff = 0.5
+	ammo_behavior_flags = AMMO_BALLISTIC
+	accurate_range = 7
+	max_range = 21
+	shell_speed = 3.2
+	damage = 36.5
+	penetration = 12.5
+	sundering = 1.5

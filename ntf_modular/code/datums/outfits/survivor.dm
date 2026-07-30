@@ -11,7 +11,7 @@
 	glasses = /obj/item/clothing/glasses/welding
 	r_pocket = /obj/item/storage/pouch/tools/full
 	l_pocket = /obj/item/storage/pouch/survival/full
-	id = /obj/item/card/id/captains_spare/survival
+	id = /obj/item/card/id
 	backpack_contents = list(
 		/obj/item/reagent_containers/food/drinks/cans/waterbottle = 1,
 	)
@@ -25,6 +25,9 @@
 	shoes = /obj/item/clothing/shoes/marine/full
 	head = /obj/item/clothing/head/servicecap
 	back = /obj/item/storage/backpack/marine/satchel
+	suit_store = /obj/item/weapon/gun/rifle/famas
+	r_pocket = /obj/item/storage/pouch/magazine/large/pmc_famas
+
 	backpack_contents = list(
 		/obj/item/reagent_containers/food/drinks/cans/waterbottle = 1,
 		/obj/item/tool/pen = 1,
@@ -77,9 +80,20 @@
 
 	id = /obj/item/card/id/gold
 	belt = /obj/item/storage/belt/utility/full
-	ears = /obj/item/radio/headset/mainship/marine/icc
 	w_uniform = /obj/item/clothing/under/rank/synthetic
 	shoes = /obj/item/clothing/shoes/white
 	gloves = /obj/item/clothing/gloves/insulated
 	r_pocket = /obj/item/storage/pouch/general/medium
 	l_pocket = /obj/item/storage/pouch/general/medium
+
+/datum/outfit/job/survivor/administrator
+	name = "Local Colony Administrator"
+	jobtype = /datum/job/icc/administrator
+
+	id = /obj/item/card/id/silver
+	belt = /obj/item/storage/holster/belt/pistol/m4a3/officer
+	w_uniform = /obj/item/clothing/under/marine/officer/bridge
+	shoes = /obj/item/clothing/shoes/marine/full
+	head = /obj/item/clothing/head/tgmccap/ro
+	r_pocket = /obj/item/storage/pouch/general/large
+	l_pocket = /obj/item/binoculars

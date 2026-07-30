@@ -3,7 +3,7 @@
 	config_tag = "Secret of Life - Main"
 	silo_scaling = 1
 	round_type_flags = MODE_INFESTATION|MODE_PSY_POINTS|MODE_PSY_POINTS_ADVANCED|MODE_HIJACK_POSSIBLE|MODE_SILO_RESPAWN|MODE_ALLOW_XENO_QUICKBUILD|MODE_MUTATIONS_OBTAINABLE|MODE_XENO_GRAB_DEAD_ALLOWED|MODE_ALLOW_MARINE_QUICKBUILD
-	round_type_flags2 = MODE_2_CAMPAIGN_LITE_SUPPORT|MODE_2_NO_GHOSTS|MODE_2_NO_ABDUCT|MODE_2_SINGLE_USE_NUKE_DISK_GENERATOR|MODE_2_CHILL_RULES
+	round_type_flags2 = MODE_2_CAMPAIGN_LITE_SUPPORT|MODE_2_NO_GHOSTS|MODE_2_NO_ABDUCT|MODE_2_SINGLE_USE_NUKE_DISK_GENERATOR|MODE_2_CHILL_RULES|MODE_2_MINER_RUSH_PROT
 	shutters_drop_time = 15 MINUTES
 	xeno_abilities_flags = ABILITY_NUCLEARWAR|ABILITY_SOLMODE
 	factions = list(FACTION_TERRAGOV, FACTION_SOM, FACTION_XENO, FACTION_CLF, FACTION_ICC, FACTION_VSD)
@@ -58,6 +58,9 @@
 		/datum/job/survivor/prisoner = 2,
 		/datum/job/survivor/stripper = -1,
 		/datum/job/survivor/maid = 3,
+		/datum/job/survivor/bartender = 1,
+		/datum/job/survivor/chemist = 1,
+		/datum/job/survivor/roboticist = 1,
 		/datum/job/other/prisoner = 4,
 		/datum/job/survivor/synth = 2,
 		/datum/job/xenomorph = 8,
@@ -68,6 +71,8 @@
 		/datum/job/som/command/fieldcommander = 1,
 		/datum/job/som/command/staffofficer = 2,
 		/datum/job/som/command/pilot = 1,
+		/datum/job/som/command/chiefmp = 1,
+		/datum/job/som/security/militarypolice = 5,
 		/datum/job/som/command/assault_crewman = 2,
 		/datum/job/som/command/mech_pilot = 1,
 		/datum/job/som/requisitions/officer = 1,
@@ -75,6 +80,7 @@
 		/datum/job/som/engineering/tech = 2,
 		/datum/job/som/medical/professor = 1,
 		/datum/job/som/medical/medicalofficer = 2,
+		/datum/job/som/squad/slut = 3,
 		/datum/job/som/squad/standard = 4,
 		/datum/job/som/squad/medic = 2,
 		/datum/job/som/squad/engineer = 2,
@@ -90,12 +96,15 @@
 		/datum/job/clf/silicon/synthetic/clf = 1,
 		/datum/job/clf/mo = 1,
 		/datum/job/clf/messiah = 1,
-		/datum/job/other/prisonerclf = 4,,
+		/datum/job/other/prisonerclf = 4,
+		/datum/job/vsd_squad/standard = 2,
 		/datum/job/vsd_squad/medic = 1,
 		/datum/job/vsd_squad/engineer = 1,
 		/datum/job/vsd_squad/spec = 1,
 		/datum/job/vsd_squad/escort = 1,
+		/datum/job/vsd_squad/silicon/synthetic = 1,
 		/datum/job/vsd_squad/leader = 1,
+		/datum/job/vsd_squad/medical/ripperdoc = 1,
 		/datum/job/icc_squad/standard = 4,
 		/datum/job/icc_squad/medic = 2,
 		/datum/job/icc_squad/tech = 2,
@@ -134,6 +143,7 @@
 	var/atom/movable/screen/text/screen_timer/nuke_hud_timer = null
 	var/nuking_faction = "Unknown"
 	var/total_war = FALSE
+	var/saved_larva_count = 0
 
 /datum/game_mode/infestation/secret_of_life/on_nuke_started(datum/source, obj/machinery/nuclearbomb/nuke)
 	. = ..()
@@ -178,14 +188,21 @@
 				xeno.evolution_stored = xeno.xeno_caste.evolution_threshold //free evolution
 		*/
 		for(var/obj/item/teleporter_kit/indestructible/teles in GLOB.indestructible_teleporters)
-			teles.resistance_flags = XENO_DAMAGEABLE
+			teles.set_destructible(TRUE)
+		var/datum/job/xenomorph/xeno_job = SSjob.GetJobType(/datum/job/xenomorph)
+		var/burrowed = xeno_job.total_positions - xeno_job.current_positions
+		message_admins("saving [burrowed] burrowed for normal hive, war reserve burrowed is [FREE_XENO_AT_START]")
+		saved_larva_count = burrowed
+		xeno_job.total_positions = xeno_job.current_positions + FREE_XENO_AT_START
 		respawn_time = 10 MINUTES //we have cloning here and small pop so its not 30 minutes.
 		xenorespawn_time = 5 MINUTES
 		bioscan_interval = 15 MINUTES
 		round_type_flags &= ~MODE_XENO_GRAB_DEAD_ALLOWED
-		round_type_flags2 &= ~MODE_2_CHILL_RULES
+		round_type_flags2 &= ~(MODE_2_CHILL_RULES|MODE_2_MINER_RUSH_PROT)
 		GLOB.time_before_dnr = STANDARD_DNR_TIME
 		GLOB.max_larva_count_per_mob = MAX_LARVA_PREGNANCIES
+		GLOB.phoron_crate_value = PHORON_CRATE_SELL_AMOUNT
+		GLOB.plat_crate_value = PLATINUM_CRATE_SELL_AMOUNT
 	else
 		evo_requirements = list(
 			/datum/xeno_caste/queen = 0,
@@ -193,14 +210,19 @@
 			/datum/xeno_caste/dragon = 0,
 		)
 		for(var/obj/item/teleporter_kit/indestructible/teles in GLOB.indestructible_teleporters)
-			teles.resistance_flags = initial(teles.resistance_flags)
+			teles.set_destructible(FALSE)
+		var/datum/job/xenomorph/xeno_job = SSjob.GetJobType(/datum/job/xenomorph)
+		xeno_job.total_positions = saved_larva_count
+		message_admins("re-setting [saved_larva_count] burrowed for normal hive.")
 		GLOB.time_before_dnr = SOL_DNR_TIME
 		GLOB.max_larva_count_per_mob = MAX_LARVA_PREGNANCIES_SOL
+		GLOB.phoron_crate_value = PHORON_CRATE_SELL_AMOUNT_WAR
+		GLOB.plat_crate_value = PLATINUM_CRATE_SELL_AMOUNT_WAR
 		respawn_time = initial(respawn_time)
 		xenorespawn_time = initial(xenorespawn_time)
 		bioscan_interval = initial(bioscan_interval)
 		round_type_flags |= MODE_XENO_GRAB_DEAD_ALLOWED
-		round_type_flags2 |= MODE_2_CHILL_RULES
+		round_type_flags2 |= (MODE_2_CHILL_RULES|MODE_2_MINER_RUSH_PROT)
 
 	for(var/datum/xeno_caste/caste AS in evo_requirements)
 		GLOB.xeno_caste_datums[caste][XENO_UPGRADE_BASETYPE].evolve_min_xenos = evo_requirements[caste]
@@ -213,6 +235,12 @@
 	)
 	SSvote.initiate_vote()
 
+//have to have this late
+/datum/game_mode/post_setup()
+	. = ..()
+	if(!(round_type_flags2 & MODE_2_CHILL_RULES))
+		GLOB.plat_crate_value = PLATINUM_CRATE_SELL_AMOUNT_WAR
+		GLOB.phoron_crate_value = PHORON_CRATE_SELL_AMOUNT_WAR
 
 //sets NTC and SOM squads
 /datum/game_mode/infestation/secret_of_life/set_valid_squads()
@@ -223,6 +251,9 @@
 		if(squad.faction == FACTION_TERRAGOV || squad.faction == FACTION_SOM) //We only want Marine and SOM squads, future proofs if more faction squads are added
 			SSjob.active_squads[squad.faction] += squad
 	return TRUE
+
+/datum/game_mode/infestation/secret_of_life/scale_squad_jobs()
+	return
 
 /datum/game_mode/infestation/secret_of_life/announce()
 	to_chat(world, "<b>The current game mode is - Extended Role-Playing!</b>")
@@ -247,6 +278,9 @@
 		SSpoints.add_strategic_psy_points(hivenumber, 1400)
 		SSpoints.add_tactical_psy_points(hivenumber, 300)
 		SSpoints.add_biomass_points(hivenumber, 0) // Solely to make sure it isn't null.
+
+	for(var/obj/effect/landmark/spawn_marker/civilian/civneu in GLOB.spawn_civneutral)
+		civneu.trigger_now()
 
 //NTF addition start
 	if(randomize_miners)
@@ -451,6 +485,8 @@ alt gamemodes
 		/datum/job/som/command/fieldcommander = 1,
 		/datum/job/som/command/staffofficer = 2,
 		/datum/job/som/command/pilot = 1,
+		/datum/job/som/command/chiefmp = 1,
+		/datum/job/som/security/militarypolice = 5,
 		/datum/job/som/command/assault_crewman = 2,
 		/datum/job/som/command/mech_pilot = 1,
 		/datum/job/som/requisitions/officer = 1,
@@ -458,7 +494,8 @@ alt gamemodes
 		/datum/job/som/engineering/tech = 2,
 		/datum/job/som/medical/professor = 1,
 		/datum/job/som/medical/medicalofficer = 2,
-		/datum/job/som/squad/standard = 6,
+		/datum/job/som/squad/slut = 3,
+		/datum/job/som/squad/standard = 4,
 		/datum/job/som/squad/medic = 2,
 		/datum/job/som/squad/engineer = 2,
 		/datum/job/som/squad/leader = 2,
@@ -527,6 +564,8 @@ alt gamemodes
 		/datum/job/som/command/fieldcommander = 1,
 		/datum/job/som/command/staffofficer = 2,
 		/datum/job/som/command/pilot = 1,
+		/datum/job/som/command/chiefmp = 1,
+		/datum/job/som/security/militarypolice = 5,
 		/datum/job/som/command/assault_crewman = 2,
 		/datum/job/som/command/mech_pilot = 1,
 		/datum/job/som/requisitions/officer = 1,
@@ -534,7 +573,8 @@ alt gamemodes
 		/datum/job/som/engineering/tech = 2,
 		/datum/job/som/medical/professor = 1,
 		/datum/job/som/medical/medicalofficer = 2,
-		/datum/job/som/squad/standard = 6,
+		/datum/job/som/squad/slut = 3,
+		/datum/job/som/squad/standard = 4,
 		/datum/job/som/squad/medic = 2,
 		/datum/job/som/squad/engineer = 2,
 		/datum/job/som/squad/leader = 2,
@@ -571,7 +611,6 @@ alt gamemodes
 		/datum/job/terragov/medical/researcher = 1,
 		/datum/job/terragov/civilian/liaison = 1,
 		/datum/job/terragov/silicon/synthetic = 4,
-		/datum/job/clf/silicon/synthetic/clf = 1,
 		/datum/job/terragov/silicon/ai = 1,
 		/datum/job/terragov/squad/engineer = 4,
 		/datum/job/terragov/squad/corpsman = 4,
@@ -647,6 +686,9 @@ alt gamemodes
 		/datum/job/survivor/stripper = -1,
 		/datum/job/survivor/maid = 4,
 		/datum/job/survivor/synth = 1,
+		/datum/job/survivor/bartender = 1,
+		/datum/job/survivor/chemist = 1,
+		/datum/job/survivor/roboticist = 1,
 		/datum/job/other/prisoner = 4,
 		/datum/job/xenomorph = 5,
 		/datum/job/xenomorph/green = FREE_XENO_AT_START_CORRUPT,
@@ -721,6 +763,9 @@ alt gamemodes
 		/datum/job/survivor/prisoner = 2,
 		/datum/job/survivor/stripper = -1,
 		/datum/job/survivor/maid = 3,
+		/datum/job/survivor/bartender = 1,
+		/datum/job/survivor/chemist = 1,
+		/datum/job/survivor/roboticist = 1,
 		/datum/job/other/prisoner = 4,
 		/datum/job/survivor/synth = 2,
 		/datum/job/xenomorph = 8,
@@ -731,6 +776,8 @@ alt gamemodes
 		/datum/job/som/command/fieldcommander = 1,
 		/datum/job/som/command/staffofficer = 2,
 		/datum/job/som/command/pilot = 1,
+		/datum/job/som/command/chiefmp = 1,
+		/datum/job/som/security/militarypolice = 5,
 		/datum/job/som/command/assault_crewman = 2,
 		/datum/job/som/command/mech_pilot = 1,
 		/datum/job/som/requisitions/officer = 1,
@@ -738,6 +785,7 @@ alt gamemodes
 		/datum/job/som/engineering/tech = 2,
 		/datum/job/som/medical/professor = 1,
 		/datum/job/som/medical/medicalofficer = 2,
+		/datum/job/som/squad/slut = 3,
 		/datum/job/som/squad/standard = 4,
 		/datum/job/som/squad/medic = 2,
 		/datum/job/som/squad/engineer = 2,
@@ -759,7 +807,9 @@ alt gamemodes
 		/datum/job/vsd_squad/engineer = 1,
 		/datum/job/vsd_squad/spec = 1,
 		/datum/job/vsd_squad/escort = 1,
+		/datum/job/vsd_squad/silicon/synthetic = 1,
 		/datum/job/vsd_squad/leader = 1,
+		/datum/job/vsd_squad/medical/ripperdoc = 1,
 		/datum/job/icc_squad/standard = 4,
 		/datum/job/icc_squad/medic = 2,
 		/datum/job/icc_squad/tech = 2,

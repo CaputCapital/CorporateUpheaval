@@ -221,7 +221,7 @@
 	inv_hide_flags = HIDEALLHAIR|HIDEEARS
 	item_flags = SYNTH_RESTRICTED
 	resistance_flags = UNACIDABLE
-	anti_hug = 6
+	anti_hug = 1
 	item_map_variant_flags = (ITEM_JUNGLE_VARIANT|ITEM_ICE_VARIANT|ITEM_PRISON_VARIANT)
 
 /obj/item/clothing/head/helmet/marine/specialist/tdf
@@ -495,7 +495,7 @@
 	starting_attachments = list(
 		/obj/item/armor_module/storage/helmet,
 	)
-	
+
 /obj/item/clothing/head/helmet/marine/cmfreelancer/beret
 	name = "\improper Colonial Militia beret"
 	desc = "A white beret, with a worn out Freelancers emblem. Not many people you can see wear such things, especially when they're not part of an official military force. Additionally issued with an armored platemask."
@@ -531,10 +531,10 @@
 		/obj/item/armor_module/module/binoculars,
 		/obj/item/armor_module/storage/helmet,
 	)
-	
+
 /obj/item/clothing/head/helmet/marine/cmfreelancer/heavy
 	name = "\improper CM3 pattern heavy helmet"
-	desc = "A sturdy freelancer's helmet with additional plates. Many years ago on the Terra, the sign of that helmet was inspiring hope, but now - only apathy."
+	desc = "A sturdy freelancer's helmet with additional plates. Many years ago on the Terra, the sign of that helmet was inspiring hope, but now - the need to protect."
 	icon_state = "freelancer_helmet_heavy"
 	soft_armor = list(MELEE = 60, BULLET = 80, LASER = 70, ENERGY = 50, BOMB = 65, BIO = 40, FIRE = 40, ACID = 45)
 	attachments_allowed = list(
@@ -547,7 +547,7 @@
 
 /obj/item/clothing/head/helmet/marine/cmfreelancer/specialist
 	name = "\improper CM3 pattern rocketeer helmet"
-	desc = "A sturdy freelancer's helmet with additional plates and protective riot visor. Many years ago on the Terra, the sign of that helmet was inspiring hope, but now - only apathy."
+	desc = "A sturdy freelancer's helmet with additional plates and protective riot visor. Many years ago on the Terra, the sign of that helmet was inspiring hope, but now - the need to quell the tide."
 	icon_state = "freelancer_helmet_specialist"
 	soft_armor = list(MELEE = 55, BULLET = 75, LASER = 60, ENERGY = 70, BOMB = 80, BIO = 40, FIRE = 55, ACID = 55)
 	attachments_allowed = list(

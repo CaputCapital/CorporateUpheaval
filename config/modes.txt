@@ -49,9 +49,9 @@ mode Colony Fall
 	votable 1
 endmode
 
-mode Colony Survival
+mode Prison Fall
 	requiredplayers 15
-	votable 1
+	votable 0
 endmode
 
 mode Extended - Survivor-Heavy
@@ -85,7 +85,7 @@ mode Secret of Life - Main
 endmode
 
 mode Secret of Life - Faction Bloat
-	requiredplayers 35
+	requiredplayers 20
 	default
 endmode
 

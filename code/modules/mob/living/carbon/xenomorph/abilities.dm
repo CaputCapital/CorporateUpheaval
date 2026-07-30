@@ -15,6 +15,12 @@
 	xeno_owner.toggle_resting()
 	return succeed_activate()
 
+/datum/action/ability/xeno_action/xeno_resting/ai_should_start_consider()
+	return FALSE
+
+/datum/action/ability/xeno_action/xeno_resting/ai_should_use(target)
+	return FALSE
+
 // ***************************************
 // *********** Drone-y abilities
 // ***************************************
@@ -868,6 +874,20 @@ GLOBAL_LIST_INIT(xeno_resin_costs, list(
 	playsound(owner.loc, 'sound/voice/alien/drool1.ogg', 50, 1)
 	to_chat(owner, span_xenodanger("We feel our acid glands refill. We can spray acid again."))
 
+/datum/action/ability/activable/xeno/spray_acid/ai_should_start_consider()
+	return TRUE
+
+/datum/action/ability/activable/xeno/spray_acid/ai_should_use(atom/target)
+	if(!iscarbon(target))
+		return FALSE
+	if(get_dist(target, owner) > 6)
+		return FALSE
+	if(!line_of_sight(owner, target))
+		return FALSE
+	if(owner.issamexenohive(target))
+		return FALSE
+	return TRUE
+
 /datum/action/ability/activable/xeno/xeno_spit
 	name = "Xeno Spit"
 	action_icon_state = "shift_spit_neurotoxin"
@@ -1027,12 +1047,12 @@ GLOBAL_LIST_INIT(xeno_resin_costs, list(
 		return FALSE
 	if(get_dist(target, owner) > 6)
 		return FALSE
-	if(!can_use_ability(target, override_flags = ABILITY_IGNORE_SELECTED_ABILITY))
-		return FALSE
 	if(!line_of_sight(owner, target))
 		return FALSE
 	if(target.get_xeno_hivenumber() == owner.get_xeno_hivenumber())
 		return FALSE
+	xeno_owner.ammo = pick(xeno_owner.xeno_caste.spit_types)
+	xeno_owner.update_spits(TRUE)
 	return TRUE
 
 
@@ -1069,6 +1089,11 @@ GLOBAL_LIST_INIT(xeno_resin_costs, list(
 		to_chat(xeno_owner, span_notice("We have stopped hiding."))
 		button.cut_overlay(mutable_appearance('icons/Xeno/actions/general.dmi', "selected_purple_frame", ACTION_LAYER_ACTION_ICON_STATE, null, FLOAT_PLANE))
 
+/datum/action/ability/activable/xeno/xenohide/ai_should_start_consider()
+	return TRUE
+
+/datum/action/ability/activable/xeno/xenohide/ai_should_use(atom/target)
+	return (xeno_owner.layer != BELOW_TABLE_LAYER)
 
 //Neurotox Sting
 /datum/action/ability/activable/xeno/neurotox_sting
@@ -1129,6 +1154,13 @@ GLOBAL_LIST_INIT(xeno_resin_costs, list(
 /datum/action/ability/activable/xeno/neurotox_sting/proc/track_stats()
 	GLOB.round_statistics.sentinel_neurotoxin_stings++
 	SSblackbox.record_feedback("tally", "round_statistics", 1, "sentinel_neurotoxin_stings")
+
+/datum/action/ability/activable/xeno/neurotox_sting/ai_should_start_consider()
+	return TRUE
+
+/datum/action/ability/activable/xeno/neurotox_sting/ai_should_use(atom/target)
+	var/mob/living/carbon/human/human_target = target
+	return ishuman(target) && !(CHECK_BITFIELD(human_target.species.species_flags, NO_CHEM_METABOLIZATION))
 
 //Ozelomelyn Sting
 /datum/action/ability/activable/xeno/neurotox_sting/ozelomelyn
@@ -1250,6 +1282,18 @@ GLOBAL_LIST_INIT(xeno_resin_costs, list(
 	succeed_activate()
 	add_cooldown()
 	owner.record_traps_created()
+
+/datum/action/ability/xeno_action/lay_egg/ai_should_start_consider()
+	return TRUE
+
+/datum/action/ability/xeno_action/lay_egg/ai_should_use(target)
+	if(xeno_owner.plasma_stored != xeno_owner.xeno_caste.plasma_max)
+		return FALSE
+	if(xeno_owner.health != xeno_owner.maxHealth)
+		return FALSE
+	if(ismob(target))
+		return FALSE
+	return TRUE
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1462,6 +1506,12 @@ GLOBAL_LIST_INIT(xeno_resin_costs, list(
 	log_combat(victim, owner, "was drained.")
 	log_game("[key_name(victim)] was drained at [AREACOORD(victim.loc)].")
 
+/datum/action/ability/activable/xeno/psydrain/ai_should_start_consider()
+	return TRUE
+
+/datum/action/ability/activable/xeno/psydrain/ai_should_use(target)
+	var/mob/living/living_target = target
+	return istype(living_target) && living_target.stat
 
 /////////////////////////////////
 // Impregnate
@@ -1527,10 +1577,8 @@ GLOBAL_LIST_INIT(xeno_resin_costs, list(
 			to_chat(victim, span_warning("[X] fucks you!"))
 		if(X.client?.prefs?.xenogender > 2)
 			X.impregify(victim, HOLE_VAGINA, damagemult = 3)
-			log_combat(X, victim, "impregnated", addition="with their impregnate ability")
 		else
-			X.xenoimpregify()
-			log_combat(X, victim, "got impregnated by", addition="with their impregnate ability")
+			X.xenoimpregify(victim)
 		add_cooldown()
 		succeed_activate()
 	if(isxeno(A))
@@ -1549,9 +1597,9 @@ GLOBAL_LIST_INIT(xeno_resin_costs, list(
 			to_chat(victim, span_warning("[X] fucks you!"))
 			victim.emote("moan")
 		if(victim.gender == FEMALE)
-			victim.xenoimpregify()
+			victim.xenoimpregify(X)
 		if(X.gender == FEMALE)
-			X.xenoimpregify()
+			X.xenoimpregify(victim)
 		succeed_activate()
 /////////////////////////////////
 // Cocoon

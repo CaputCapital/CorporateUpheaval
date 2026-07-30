@@ -19,7 +19,10 @@
 /// Defines whether we are using ass overlay
 	var/cock = null
 	var/cock_size = 3
+	var/cock_storage = null
+	var/cock_state = COCK_STATE_FLACCID
 	var/cock_color = "#FFFFFF"
+	var/cock_color_secondary = "#d98fa3"
 	var/list/cock_emissive = list(FALSE, FALSE, FALSE)
 /// Defines whether we are using vagina overlay
 	var/vagina = null
@@ -36,6 +39,9 @@
 	var/testicles_color = "#FFFFFF"
 	var/testicles_color_secondary = "#d98fa3"
 	var/list/testicles_emissive = list(FALSE, FALSE, FALSE)
+/// Runtime genital display/access overrides from the mob interaction panel.
+	var/list/sexcon_genital_visibility
+	var/list/sexcon_genital_accessibility
 ///For xeno healing bone repair
 	var/xeno_heals = 0
 	// Xenomorph that is hauling us if we are hauled

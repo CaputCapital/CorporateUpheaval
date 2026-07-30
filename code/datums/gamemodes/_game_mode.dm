@@ -71,7 +71,6 @@ GLOBAL_VAR(common_report) //Contains common part of roundend report
 	var/waiting_for_candidates = FALSE
 	/// Ponderation rate of silos output. 1 is normal, 2 is twice
 	var/silo_scaling = 1
-
 	///If the gamemode has a whitelist of valid ship maps. Whitelist overrides the blacklist
 	var/list/whitelist_ship_maps
 	///If the gamemode has a blacklist of disallowed ship maps
@@ -79,7 +78,7 @@ GLOBAL_VAR(common_report) //Contains common part of roundend report
 	///If the gamemode has a whitelist of valid ground maps. Whitelist overrides the blacklist
 	var/list/whitelist_ground_maps
 	///If the gamemode has a blacklist of disallowed ground maps
-	var/list/blacklist_ground_maps = list(MAP_WHISKEY_OUTPOST, MAP_OSCAR_OUTPOST, MAP_FORT_PHOBOS, MAP_COLONY1, MAP_CORSAT, MAP_LV_624BASES)
+	var/list/blacklist_ground_maps = list(MAP_WHISKEY_OUTPOST, MAP_DELTA_STATION, MAP_OSCAR_OUTPOST, MAP_FORT_PHOBOS, MAP_COLONY1, MAP_CORSAT, MAP_LV_624BASES)
 	///If the gamemode has a whitelist of valid antag maps. Whitelist overrides the blacklist
 	var/list/whitelist_antag_maps
 	///If the gamemode has a blacklist of disallowed antag maps
@@ -466,10 +465,15 @@ GLOBAL_LIST_INIT(bioscan_locations, list(
 		parts += "The longest intel chain cashed in had length [GLOB.round_statistics.intel_max_chain]."
 	for(var/chain_length in GLOB.round_statistics.intel_chain_sold_by_list)
 		parts += "The first chain of length [chain_length] cashed in was cashed in by [GLOB.round_statistics.intel_chain_sold_by_list[chain_length]] for [GLOB.round_statistics.intel_chain_sold_for_list[chain_length]]."
+	for(var/sheet_name in GLOB.round_statistics.portable_stats_by_sheet_name)
+		parts += "Groundside generators produced [DisplayEnergy(GLOB.round_statistics.portable_stats_by_sheet_name[sheet_name]["power output"])] of electricty from [GLOB.round_statistics.portable_stats_by_sheet_name[sheet_name]["fuel used"]] sheets of [sheet_name] fuel."
+	parts += "Groundside Area Power Controllers were charged by a total of [DisplayEnergy(GLOB.round_statistics.apc_input_ground)] and outputted a total of [DisplayEnergy(GLOB.round_statistics.apc_output_ground)] of electricity."
+	parts += "Groundside SMESes were charged by a total of [DisplayEnergy(GLOB.round_statistics.smes_input_ground)] and outputted a total of [DisplayEnergy(GLOB.round_statistics.smes_output_ground)] of electricity."
+	parts += "Groundside geothermals produced [DisplayEnergy(GLOB.round_statistics.geothermal_output_ground)] of electricity."
 	if(GLOB.round_statistics.strategic_psypoints_from_generators)
-		parts += "[GLOB.round_statistics.strategic_psypoints_from_generators] strategic psy points were obtained from generators, at an average rate of [GLOB.round_statistics.strategic_psypoints_from_generators * ((1 HOURS) /(1 SECONDS)) / GLOB.round_statistics.generator_seconds] points per generator per hour."
+		parts += "[GLOB.round_statistics.strategic_psypoints_from_generators] strategic psy points were obtained from geothermals, at an average rate of [GLOB.round_statistics.strategic_psypoints_from_generators * ((1 HOURS) /(1 SECONDS)) / GLOB.round_statistics.generator_seconds] points per geothermal per hour."
 		var/avg_gen_time = GLOB.round_statistics.generator_seconds * 1 SECONDS / GLOB.generators_on_ground
-		parts += "The average generator was held by xenos for [DisplayTimeText(avg_gen_time)], or [100 * avg_gen_time / GLOB.round_statistics.round_length]% of the round."
+		parts += "The average geothermal was held by xenos for [DisplayTimeText(avg_gen_time)], or [100 * avg_gen_time / GLOB.round_statistics.groundside_time_total]% of the round."
 	if(GLOB.round_statistics.strategic_psypoints_from_hive_target_rewards)
 		parts += "[GLOB.round_statistics.strategic_psypoints_from_hive_target_rewards] strategic psy points were obtained from [GLOB.round_statistics.hive_target_rewards] hive target rewards, for an average of [GLOB.round_statistics.strategic_psypoints_from_hive_target_rewards/GLOB.round_statistics.hive_target_rewards] points per hive target reward claimed."
 	if(GLOB.round_statistics.total_embryos_rewarding)

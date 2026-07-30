@@ -13,6 +13,8 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	var/icon_state = "bullet"
 	///used in icons/obj/items/ammo for use in generating handful sprites
 	var/handful_icon_state = "bullet"
+	///used in icons/obj/items/ammo for use in generating handful sprites
+	var/handful_icon = 'icons/obj/items/ammo/handful.dmi'
 	///how much of this ammo you can carry in a handful
 	var/handful_amount = 8
 	///Bullet type on the Ammo HUD
@@ -216,7 +218,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 		//Damages the victims, inflicts brief stagger+slow, and ignites
 		victim.apply_damage(deflag_damage, BURN, blocked = FIRE, updating_health = TRUE, attacker = proj.firer)
 
-		staggerstun(victim, proj, 30, stagger = 0.5 SECONDS, slowdown = 0.5)
+		// staggerstun(victim, proj, 30, stagger = 0.5 SECONDS, slowdown = 0.5)
 		victim.adjust_fire_stacks(5)
 		victim.IgniteMob()
 

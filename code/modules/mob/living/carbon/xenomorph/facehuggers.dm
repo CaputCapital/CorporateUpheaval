@@ -335,7 +335,7 @@ GLOBAL_LIST_EMPTY(alive_hugger_list)
 		if(combat_hugger && M.buckled)
 			continue
 
-		if(M.key && (M.afk_status == MOB_RECENTLY_DISCONNECTED || M.afk_status == MOB_DISCONNECTED))
+		if((M.key && (M.afk_status == MOB_RECENTLY_DISCONNECTED || M.afk_status == MOB_DISCONNECTED)) || HAS_TRAIT(M, TRAIT_STASIS))
 			continue
 
 		if(!M.can_be_facehugged(src))
@@ -615,7 +615,7 @@ GLOBAL_LIST_EMPTY(alive_hugger_list)
 			if(istype(D))
 				if(D.anti_hug > 0 || HAS_TRAIT(D, TRAIT_NODROP))
 					blocked = D
-					D.anti_hug = max(0, --D.anti_hug)
+					//D.anti_hug = max(0, --D.anti_hug)
 					H.visible_message("<span class='danger'>[src] smashes against [H]'s [D.name], damaging it!")
 					return FALSE
 				else
@@ -661,6 +661,20 @@ GLOBAL_LIST_EMPTY(alive_hugger_list)
 				var/obj/item/clothing/mask/facehugger/hugger = W
 				if(hugger.stat != DEAD)
 					target_hole = pick(HOLE_VAGINA, HOLE_ASS) //we try the others
+
+		if(target_hole == HOLE_VAGINA || target_hole == HOLE_ASS) //check other holes if face full
+			if(target.wear_suit)
+				var/obj/item/clothing/suit/S = target.wear_suit
+				if(istype(S))
+					if(istype(S, /obj/item/clothing/mask/facehugger))
+						var/obj/item/clothing/mask/facehugger/hugger = S
+						if(hugger.stat != DEAD)
+							return FALSE //face full, bottom full
+
+					if(S.anti_hug > 0 || HAS_TRAIT(S, TRAIT_NODROP))
+						return FALSE //couldnt grab bottoms either
+
+	//there is atleast bottoms to hug.
 	if(target_hole != HOLE_MOUTH)
 		//try attach to undies first
 		var/obj/item/clothing/undie = target.w_underwear

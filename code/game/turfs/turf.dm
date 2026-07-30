@@ -59,12 +59,17 @@
 
 	///Icon-smoothing variable to map a diagonal wall corner with a fixed underlay.
 	var/list/fixed_underlay = null
+	var/time_created = null
+	var/creation_logdata = null
 
 /turf/Initialize(mapload)
 	SHOULD_CALL_PARENT(FALSE) // anti laggies
 	if(atom_flags & INITIALIZED)
 		stack_trace("Warning: [src]([type]) initialized multiple times!")
 	ENABLE_BITFIELD(atom_flags, INITIALIZED)
+	if(usr)
+		time_created = world.timeofday
+		creation_logdata = logdetails(usr)
 
 	/// We do NOT use the shortcut here, because this is faster
 	if(SSmapping.max_plane_offset)
@@ -176,6 +181,10 @@
 		if(i == mover || i == mover.loc) // Multi tile objects and moving out of other objects
 			continue
 		var/atom/movable/thing = i
+		if(ishitbox(thing))
+			var/obj/hitbox/the_hitbox = thing
+			if(the_hitbox.root == mover || the_hitbox.root == src) //dont collide with your own root or self if you are a hitbox.
+				continue
 		if(CHECK_MULTIPLE_BITFIELDS(thing.pass_flags, HOVERING))
 			continue
 		if(thing.status_flags & INCORPOREAL)

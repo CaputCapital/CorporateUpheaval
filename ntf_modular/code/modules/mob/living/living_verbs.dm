@@ -32,21 +32,3 @@
 	set category = "OOC"
 
 	mob.stop_sound_channel(CHANNEL_MIDI)
-
-/mob/living/verb/toggle_quicksex()
-	set name = "Toggle Quicksex"
-	set desc = "Prevents you from dragging yourself to people for quicksex actions."
-	set category = "Preferences"
-	set src = usr
-
-	if(QDELETED(usr))
-		return
-	if(!isliving(usr))
-		return
-	if(isliving(usr))
-		var/mob/living/sussy = usr
-		if(!sussy.client.prefs)
-			return
-		sussy.client.prefs.quick_sex_toggle = !sussy.client.prefs.quick_sex_toggle
-		balloon_alert(usr, "QK Sex [sussy.client.prefs.quick_sex_toggle ? "ON" : "OFF"]")
-		sussy.client.prefs.save_preferences()

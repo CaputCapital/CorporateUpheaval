@@ -6,7 +6,7 @@
 
 //Prisoner Survivor
 /datum/job/survivor/prisoner
-	title = "Prisoner Colonist"
+	title = "Fugitive Colonist"
 	skills_type = /datum/skills/civilian/survivor
 	outfit = /datum/outfit/job/survivor/prisoner
 
@@ -30,6 +30,8 @@
 	supervisors = "the acting captain, Ninetails."
 	skills_type = /datum/skills/synthetic
 	outfit = /datum/outfit/job/survivor/synth
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_MEDICAL, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS, ACCESS_MARINE_BRIG, ACCESS_ICC_SECURITY, ACCESS_ICC_CARGO)
+	minimal_access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_MEDICAL, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS, ACCESS_MARINE_BRIG, ACCESS_ICC_SECURITY, ACCESS_ICC_CARGO)
 	exp_requirements = XP_REQ_EXPERIENCED
 	exp_type = EXP_TYPE_REGULAR_ALL
 	job_flags = JOB_FLAG_SPECIALNAME|JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ADDTOMANIFEST|JOB_FLAG_ISCOMMAND|JOB_FLAG_BOLD_NAME_ON_SELECTION|JOB_FLAG_PROVIDES_SQUAD_HUD|JOB_FLAG_CAN_SEE_ORDERS|JOB_FLAG_ALWAYS_VISIBLE_ON_MINIMAP
@@ -80,8 +82,19 @@
 			new_human.wear_id.paygrade = "Mk.V"
 	new_human.wear_id.update_label()
 
-/datum/job/terragov/silicon/synthetic/get_spawn_message_information(mob/M)
+/datum/job/survivor/synth/get_spawn_message_information(mob/M)
 	. = ..()
 	. += separator_hr("[span_role_header("<b>[title] Information</b>")]")
 	. += "Your primary job is to support and assist all survivors, NTC departments and personnel. \
 		In addition, being a Synthetic gives you knowledge in every field and specialization possible on-board the ship."
+
+
+//for colony fall etc
+/datum/job/survivor/admin
+	title = "Local Colony Administrator"
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_MEDICAL, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS, ACCESS_MARINE_BRIG, ACCESS_ICC_SECURITY, ACCESS_ICC_CARGO)
+	minimal_access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_MEDICAL, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS, ACCESS_MARINE_BRIG, ACCESS_ICC_SECURITY, ACCESS_ICC_CARGO)
+	paygrade = "CM6"
+	comm_title = "ADMN"
+	total_positions = 1
+	outfit = /datum/outfit/job/survivor/administrator

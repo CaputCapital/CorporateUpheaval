@@ -200,10 +200,20 @@ Imports
 	contains = list(/obj/item/weapon/gun/rifle/lmg_d)
 	cost = 100
 
+/datum/supply_packs/imports/lmg_d/modern
+	name = "lMG-DM Tactical Light Machine Gun"
+	contains = list(/obj/item/weapon/gun/rifle/lmg_d/modern)
+	cost = 250
+
 /datum/supply_packs/imports/lmg_d/ammo
 	name = "lMG-D Light Machine Gun Drum Magazine"
 	contains = list(/obj/item/ammo_magazine/rifle/lmg_d)
 	cost = 10
+
+/datum/supply_packs/imports/lmg_d/ammo/belt
+	name = "lMG-D Light Machine Gun Belt Pack"
+	contains = list(/obj/item/ammo_magazine/rifle/lmg_d/belt)
+	cost = 50
 
 /datum/supply_packs/imports/dp27
 	name = "Degtyaryov 'RP' Machine Gun"
@@ -356,34 +366,34 @@ Imports
 	cost = 3
 
 /datum/supply_packs/imports/lassniper
-	name = "Terra Experimental laser sniper rifle"
+	name = "old world laser sniper rifle"
 	contains = list(/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_sniper)
-	cost = 25
+	cost = 300
 
 /datum/supply_packs/imports/lasrifle
-	name = "Terra Experimental laser rifle"
+	name = "old world laser rifle"
 	contains = list(/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_rifle)
-	cost = 20
+	cost = 300
 
 /datum/supply_packs/imports/lasmachinegun
-	name = "Terra Experimental laser machine gun"
+	name = "old world laser machine gun"
 	contains = list(/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_mlaser)
-	cost = 20
+	cost = 300
 
 /datum/supply_packs/imports/lascarbine
-	name = "Terra Experimental laser carbine"
+	name = "old world laser carbine"
 	contains = list(/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_carbine)
-	cost = 10
+	cost = 300
 
 /datum/supply_packs/imports/laspistol
-	name = "Terra Experimental laser pistol"
+	name = "old world laser pistol"
 	contains = list(/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_pistol)
-	cost = 5
+	cost = 100
 
 /datum/supply_packs/imports/lasguncell
-	name = "Terra Experimental standard battery"
+	name = "old world standard battery"
 	contains = list(/obj/item/cell/lasgun/lasrifle)
-	cost = 3
+	cost = 10
 
 /datum/supply_packs/imports/strawhat
 	name = "Straw hat"

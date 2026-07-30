@@ -16,6 +16,13 @@
 #define PLATINUM_CRATE_SELL_AMOUNT 80
 #define PHORON_DROPSHIP_BONUS_AMOUNT 20
 #define PLATINUM_DROPSHIP_BONUS_AMOUNT 80
+
+#define PHORON_CRATE_SELL_AMOUNT_WAR 175
+#define PLATINUM_CRATE_SELL_AMOUNT_WAR 325
+
+GLOBAL_VAR_INIT(phoron_crate_value, PHORON_CRATE_SELL_AMOUNT)
+GLOBAL_VAR_INIT(plat_crate_value, PLATINUM_CRATE_SELL_AMOUNT)
+
 ///Resource generator that produces a certain material that can be repaired by marines and attacked by xenos, Intended as an objective for marines to play towards to get more req gear
 /obj/machinery/miner
 	name = "\improper Ninetails phoron Mining Well"
@@ -231,6 +238,9 @@
 /obj/machinery/miner/wirecutter_act(mob/living/user, obj/item/I)
 	if(miner_status != MINER_MEDIUM_DAMAGE)
 		return
+	if(user.faction != FACTION_TERRAGOV && user.faction != FACTION_SOM && user.faction != FACTION_ICC)
+		to_chat(user, span_warning("Your faction's high command is not interested in minerals."))
+		return FALSE
 	if(user.skills.getRating(SKILL_ENGINEER) < SKILL_ENGINEER_ENGI)
 		user.visible_message(span_notice("[user] fumbles around figuring out [src]'s wiring."),
 		span_notice("You fumble around figuring out [src]'s wiring."))
@@ -253,6 +263,10 @@
 	return TRUE
 
 /obj/machinery/miner/proc/can_capture(mob/user)
+
+	if(!(SSticker.mode.round_type_flags2 & MODE_2_MINER_RUSH_PROT))
+		return TRUE
+
 	var/phoron_total = 0
 	var/phoron_faction = 0
 	var/platinum_total = 0
@@ -278,13 +292,17 @@
 
 /obj/machinery/miner/wrench_act(mob/living/user, obj/item/I)
 	var/area/cavezone = get_area(src)
+	var/timeleft = 30 MINUTES - (world.time - SSticker.round_start_time)
+	if((timeleft > 0) && (SSticker.mode.round_type_flags2 & MODE_2_MINER_RUSH_PROT))
+		to_chat(user, span_warning("It's too early for this.  You can do this in [DisplayTimeText(timeleft)]."))
+		return FALSE
 	if(user.faction == FACTION_CLF && ((cavezone && cavezone.ceiling > CEILING_UNDERGROUND) || is_platinum()))
 		to_chat(user, span_warning("Repairing this would go against your masters' wishes and wellbeing."))
 		return FALSE
-	if(!user.faction == FACTION_TERRAGOV && !user.faction == FACTION_SOM && !user.faction == FACTION_ICC)
+	if(user.faction != FACTION_TERRAGOV && user.faction != FACTION_SOM && user.faction != FACTION_ICC)
 		to_chat(user, span_warning("Your faction's high command is not interested in minerals."))
 		return FALSE
-	if ((SSticker.mode.round_type_flags2 & MODE_2_CHILL_RULES) && (user.faction != FACTION_CLF) && !can_capture(user))
+	if ((user.faction != FACTION_CLF) && !can_capture(user))
 		user.visible_message(span_warning("Under the current truce, your faction is forbidden from seizing additional miners of this type. Only when war is declared may this restriction be lifted."))
 		return FALSE
 	if(miner_status != MINER_SMALL_DAMAGE)
@@ -373,12 +391,18 @@
 		var/marker_icon = "miner_[mineral_value >= PLATINUM_CRATE_SELL_AMOUNT ? "platinum" : "phoron"]_off"
 		SSminimaps.add_marker(src, MINIMAP_FLAG_ALL, image('ntf_modular/icons/UI_icons/map_blips.dmi', null, marker_icon, MINIMAP_BLIPS_LAYER))
 		return
+	if(is_platinum()) //update values
+		mineral_value = GLOB.plat_crate_value
+	else
+		mineral_value = GLOB.phoron_crate_value
 	if(add_tick >= required_ticks)
 		set_miner_status() // shouldn't be necessary but should fix the markers breaking
 		if(miner_upgrade_type == MINER_AUTOMATED)
+			var/unblocked = FALSE
 			for(var/direction in GLOB.cardinals)
-				if(!isopenturf(get_step(loc, direction))) //Must be open on one side to operate
-					continue
+				if(isopenturf(get_step(loc, direction))) //Must be open on one side to operate
+					unblocked = TRUE
+			if(unblocked)
 				SSpoints.add_supply_points(faction, mineral_value)  //NTF edit. Forcibly caps req points.
 				SSpoints.add_dropship_points(faction, dropship_bonus)
 				GLOB.round_statistics.points_from_mining += mineral_value
@@ -387,12 +411,16 @@
 				say("Ore shipment has been sold for [mineral_value] points.")
 				add_tick = 0
 				return
-			playsound(loc,'sound/machines/buzz-two.ogg', 35, FALSE)
-			add_tick = 0
-			miner_integrity = 0.66 * max_miner_integrity
-			src.log_message("was disabled due to lack of empty space", LOG_ATTACK)
-			set_miner_status()
-			return
+			else
+				playsound(loc,'sound/machines/buzz-two.ogg', 35, FALSE)
+				add_tick = 0
+				miner_integrity = 0.66 * max_miner_integrity
+				src.log_message("was disabled due to lack of empty space", LOG_ATTACK)
+				set_miner_status()
+				for(var/direction in GLOB.cardinals)
+					var/turf/blocking_turf = get_step(loc, direction)
+					src.log_message("blocked by: [blocking_turf] created at [time2text(blocking_turf.time_created, "YYYY-MM-DD hh:mm:ss")] by [blocking_turf.creation_logdata]")
+				return
 		stored_mineral += 1
 		add_tick = 0
 		say("[stored_mineral] Ore shipment\s is ready to be exported.")

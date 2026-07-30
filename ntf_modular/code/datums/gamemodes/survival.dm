@@ -2,11 +2,12 @@
 	name = "Colony Fall"
 	config_tag = "Colony Fall"
 	round_type_flags = MODE_INFESTATION|MODE_DISALLOW_RAILGUN|MODE_PSY_POINTS|MODE_XENO_GRAB_DEAD_ALLOWED|MODE_MUTATIONS_OBTAINABLE
-	round_type_flags2 = MODE_2_NO_GHOSTS|MODE_2_SURVIVAL
+	round_type_flags2 = MODE_2_SURVIVAL
 	xeno_abilities_flags = ABILITY_ALL_GAMEMODE
 	factions = list(FACTION_ICC, FACTION_XENO, FACTION_CLF)
 	human_factions = list(FACTION_ICC, FACTION_CLF)
 	valid_job_types = list(
+		/datum/job/survivor/admin = 1,
 		/datum/job/survivor/assistant = 2,
 		/datum/job/survivor/scientist = 1,
 		/datum/job/survivor/doctor = 2,
@@ -25,15 +26,16 @@
 		/datum/job/survivor/stripper = 4,
 		/datum/job/survivor/maid = 4,
 		/datum/job/survivor/synth = 1,
-		/datum/job/clf/standard = 1,
-		/datum/job/clf/medic = 1,
-		/datum/job/clf/leader = 1,
+		/datum/job/survivor/bartender = 1,
+		/datum/job/survivor/chemist = 1,
+		/datum/job/survivor/roboticist = 1,
+		/datum/job/clf/traitor = 3,
 		/datum/job/xenomorph = 2,//two so they dont wipe by a mistake or maybe duo.
 	)
 	evo_requirements = list(
-		/datum/xeno_caste/queen = 8,
-		/datum/xeno_caste/king = 12,
-		/datum/xeno_caste/dragon = 12,
+		/datum/xeno_caste/queen = 10,
+		/datum/xeno_caste/king = 14,
+		/datum/xeno_caste/dragon = 14,
 		/datum/xeno_caste/gorger = 6,
 		/datum/xeno_caste/widow = 6,
 		/datum/xeno_caste/ravager = 6,
@@ -41,7 +43,7 @@
 		/datum/xeno_caste/boiler = 6,
 		/datum/xeno_caste/defiler = 6,
 		/datum/xeno_caste/crusher = 6,
-		/datum/xeno_caste/shrike = 6,
+		/datum/xeno_caste/shrike = 8,
 		/datum/xeno_caste/behemoth = 6,
 		/datum/xeno_caste/warlock = 6,
 		/datum/xeno_caste/chimera = 6,
@@ -95,7 +97,7 @@
 			color_override = "purple"
 		))
 		to_chat(M, span_information("You are a xenomorph, your primary goal is to breed as many hosts as possible while keeping yourself and the larvas in the hosts alive. You must still stick to roleplay standards. There is no time limit in this mode, take your time with erp or whatever rather than spamming impregnate on people. Game ends when all Xenos or Humans die. If you allow the talls to call for help, you will have trouble."))
-		//to_chat("all", span_boldwarning("Xenos can not see mobs through walls in this mode."))
+		to_chat("all", span_boldwarning("Xenos can not see mobs through walls in this mode."))
 
 
 /datum/game_mode/infestation/colony_fall/check_finished()
@@ -133,55 +135,44 @@
 		round_finished = MODE_INFESTATION_M_MAJOR
 		return TRUE
 
-
-/datum/game_mode/infestation/colony_fall/survival
-	name = "Colony Survival"
-	config_tag = "Colony Survival"
-	factions = list(FACTION_XENO, FACTION_ICC, FACTION_CLF)
-	human_factions = list(FACTION_ICC, FACTION_CLF)
+/datum/game_mode/infestation/colony_fall/prison_fall
+	name = "Prison Fall"
+	config_tag = "Prison Fall"
+	factions = list(FACTION_ICC, FACTION_XENO)
+	human_factions = list(FACTION_ICC)
 	valid_job_types = list(
-		/datum/job/survivor/assistant = 2,
-		/datum/job/survivor/scientist = 1,
-		/datum/job/survivor/doctor = 2,
+		/datum/job/survivor/admin = 1,
+		/datum/job/survivor/assistant = 1,
+		/datum/job/survivor/scientist = 2,
+		/datum/job/survivor/doctor = 3,
 		/datum/job/survivor/liaison = 1,
-		/datum/job/survivor/security = 4,
-		/datum/job/survivor/civilian = 6,
+		/datum/job/survivor/security = 12,
+		/datum/job/survivor/civilian = 3,
 		/datum/job/survivor/chef = 1,
 		/datum/job/survivor/botanist = 1,
-		/datum/job/survivor/atmos = 2,
+		/datum/job/survivor/atmos = 1,
 		/datum/job/survivor/chaplain = 1,
-		/datum/job/survivor/miner = 2,
-		/datum/job/survivor/salesman = 1,
-		/datum/job/survivor/marshal = 1,
-		/datum/job/survivor/non_deployed_operative = 2,
-		/datum/job/survivor/prisoner = 6,
-		/datum/job/survivor/stripper = 4,
-		/datum/job/survivor/maid = 4,
+		/datum/job/survivor/miner = 1,
+		/datum/job/survivor/prisoner = 24,
+		/datum/job/survivor/stripper = 1,
+		/datum/job/survivor/maid = 1,
 		/datum/job/survivor/synth = 1,
-		/datum/job/clf/standard = 2,
-		/datum/job/clf/medic = 1,
-		/datum/job/clf/specialist = 1,
-		/datum/job/clf/leader = 1,
-		/datum/job/xenomorph = 5,//five since there will be CM
-		/datum/job/icc_squad/standard = 2,
-		/datum/job/icc_squad/medic = 1,
-		/datum/job/icc_squad/tech = 1,
-		/datum/job/icc_squad/spec = 1,
-		/datum/job/icc_squad/leader = 1,
-		/datum/job/icc/commander = 1,
-		/datum/job/icc/fieldcommander = 1,
-		/datum/job/icc/administrator = 4,
+		/datum/job/survivor/bartender = 1,
+		/datum/job/survivor/chemist = 1,
+		/datum/job/survivor/roboticist = 1,
+		/datum/job/xenomorph = 4,
 	)
-	whitelist_ground_maps = null
-	whitelist_antag_maps = null
-	blacklist_ground_maps = list(MAP_WHISKEY_OUTPOST, MAP_OSCAR_OUTPOST, MAP_FORT_PHOBOS, MAP_COLONY1, MAP_CORSAT, MAP_LV_624BASES)
+	whitelist_ground_maps = list(MAP_PRISON_STATION)
+	blacklist_ground_maps = null
+	whitelist_ship_maps = list(MAP_EAGLE)
+	whitelist_antag_maps = list(MAP_ANTAGMAP_NOSPAWN)
 
-/datum/game_mode/infestation/colony_fall/survival/announce()
+/datum/game_mode/infestation/colony_fall/announce()
 	to_chat("all", span_round_header("The current map is - [SSmapping.configs[GROUND_MAP].map_name]!"))
-	to_chat("all", span_information("The brave colonists from earth have settled down and heard terrible things have happened to some other colonies across the world but it is hard to believe the rumors... Surely nothing will go out of the ordinary this shift. // Stick to roleplay requirements, nobody but security must be visibly armed in green alert."))
+	to_chat("all", span_information("A prison labor station formed recently in XF-69's orbit, good prisoners will be put to work while rest are to be held confined, only let out for daily scheduled activities. (prisoners are expected to get in their cells at roundstart)"))
 	priority_announce(
 		message = "It's the beginning of another shift in [SSmapping.configs[GROUND_MAP].map_name]. Make Phantom City proud!",
-		title = "Good morning, colonists.",
+		title = "Good morning, crew.",
 		type = ANNOUNCEMENT_PRIORITY,
 		color_override = "blue"
 	)
@@ -191,8 +182,8 @@
 		SEND_SOUND(M, S)
 		to_chat(M, assemble_alert(
 			title = "Queen Mother Calls.",
-			message = "Rise my children, it is time to assault this still unbuilt tall-host hive before they can call for help. You are alone, so take care and infect hosts to grow your hive. Do not let the talls find you out too soon, or you will have trouble.",
+			message = "Rise my children, you came to this tall hive in one of their birds, stashed away... It is time to claim it for ourselves.",
 			color_override = "purple"
 		))
 		to_chat(M, span_information("You are a xenomorph, your primary goal is to breed as many hosts as possible while keeping yourself and the larvas in the hosts alive. You must still stick to roleplay standards. There is no time limit in this mode, take your time with erp or whatever rather than spamming impregnate on people. Game ends when all Xenos or Humans die. If you allow the talls to call for help, you will have trouble."))
-		//to_chat("all", span_boldwarning("Xenos can not see mobs through walls in this mode."))
+		to_chat("all", span_boldwarning("Xenos can not see mobs through walls in this mode."))

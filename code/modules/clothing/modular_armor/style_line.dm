@@ -6,7 +6,6 @@
 	desc = "They got that drip, doe."
 	item_map_variant_flags = NONE
 	allowed_uniform_type = /obj/item/clothing/under
-	slowdown = - 0.3
 	icon = 'icons/obj/clothing/suits/marine_suits.dmi'
 	worn_icon_list = list(
 		slot_wear_suit_str = 'icons/mob/clothing/suits/marine_suits.dmi',
@@ -220,7 +219,7 @@
 	desc = "A stylish skimask, can be recolored. Makes you feel like an operator just looking at it."
 	icon_state = "ski_inhand"
 	worn_icon_state = "ski"
-	inv_hide_flags = HIDEALLHAIR|HIDEEARS
+	inv_hide_flags = HIDEALLHAIR|HIDEEARS|HIDEFACE
 	item_map_variant_flags = ITEM_JUNGLE_VARIANT|ITEM_ICE_VARIANT|ITEM_DESERT_VARIANT
 	greyscale_config = /datum/greyscale_config/style_hat
 
@@ -230,6 +229,7 @@
 	desc = "The CFCC is a prime and readied, yet stylish facemask ready to... cover your face."
 	icon_state = "coof_inhand"
 	worn_icon_state = "coof"
+	inv_hide_flags = HIDEFACE
 	item_map_variant_flags = ITEM_JUNGLE_VARIANT|ITEM_ICE_VARIANT|ITEM_DESERT_VARIANT
 	greyscale_config = /datum/greyscale_config/style_hat
 
