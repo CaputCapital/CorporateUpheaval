@@ -77,11 +77,11 @@ GLOBAL_LIST_EMPTY(alive_hugger_list)
 	var/target_hole = HOLE_MOUTH
 	var/face_tint = TINT_BLIND
 	var/can_self_remove = TRUE
+	var/filtercolor
 
-/obj/item/clothing/mask/facehugger/Initialize(mapload)
-	. = ..()
-	if(face_tint)
-		AddComponent(/datum/component/clothing_tint, face_tint, TRUE, SLOT_WEAR_MASK)
+/obj/item/clothing/mask/facehugger/proc/set_filtercolor(color)
+	filtercolor = color
+	add_filter("base_color", -10, color_matrix_filter(filtercolor))
 
 /obj/item/clothing/mask/facehugger/Initialize(mapload, input_hivenumber, input_source, new_fire_immunity)
 	. = ..()
@@ -110,6 +110,9 @@ GLOBAL_LIST_EMPTY(alive_hugger_list)
 		COMSIG_ATOM_EXITED = PROC_REF(on_exited),
 	)
 	AddElement(/datum/element/connect_loc, connections)
+	if(face_tint)
+		AddComponent(/datum/component/clothing_tint, face_tint, TRUE, SLOT_WEAR_MASK)
+	set_filtercolor(filtercolor)
 
 /obj/item/clothing/mask/facehugger/Moved(atom/old_loc, movement_dir, forced, list/old_locs)
 	. = ..()
@@ -126,7 +129,7 @@ GLOBAL_LIST_EMPTY(alive_hugger_list)
 	worn_item_state_slots = list(slot_wear_mask_str = "facehugger_face_slow", slot_underwear_str = "facehugger_crotch_slow", slot_shirt_str = "facehugger_back_slow")
 	//
 	var/flags = S?.client.prefs.sex_pref_flags
-	if(!(flags & SEXPREF_FACEHUGGER_LEWD)) //non thrusting versions, for hugger itself with prefs disabled
+	if(S?.client && !(flags & SEXPREF_FACEHUGGER_LEWD)) //non thrusting versions, for hugger itself with prefs disabled
 		worn_item_state_slots = list(slot_wear_mask_str = "facehugger_face_stop", slot_underwear_str = "facehugger_crotch_stop", slot_shirt_str = "facehugger_back_stop")
 	RegisterSignal(S, COMSIG_QDELETING, PROC_REF(clear_hugger_source))
 
@@ -722,11 +725,17 @@ GLOBAL_LIST_EMPTY(alive_hugger_list)
 			var/hugsound = user.gender == FEMALE ? SFX_FEMALE_HUGGED : SFX_MALE_HUGGED
 			playsound(loc, hugsound, 25, 0)
 	var/flags = user?.client.prefs.sex_pref_flags
-	if(!(flags & SEXPREF_FACEHUGGER_LEWD)) //non thrusting versions
+	if(user.client && !(flags & SEXPREF_FACEHUGGER_LEWD)) //non thrusting versions
 		worn_item_state_slots = list(slot_wear_mask_str = "facehugger_face_stop", slot_underwear_str = "facehugger_crotch_stop", slot_shirt_str = "facehugger_back_stop")
 	if(!issamexenohive(user))
-		user.ParalyzeNoChain(10 SECONDS)
-		user.apply_damage(100, STAMINA)
+		if(!user.has_status_effect(/datum/status_effect/facehugger_resistance))
+			user.ParalyzeNoChain(10 SECONDS)
+			user.apply_damage(50, STAMINA)
+			user.apply_status_effect(/datum/status_effect/facehugger_resistance)
+		else
+			user.apply_damage(25, STAMINA)
+		if(!issamexenohive(user) && target_hole == HOLE_MOUTH)
+			user.AdjustMute(10 SECONDS)
 
 	attached = TRUE
 	go_idle(FALSE, TRUE)
@@ -879,11 +888,6 @@ GLOBAL_LIST_EMPTY(alive_hugger_list)
 	sterile = TRUE
 	combat_hugger = TRUE
 	equip_slot_flags = NONE
-	var/filtercolor
-
-/obj/item/clothing/mask/facehugger/combat/Initialize(mapload, ...)
-	. = ..()
-	add_filter("base_color", -10, color_matrix_filter(filtercolor))
 
 /obj/item/clothing/mask/facehugger/combat/chem_injector
 	desc = "This strange creature has a single prominent sharp proboscis."
