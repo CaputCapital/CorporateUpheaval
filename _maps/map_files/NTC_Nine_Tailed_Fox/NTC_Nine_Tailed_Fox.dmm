@@ -1,9 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aai" = (
-/obj/machinery/conveyor{
-	id = "shipfloor2_garbage"
-	},
 /obj/machinery/door/window,
+/obj/machinery/conveyor/auto,
 /turf/open/floor/plating/plating_catwalk,
 /area/mainship/hull/upper_hull)
 "aal" = (
@@ -3921,7 +3919,6 @@
 	},
 /area/mainship/squads/general)
 "djm" = (
-/obj/item/ammo_casing/bullet,
 /turf/open/floor/mainship/cargo/arrow{
 	dir = 1
 	},
@@ -7882,9 +7879,8 @@
 	},
 /area/mainship/medical/lower_medical)
 "gvU" = (
-/obj/structure/table/reinforced,
 /obj/machinery/camera/autoname/mainship{
-	dir = 8
+	dir = 4
 	},
 /turf/open/floor/mainship/black/full,
 /area/mainship/shipboard/firing_range)
@@ -11462,6 +11458,9 @@
 "jmu" = (
 /obj/structure/table/mainship/nometal,
 /obj/machinery/computer/supplydrop_console,
+/obj/machinery/door_control/old/req{
+	pixel_x = 14
+	},
 /turf/open/floor/mainship/green{
 	dir = 1
 	},
@@ -12035,14 +12034,6 @@
 /area/mainship/hallways/aft_hallway{
 	name = "Ship Floor 3 Hallways"
 	})
-"jLh" = (
-/obj/item/ammo_casing/bullet{
-	pixel_y = -8
-	},
-/turf/open/floor/mainship/cargo/arrow{
-	dir = 1
-	},
-/area/mainship/shipboard/firing_range)
 "jLv" = (
 /turf/closed/wall/mainship,
 /area/mainship/hallways/workerprep)
@@ -13252,7 +13243,6 @@
 /turf/open/floor/mainship/floor,
 /area/mainship/groundhq/ntf/shipboard/brig)
 "kHI" = (
-/obj/structure/target_stake/occupied,
 /turf/open/floor/mainship/black{
 	dir = 5
 	},
@@ -13553,7 +13543,7 @@
 /turf/open/floor/mainship/mono,
 /area/mainship/hallways/dorm2)
 "kQD" = (
-/obj/structure/target_stake/occupied/alien,
+/obj/structure/target_stake/occupied/syndicate,
 /turf/open/floor/mainship/black{
 	dir = 1
 	},
@@ -25224,15 +25214,6 @@
 /obj/machinery/door/airlock/mainship/generic/pilot/bunk,
 /turf/open/floor/mainship/floor,
 /area/mainship/living/pilotbunks)
-"uhP" = (
-/obj/item/ammo_casing/bullet{
-	pixel_x = -7;
-	pixel_y = 4
-	},
-/turf/open/floor/mainship/cargo/arrow{
-	dir = 1
-	},
-/area/mainship/shipboard/firing_range)
 "uhY" = (
 /turf/open/floor/mainship/orange{
 	dir = 4
@@ -26228,7 +26209,7 @@
 	},
 /area/mainship/groundhq/ntf/hallways/gardens)
 "uYU" = (
-/obj/structure/target_stake/occupied/syndicate,
+/obj/structure/target_stake/occupied/alien,
 /turf/open/floor/mainship,
 /area/mainship/shipboard/firing_range)
 "uZn" = (
@@ -27359,7 +27340,7 @@
 "weq" = (
 /obj/structure/target_stake/occupied,
 /turf/open/floor/mainship/black{
-	dir = 8
+	dir = 4
 	},
 /area/mainship/shipboard/firing_range)
 "weL" = (
@@ -50568,7 +50549,7 @@ qgZ
 aMa
 vve
 nVN
-weq
+hPr
 hPr
 hPr
 icA
@@ -50578,7 +50559,7 @@ hPr
 hPr
 jAV
 pJE
-sbX
+gvU
 sbX
 vDv
 flh
@@ -50697,7 +50678,7 @@ dDT
 dDT
 sNA
 wWW
-uhP
+djm
 sbX
 vtb
 flh
@@ -50807,16 +50788,16 @@ aMa
 vve
 qtL
 dDT
+dDT
+dDT
+dDT
+dDT
 uYU
-dDT
-dDT
-dDT
-dDT
 dDT
 dDT
 sNA
 wWW
-jLh
+djm
 sbX
 wWW
 flh
@@ -50927,14 +50908,14 @@ vve
 kHI
 bNX
 bNX
-bNX
+weq
 bNX
 bNX
 bNX
 bNX
 bNX
 bEM
-gvU
+wWW
 djm
 vre
 fTX
