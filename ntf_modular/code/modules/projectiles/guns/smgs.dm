@@ -168,10 +168,10 @@
 
 /obj/item/weapon/gun/smg/vortex/update_icon_state()
 	. = ..()
-	if((!length(chamber_items) && max_chamber_items) || (!rounds && !max_chamber_items))
-		icon_state = base_gun_icon + "[extended ? "_dep" : ""]" + "_e"
+	if(extended)
+		icon_state = "[base_gun_icon]_dep"
 	else
-		icon_state = base_gun_icon + "[extended ? "_dep" : ""]"
+		icon_state = base_gun_icon
 
 /obj/item/weapon/gun/smg/vortex/update_item_state()
 	var/current_state = worn_icon_state

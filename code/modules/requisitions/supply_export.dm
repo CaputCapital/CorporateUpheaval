@@ -72,17 +72,17 @@
 		modifier = 2
 	switch(tier)
 		if(XENO_TIER_MINION)
-			. = list(10 * modifier, 1 * modifier)
+			. = list(60 * modifier, 30 * modifier)
 		if(XENO_TIER_ZERO)
-			. = list(35 * modifier, 4 * modifier)
+			. = list(200 * modifier, 100 * modifier)
 		if(XENO_TIER_ONE)
-			. = list(75 * modifier, 8 * modifier)
+			. = list(300 * modifier, 150 * modifier)
 		if(XENO_TIER_TWO)
-			. = list(175 * modifier, 18 * modifier)
+			. = list(600 * modifier, 300 * modifier)
 		if(XENO_TIER_THREE)
-			. = list(300 * modifier, 30 * modifier)
+			. = list(1000 * modifier, 500 * modifier)
 		if(XENO_TIER_FOUR)
-			. = list(550 * modifier, 55 * modifier)
+			. = list(2000 * modifier, 1000 * modifier)
 	return
 
 //I hate it but it's how it was so I'm not touching it further than this
@@ -90,7 +90,7 @@
 	var/modifier = 1
 	if(stat != DEAD)
 		modifier = 2
-	. = list(300 * modifier, 30 * modifier)
+	. = list(1200 * modifier, 600 * modifier)
 
 	return
 

@@ -127,7 +127,7 @@ MEDICAL
 		/obj/item/reagent_containers/hypospray/autoinjector/russian_red,
 	)
 	containertype = /obj/structure/closet/crate/secure/surgery
-	cost = 50
+	cost = 350
 
 /datum/supply_packs/medical/earmuffs
 	name = "Earmuffs"
@@ -196,6 +196,6 @@ MEDICAL
 		/obj/item/reagent_containers/blood/OPlus,
 		/obj/item/reagent_containers/blood/OMinus,
 	)
-	cost = 1200
+	cost = 2600
 	containertype = /obj/structure/closet/crate/secure/surgery
 	access = ACCESS_MARINE_MEDBAY

@@ -33,7 +33,7 @@
 
 /datum/skills/slut
 	name = SQUAD_SLUT
-	sex = SKILL_SEX_EXPERT
+	sex = SKILL_SEX_TRAINED
 
 /datum/skills/slut/clf
 	name = "Cult Offering"

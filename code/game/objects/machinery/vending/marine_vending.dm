@@ -81,8 +81,6 @@
 			/obj/item/ammo_magazine/rifle/bolt = -1,
 			/obj/item/weapon/gun/shotgun/double/martini = -1,
 			/obj/item/ammo_magazine/rifle/martini = -1,
-			/obj/item/weapon/gun/rifle/plasma_dmr = 1,
-			/obj/item/ammo_magazine/rifle/plasma_dmr = -1,
 		),
 		"Shotgun" = list(
 			/obj/item/weapon/gun/shotgun/pump/t35 = -1,
@@ -177,7 +175,6 @@
 			/obj/item/explosive/grenade/sticky = 125,
 			/obj/item/explosive/grenade/sticky/trailblazer = 75,
 			/obj/item/explosive/grenade/incendiary = 50,
-			/obj/item/explosive/grenade/ionplasma = 25,
 			/obj/item/explosive/grenade/smokebomb = 25,
 			/obj/item/explosive/grenade/smokebomb/cloak = 25,
 			/obj/item/explosive/grenade/smokebomb/antigas = 10,
@@ -1171,7 +1168,7 @@
 
 /obj/machinery/vending/MarineMed
 	name = "\improper MarineMed"
-	desc = "Marine Medical drug dispenser - Provided by Novamed Pharmaceuticals Division(TM)."
+	desc = "Marine Medical drug dispenser - Provided by Ninetails Pharmaceuticals Division(TM)."
 	icon_state = "marinemed"
 	icon_vend = "marinemed-vend"
 	icon_deny = "marinemed-deny"
@@ -2594,7 +2591,6 @@
 		/obj/item/stack/cable_coil = -1,
 		/obj/item/tool/crowbar = -1,
 		/obj/item/tool/weldingtool = -1,
-		/obj/item/tool/surgery/solderingtool = 3,
 		/obj/item/tool/wirecutters = -1,
 		/obj/item/tool/wrench = -1,
 		/obj/item/tool/screwdriver = -1,

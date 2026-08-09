@@ -107,9 +107,3 @@
 	contains = list(/obj/item/circuitboard/machine/telecomms/relay/tower/faction/kz)
 	cost = 50
 	faction_lock = list(FACTION_VSD)
-
-/datum/supply_packs/engineering/floodlight
-	name = "floodlight crate (x4)"
-	notes = "Four large floodlights, used to illuminate large areas."
-	contains = list(/obj/structure/largecrate/supply/floodlights)
-	cost = 100

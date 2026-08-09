@@ -61,7 +61,6 @@
 	id = "minidropship_podlock"
 	},
 /obj/structure/barricade/folding,
-/obj/effect/landmark/autowire,
 /turf/open/floor/mainship/mono,
 /area/shuttle/minidropship)
 "j" = (
@@ -161,7 +160,6 @@
 /obj/structure/barricade/folding{
 	dir = 4
 	},
-/obj/effect/landmark/autowire,
 /turf/open/floor/plating/plating_catwalk,
 /area/shuttle/minidropship)
 "z" = (
@@ -227,7 +225,6 @@
 	id = "minidropship_podlock"
 	},
 /obj/structure/barricade/folding,
-/obj/effect/landmark/autowire,
 /turf/open/floor/plating/plating_catwalk,
 /area/shuttle/minidropship)
 "J" = (
@@ -287,7 +284,6 @@
 /obj/structure/barricade/folding{
 	dir = 8
 	},
-/obj/effect/landmark/autowire,
 /turf/open/floor/plating/plating_catwalk,
 /area/shuttle/minidropship)
 "U" = (

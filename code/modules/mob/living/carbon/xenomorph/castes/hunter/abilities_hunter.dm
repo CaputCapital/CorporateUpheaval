@@ -441,8 +441,7 @@
 		if(!human_target.check_shields(COMBAT_TOUCH_ATTACK, 30, "melee", shield_flags = SHIELD_FLAG_XENOMORPH))
 			xeno_owner.Paralyze(XENO_POUNCE_SHIELD_STUN_DURATION)
 			xeno_owner.set_throwing(FALSE)
-			playsound(get_turf(xeno_owner), 'ntf_modular/sound/machines/bonk.ogg', 50, FALSE)
-			xeno_owner.visible_message(span_xenowarning("[xeno_owner] is knocked back!"), span_xenowarning("We are knocked back!"))
+			playsound(xeno_owner, 'ntf_modular/sound/machines/bonk.ogg', 50, FALSE)
 			return
 	trigger_pounce_effect(living_target)
 	pounce_complete()

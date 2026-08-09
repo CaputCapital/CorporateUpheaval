@@ -107,8 +107,6 @@
 /obj/machinery/door/poddoor/shutters/transit/nonsmoothing{
 	dir = 1
 	},
-/obj/structure/barricade/solid/plasteel,
-/obj/effect/landmark/autowire,
 /turf/open/floor/mainship/white{
 	dir = 1
 	},
@@ -223,20 +221,6 @@
 	},
 /turf/template_noop,
 /area/shuttle/minidropship)
-"T" = (
-/obj/machinery/door/poddoor/mainship/open{
-	dir = 2;
-	id = "minidropship_podlock"
-	},
-/obj/machinery/door/poddoor/shutters/transit/nonsmoothing{
-	dir = 1
-	},
-/obj/structure/barricade/folding,
-/obj/effect/landmark/autowire,
-/turf/open/floor/mainship/white{
-	dir = 1
-	},
-/area/shuttle/minidropship)
 "V" = (
 /obj/structure/dropship_piece/tadpole/engine{
 	dir = 1;
@@ -339,7 +323,7 @@ d
 m
 m
 q
-T
+y
 "}
 (6,1,1) = {"
 J

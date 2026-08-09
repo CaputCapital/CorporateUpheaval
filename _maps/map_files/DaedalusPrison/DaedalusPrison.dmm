@@ -14477,11 +14477,6 @@
 	},
 /turf/open/floor/plating/ground/snow/layer0,
 /area/daedalusprison/outside/south)
-"lLe" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/patrol_point/xeno/xeno_11,
-/turf/open/floor/wood,
-/area/daedalusprison/inside/bar)
 "lLi" = (
 /obj/structure/curtain/shower,
 /obj/effect/landmark/weed_node,
@@ -24424,10 +24419,6 @@
 	dir = 4
 	},
 /area/daedalusprison/inside/centralhalls)
-"tFz" = (
-/obj/effect/landmark/patrol_point/xeno/xeno_21,
-/turf/open/floor/plating/ground/ice,
-/area/daedalusprison/caves/north)
 "tFA" = (
 /obj/machinery/light{
 	dir = 8
@@ -56383,7 +56374,7 @@ lyE
 gLb
 gLb
 kzh
-lLe
+qFg
 qFg
 lyE
 lyE
@@ -56626,7 +56617,7 @@ fvb
 eXq
 lKh
 inc
-tFz
+fvb
 fvb
 inc
 liI
