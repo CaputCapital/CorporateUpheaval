@@ -9,10 +9,20 @@ GLOBAL_LIST_EMPTY(spawn_eusmilitia)
 	name = "Random separatist spawner"
 
 /obj/effect/landmark/spawn_marker/euseparatists/random/Initialize(mapload)
+	occupation = pick(GLOB.g16separatism_npc_jobs)
 	. = ..()
 
 /obj/effect/landmark/spawn_marker/euseparatists/proc/trigger_now()
+	occupation = SSjob.GetJobType(occupation) //get true job type ig
 	var/mob/living/carbon/human/new_human = new(loc)
+	new_human.apply_assigned_role_to_spawn(occupation, new_human.client, admin_action = TRUE)
+	switch(occupation.npc_type)
+		if("militant")
+			new_human.AddComponent(/datum/component/ai_controller, /datum/ai_behavior/human/g16separatism) //not monkey business
+		if("medic")
+			new_human.AddComponent(/datum/component/ai_controller, /datum/ai_behavior/human/g16separatism/medic)
+		if("sapper")
+			new_human.AddComponent(/datum/component/ai_controller, /datum/ai_behavior/human/g16separatism/sapper)
 	ADD_TRAIT(new_human, TRAIT_PSY_DRAINED, "union") //cant be used for larva or psydrain.
 	ADD_TRAIT(new_human, TRAIT_MAPSPAWNED, "union")
 	qdel(src)
@@ -22,13 +32,16 @@ GLOBAL_LIST_EMPTY(spawn_eusmilitia)
 	GLOB.spawn_eusmilitia += src
 
 /obj/effect/landmark/spawn_marker/euseparatists/militant
-	name = "EUS infantryman spawner"
+	name = "EUS militant spawner"
+	occupation = /datum/job/g16separatism/union/militant
 
 /obj/effect/landmark/spawn_marker/euseparatists/medic
-	name = "EUS sapper spawner"
+	name = "EUS medic spawner"
+	occupation = /datum/job/g16separatism/union/medic
 
 /obj/effect/landmark/spawn_marker/euseparatists/sapper
 	name = "EUS sapper spawner"
+	occupation = /datum/job/g16separatism/union/sapper
 
 /datum/job/g16separatism // not a job meant for players, but rather hostile AI who roam and guard the area
 	title = "Generic EUS Supporter"
