@@ -71,7 +71,7 @@ PROTECT_LEGACY_RANKS
 RULESURL FROM_FILE
 DISCORDURL https://discord.gg/VWB6cc73S
 #DONATIONURL
-GITHUBURL https://github.com/ARF-SS13/NTFvsAlienButBetter
+GITHUBURL https://github.com/LocalizedDownpour/NTFvsAlienButBetter
 BANAPPEALS https://discord.gg/VWB6cc73S
 
 ## Uncomment to enable global ban DB using the provided URL. The API should expect to receive a ckey at the end of the URL.
