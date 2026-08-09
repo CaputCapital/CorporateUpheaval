@@ -39,15 +39,14 @@
 			/obj/item/ammo_magazine/rifle/nt_halter/foxfire = 5,
 		),
 		"Energy Weapons" = list(
-			/obj/item/weapon/gun/energy/lasgun/lasrifle = 5,
-			/obj/item/cell/lasgun/lasrifle = -1,
-			/obj/item/cell/lasgun/volkite/powerpack/marine = 10,
-			/obj/item/cell/lasgun/volkite/powerpack/marine/backpack = 5,
-			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_rifle = 5,
-			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_sniper = 3,
-			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_carbine = 6,
-			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_mlaser = 5,
+			/obj/item/cell/lasgun/volkite/powerpack/marine = -1,
+			/obj/item/cell/lasgun/volkite/powerpack/marine/backpack = -1,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_rifle = -1,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_sniper = -1,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_carbine = -1,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_mlaser = -1,
 			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_pistol = -1,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/tesla = 2,
 			/obj/item/weapon/gun/energy/lasgun/lasrifle/tesla = 2,
 		),
 		"SMGs" = list(
@@ -361,13 +360,12 @@
 			/obj/item/ammo_magazine/rifle/nt_halter/foxfire = 5,
 		),
 		"Energy Weapons" = list(
-			/obj/item/weapon/gun/energy/lasgun/lasrifle = 5,
-			/obj/item/cell/lasgun/volkite/powerpack/marine = 10,
-			/obj/item/cell/lasgun/volkite/powerpack/marine/backpack = 5,
-			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_rifle = 5,
-			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_sniper = 3,
-			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_carbine = 6,
-			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_mlaser = 5,
+			/obj/item/cell/lasgun/volkite/powerpack/marine = -1,
+			/obj/item/cell/lasgun/volkite/powerpack/marine/backpack = -1,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_rifle = -1,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_sniper = -1,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_carbine = -1,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_mlaser = -1,
 			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_pistol = -1,
 			/obj/item/weapon/gun/energy/lasgun/lasrifle/tesla = 2,
 		),
@@ -1085,7 +1083,7 @@
 	)
 
 /obj/machinery/vending/lasgun
-	name = "\improper old world cell field charger"
+	name = "\improper Terra-Experimental cell field charger"
 	desc = "An automated power cell dispenser and charger. Used to recharge energy weapon power cells, including in the field. Has an internal battery that charges off the power grid when wrenched down."
 	icon_state = "lascharger"
 	icon_vend = "lascharger-vend"

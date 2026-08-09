@@ -618,7 +618,7 @@ WEAPONS
 	available_against_xeno_only = TRUE
 
 /datum/supply_packs/weapons/rechargemag
-	name = "old world recharger battery"
+	name = "Terra-Experimental recharger battery"
 	contains = list(/obj/item/cell/lasgun/lasrifle/recharger)
 	cost = 60
 
