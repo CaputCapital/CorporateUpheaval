@@ -5,13 +5,15 @@
 /datum/sex_action/masturbate_vagina/shows_on_menu(mob/living/carbon/user, mob/living/carbon/target)
 	if(user != target)
 		return FALSE
-
+	if(!user.sexcon.can_use_vagina())
+		return FALSE
 	return TRUE
 
 /datum/sex_action/masturbate_vagina/can_perform(mob/living/carbon/user, mob/living/carbon/target)
 	if(user != target)
 		return FALSE
-
+	if(!user.sexcon.can_use_vagina())
+		return FALSE
 	return TRUE
 
 /datum/sex_action/masturbate_vagina/on_start(mob/living/carbon/user, mob/living/carbon/target)

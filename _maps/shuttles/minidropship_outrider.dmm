@@ -23,10 +23,6 @@
 	dir = 8;
 	name = "inner door-control"
 	},
-/obj/structure/barricade/folding{
-	dir = 1
-	},
-/obj/effect/landmark/autowire,
 /turf/open/floor/plating/plating_catwalk,
 /area/shuttle/minidropship)
 "f" = (
@@ -107,10 +103,6 @@
 /obj/machinery/door/poddoor/mainship/open{
 	id = "minidropship_podlock"
 	},
-/obj/structure/barricade/folding{
-	dir = 8
-	},
-/obj/effect/landmark/autowire,
 /turf/open/floor/plating/plating_catwalk,
 /area/shuttle/minidropship)
 "v" = (
@@ -229,10 +221,6 @@
 	id = "minidropship_podlock"
 	},
 /obj/machinery/door/poddoor/shutters/transit/nonsmoothing,
-/obj/effect/landmark/autowire,
-/obj/structure/barricade/solid/plasteel{
-	dir = 8
-	},
 /turf/open/floor/plating/plating_catwalk,
 /area/shuttle/minidropship)
 "R" = (
@@ -247,17 +235,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/shuttle/minidropship)
-"T" = (
-/obj/machinery/door/poddoor/shutters/transit/nonsmoothing,
-/obj/machinery/door/poddoor/mainship/open{
-	id = "minidropship_podlock"
-	},
-/obj/effect/landmark/autowire,
-/obj/structure/barricade/solid/plasteel{
-	dir = 8
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/shuttle/minidropship)
 "U" = (
 /obj/machinery/door/poddoor/shutters/transit/nonsmoothing{
 	dir = 2
@@ -266,10 +243,6 @@
 	dir = 2;
 	id = "minidropship_podlock"
 	},
-/obj/structure/barricade/folding{
-	dir = 1
-	},
-/obj/effect/landmark/autowire,
 /turf/open/floor/plating/plating_catwalk,
 /area/shuttle/minidropship)
 "V" = (
@@ -294,7 +267,7 @@ w
 a
 A
 a
-T
+u
 u
 P
 A

@@ -9304,12 +9304,6 @@
 	},
 /turf/open/floor/wood/broken,
 /area/lv624/ground/jungle8)
-"iTc" = (
-/obj/effect/landmark/patrol_point/xeno/xeno_11,
-/turf/open/floor/tile/dark/brown2{
-	dir = 5
-	},
-/area/lv624/lazarus/atmos)
 "iTu" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/structure/cable,
@@ -14101,10 +14095,6 @@
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/open/floor/plating/ground/dirt,
 /area/lv624/ground/compound/sw)
-"owV" = (
-/obj/effect/landmark/patrol_point/xeno/xeno_21,
-/turf/open/floor/plating/ground/dirt,
-/area/lv624/ground/caves/central2)
 "oxg" = (
 /obj/machinery/door/poddoor/timed_late/containment/landing_zone,
 /turf/open/ground/grass,
@@ -38233,7 +38223,7 @@ guX
 bRI
 rfs
 iBi
-iTc
+bjK
 rxx
 lAG
 mDF
@@ -44293,7 +44283,7 @@ vCy
 vCy
 vCy
 hGA
-owV
+hGA
 aWU
 fTt
 mvS
