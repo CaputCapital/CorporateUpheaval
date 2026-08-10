@@ -43,6 +43,18 @@ GLOBAL_LIST_EMPTY(spawn_eusmilitia)
 	name = "EUS sapper spawner"
 	occupation = /datum/job/g16separatism/union/sapper
 
+/obj/effect/landmark/spawn_marker/euseparatists/advisorinfil
+	name = "EUS advisor-infiltrator spawner"
+	occupation = /datum/job/g16separatism/union/advisor/infiltrator
+
+/obj/effect/landmark/spawn_marker/euseparatists/advisorrifleman
+	name = "EUS advisor-rifleman spawner"
+	occupation = /datum/job/g16separatism/union/advisor/rifleman
+
+/obj/effect/landmark/spawn_marker/euseparatists/advisorpyro
+	name = "EUS advisor-pyro spawner"
+	occupation = /datum/job/g16separatism/union/advisor/firebat
+
 /datum/job/g16separatism // not a job meant for players, but rather hostile AI who roam and guard the area
 	title = "Generic EUS Supporter"
 	var/npc_type = "militant" //normal, doctor, engineer, nationaldefense (for ai)
@@ -55,31 +67,53 @@ GLOBAL_LIST_EMPTY(spawn_eusmilitia)
 /datum/job/g16separatism/union
 
 	supervisors = "who knows? Could be your local union leader or the Russinian Domain advisor sent to train you."
-	paygrade = "CLNST"
+	paygrade = "EUS"
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS, ACCESS_ICC_CARGO)
 	minimal_access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_LOGISTICS, ACCESS_ICC_CARGO)
 	faction = FACTION_HOSTILE //they don't want anybody
 
-//EUS Militant
+//EUS Militant, Low-End Grunts
 /datum/job/g16separatism/union/militant
 	title = "Separatist Militant"
 	outfit = /datum/outfit/job/g16separatism/militant
+	paygrade = "EUS-MIL"
 
-//EUS Medic
+//EUS Medic, Low-End Doctors
 /datum/job/g16separatism/union/medic
 	title = "Separatist Medic"
 	skills_type = /datum/skills/civilian/survivor
 	outfit = /datum/outfit/job/g16separatism/medic
+	paygrade = "EUS-MED"
 
-//EUS Sapper
+//EUS Sapper, Separatist Technicians
 /datum/job/g16separatism/union/sapper
 	title = "Separatist Sapper"
 	skills_type = /datum/skills/civilian/survivor/atmos
 	outfit = /datum/outfit/job/g16separatism/sapper
+	paygrade = "EUS-ENG"
 
-// EUS Russinian Advisor - pretty overpowered, pls spawn with caution
-/datum/job/g16separatism/union/advisor
-	title = "Separatist Advisor"
+//EUS Deserter, Medium-Tier Infantry
+/datum/job/g16separatism/union/deserter
+	title = "Separatist Deserter"
+	skills_type = /datum/skills/civilian/survivor/atmos
+	outfit = /datum/outfit/job/g16separatism/sapper
+	paygrade = "EUS-DSRTR"
+
+// EUS Russinian Advisors - High-Tier Operators
+/datum/job/g16separatism/union/advisor/infiltrator
+	title = "Separatist Advisor Infiltrator"
 	skills_type = /datum/skills/civilian/survivor/master
-	outfit = /datum/outfit/job/g16separatism/advisor
-	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_OVERRIDELATEJOINSPAWN
+	outfit = /datum/outfit/job/g16separatism/advisor/infiltrator
+	paygrade = "EUS-ADV"
+
+/datum/job/g16separatism/union/advisor/rifleman
+	title = "Separatist Advisor Infiltrator"
+	skills_type = /datum/skills/civilian/survivor/master
+	outfit = /datum/outfit/job/g16separatism/advisor/rifleman
+	paygrade = "EUS-ADV"
+
+/datum/job/g16separatism/union/advisor/firebat
+	title = "Separatist Advisor Infiltrator"
+	skills_type = /datum/skills/civilian/survivor/master
+	outfit = /datum/outfit/job/g16separatism/advisor/firebat
+	paygrade = "EUS-ADV"
