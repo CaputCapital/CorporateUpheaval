@@ -6,13 +6,13 @@ $include resources.txt
 $include amia.txt
 
 ## Server name: This appears at the top of the screen in-game.
-SERVER_NAME SoL|NTF vs Alien M/ERP +18 (WL at Discord)
+SERVER_NAME Project Redfin
 
 ## Hosted by name for unix platforms.
-HOSTEDBY VideNoir
+HOSTEDBY LocalizedDownpour
 
 ## The title of the main window.
-TITLE Nine Tailed Fox vs Alien
+TITLE Project Redfin
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
 HUB
