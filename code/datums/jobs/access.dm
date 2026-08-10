@@ -458,15 +458,15 @@
 		if("CM6")
 			. = size ? "ADMN" : "CM Colony Administrator"
 		if("KZ1")
-			. = size ? "JSGT" : "KZ Junior Sergeant"
+			. = size ? "JSGT" : "GSW Junior Sergeant"
 		if("KZ2")
-			. = size ? "SSGT" : "KZ Staff Sergeant"
+			. = size ? "SSGT" : "GSW Staff Sergeant"
 		if("KZ3")
-			. = size ? "SGM" : "KZ Sergeant Major"
+			. = size ? "SGM" : "GSW Sergeant Major"
 		if("KZ4")
-			. = size ? "LT" : "KZ Lieutenant"
+			. = size ? "LT" : "GSW Lieutenant"
 		if("KZ5")
-			. = size ? "KZCOMM" : "KZ Commander"
+			. = size ? "KZCOMM" : "GSW Commander"
 		if("MRC1")
 			. = size ? "MERC" : "MERC Heavy"
 		if("MRC2")

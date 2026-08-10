@@ -1168,7 +1168,7 @@
 
 /obj/machinery/vending/MarineMed
 	name = "\improper MarineMed"
-	desc = "Marine Medical drug dispenser - Provided by Ninetails Pharmaceuticals Division(TM)."
+	desc = "Marine Medical drug dispenser - Provided by SFMC Pharmaceuticals Division(TM)."
 	icon_state = "marinemed"
 	icon_vend = "marinemed-vend"
 	icon_deny = "marinemed-deny"
@@ -1313,7 +1313,7 @@
 
 /obj/machinery/vending/armor_supply
 	name = "\improper Surplus Armor Equipment Vendor"
-	desc = "An automated equipment rack hooked up to a colossal storage of armor and accessories. Ninetails designed a new vendor that utilizes bluespace technology to send surplus equipment from outer colonies' sweatshops to your hands! Be grateful."
+	desc = "An automated equipment rack hooked up to a colossal storage of armor and accessories. SFMC designed a new vendor that utilizes bluespace technology to send surplus equipment from outer colonies' sweatshops to your hands! Be grateful."
 	icon_state = "surplus_armor"
 	icon_vend = "surplus_armor_vend"
 	icon_deny = "surplus_armor_deny"
@@ -1321,7 +1321,7 @@
 	wrenchable = FALSE
 	product_ads = "You are out of uniform, marine! Where is your armor? Don't have any? You expect me to believe that, maggot?;Why wear heavy armor and unable to chase the enemy when you can go light and zoom by your peers?;Thank your armor later when you didn't die!;I remember PAS, do you remember PAS?;Time to paint the rainbow!;So many selections to choose from!"
 	products = list(
-		"Xenonauten/NTC" = list(
+		"Xenonauten/SFMC" = list(
 			/obj/item/clothing/suit/modular/tdf/light = -1,
 			/obj/item/clothing/suit/modular/tdf = -1,
 			/obj/item/clothing/suit/modular/tdf/heavy = -1,
@@ -1555,7 +1555,7 @@
 
 /obj/machinery/vending/uniform_supply
 	name = "\improper Surplus Clothing Vendor"
-	desc = "An automated equipment rack hooked up to a colossal storage of clothing and accessories. Ninetails designed a new vendor that utilizes bluespace technology to send surplus equipment from outer colonies' sweatshops to your hands! Be grateful."
+	desc = "An automated equipment rack hooked up to a colossal storage of clothing and accessories. SFMC designed a new vendor that utilizes bluespace technology to send surplus equipment from outer colonies' sweatshops to your hands! Be grateful."
 	icon_state = "surplus_clothes"
 	icon_vend = "surplus_clothes_vend"
 	icon_deny = "surplus_clothes_deny"
@@ -2014,7 +2014,7 @@
 	use_power = NO_POWER_USE
 
 /obj/machinery/vending/dress_supply
-	name = "\improper NinetailsTech dress uniform vendor"
+	name = "\improper SFMCTech dress uniform vendor"
 	desc = "An automated rack hooked up to a colossal storage of dress uniforms."
 	icon_state = "marineuniform"
 	icon_vend = "marineuniform_vend"
@@ -2042,7 +2042,7 @@
 	use_power = NO_POWER_USE
 
 /obj/machinery/vending/valhalla_req
-	name = "\improper NinetailsTech requisition vendor"
+	name = "\improper SFMCTech requisition vendor"
 	desc = "An automated rack hooked up to a colossal storage of items."
 	icon_state = "requisitionop"
 	resistance_flags = INDESTRUCTIBLE
@@ -2249,7 +2249,7 @@
 	)
 
 /obj/machinery/vending/valhalla_seasonal_req
-	name = "\improper NinetailsTech seasonal vendor"
+	name = "\improper SFMCTech seasonal vendor"
 	desc = "An automated rack hooked up to a colossal storage of items."
 	icon_state = "requisitionop"
 	resistance_flags = INDESTRUCTIBLE
@@ -2465,7 +2465,7 @@
 	)
 
 /obj/machinery/vending/valhalla_reqtorio
-	name = "\improper NinetailsTech reqtorio vendor"
+	name = "\improper SFMCTech reqtorio vendor"
 	desc = "An automated rack hooked up to a colossal storage of items."
 	icon_state = "requisitionop"
 	resistance_flags = INDESTRUCTIBLE
