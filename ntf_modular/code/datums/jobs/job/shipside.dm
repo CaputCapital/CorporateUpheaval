@@ -33,7 +33,7 @@
 
 //ghetto proc usage why not, just to not edit the job shit
 /datum/job/terragov/command/ceo/player_old_enough(client/C)
-	if(check_other_rights(usr.client, R_ADMIN, FALSE) && C.key == "CrimsonQuiver")
+	if(check_other_rights(usr.client, R_ADMIN, FALSE) && C.key == "Colfer") // So only level 40 chuds can do it
 		return TRUE
 	return FALSE
 
@@ -69,7 +69,7 @@
 	minimap_icon = "nm_ceo"
 
 /datum/job/terragov/command/nm_ceo/player_old_enough(client/C)
-	if(check_other_rights(usr.client, R_ADMIN, FALSE) && C.ckey == "CrimsonQuiver") //need someone
+	if(check_other_rights(usr.client, R_ADMIN, FALSE) && C.ckey == "Colfer")
 		return TRUE
 	return FALSE
 
