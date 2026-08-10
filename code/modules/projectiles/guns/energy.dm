@@ -567,8 +567,8 @@
 ///TE Standard Laser Pistol
 
 /obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_pistol
-	name = "\improper old world laser pistol"
-	desc = "A SFMC standard issue laser pistol since it's stock is in such high amounts in some old world 'TE' warehouse back on earth. It has an integrated charge selector for normal, heat and taser settings. Uses standard old world (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
+	name = "\improper Terra-Experimental laser pistol"
+	desc = "A SFMC standard issue laser pistol since it's stock is in such high amounts in some Terra-Experimental 'TE' warehouse back on earth. It has an integrated charge selector for normal, heat and taser settings. Uses standard Terra-Experimental (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
 	reload_sound = 'sound/weapons/guns/interact/standard_laser_pistol_reload.ogg'
 	fire_sound = 'sound/weapons/guns/fire/Laser Pistol Standard.ogg'
 	icon_state = "tep"
@@ -651,8 +651,8 @@
 //TE Standard Laser Carbine
 
 /obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_carbine
-	name = "\improper old world laser carbine"
-	desc = "A SFMC standard issue laser carbine. Has multiple firemodes for tactical flexibility. Uses standard old world (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
+	name = "\improper Terra-Experimental laser carbine"
+	desc = "A SFMC standard issue laser carbine. Has multiple firemodes for tactical flexibility. Uses standard Terra-Experimental (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
 	reload_sound = 'sound/weapons/guns/interact/standard_laser_rifle_reload.ogg'
 	fire_sound = 'sound/weapons/guns/fire/Laser Rifle Standard.ogg'
 	icon_state = "tec"
