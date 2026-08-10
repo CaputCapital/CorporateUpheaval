@@ -176,7 +176,7 @@
 //halter bullpup rifle
 /obj/item/weapon/gun/rifle/nt_halter
 	//Abomination of AR-21, PR-412, AR-18 and MPI-KM
-	name = "\improper NT 'Halter' assault rifle"
+	name = "\improper SFMC 'Halter' assault rifle"
 	desc = "The standardized SFMC bullpup AR design made to be used as their default primary firearm Chambered in 7.62x39mm."
 	icon = 'ntf_modular/icons/obj/items/guns/rifles64.dmi'
 	icon_state = "halter"
@@ -245,30 +245,30 @@
 	gun_features_flags = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_SMOKE_PARTICLES
 	gun_firemode_list = list(GUN_FIREMODE_AUTOMATIC) //no twink ass firemodes, like god intended
 	attachable_offset = list("muzzle_x" = 51, "muzzle_y" = 19,"rail_x" = 25, "rail_y" = 23, "under_x" = 35, "under_y" = 13, "stock_x" = 0, "stock_y" = 13)
-	fire_delay = 0.2 SECONDS
+	fire_delay = 0.25 SECONDS
 	burst_amount = 1
-	burst_delay = 0.15 SECONDS
-	wield_delay = 0.7 SECONDS
+	burst_delay = 0.25 SECONDS
+	wield_delay = 0.9 SECONDS
 	actions_types = list(/datum/action/item_action/aim_mode)
 	aim_slowdown = 0.4
 	aim_fire_delay = 0.1 SECONDS
 	akimbo_scatter_mod = 24
 	akimbo_additional_delay = 0.8
 	aim_speed_modifier = 3
-	scatter = -1
+	scatter = 0
 	scatter_unwielded = 18
 	accuracy_mult_unwielded = 0.8
-	force = 20 //like mpi-km i dont see why that gets more force but yes.
 
 /obj/item/weapon/gun/rifle/nt_halter/cqb
 	//more accurate but less AP version of v34 basically without stock option since its a bullpup, it IS the stock.
-	name = "\improper NT 'Halter-CQB' carbine"
+	name = "\improper SFMC 'Halter-CQB' carbine"
 	desc = "A variant of Halter series standardized SFMC bullpup AR design made into a carbine, Chambered in 7.62x39mm. This one is altered for close combat. The smaller frame make it lighter and easier to handle in close range encounters but it suffers from range reduction and overall accuracy."
 	icon = 'ntf_modular/icons/obj/items/guns/rifles64.dmi'
 	attachable_offset = list("muzzle_x" = 39, "muzzle_y" = 19,"rail_x" = 19, "rail_y" = 23, "under_x" = 29, "under_y" = 13, "stock_x" = 0, "stock_y" = 13)
 	icon_state = "haltercqb"
 	worn_icon_state = "haltercqb"
-	fire_delay = 0.15 SECONDS
+	fire_delay = 0.2 SECONDS
+	burst_delay = 0.2 SECONDS
 	aim_fire_delay = 0.1 SECONDS
 	aim_speed_modifier = 2.5
 	aim_slowdown = 0.3
@@ -279,11 +279,38 @@
 	damage_falloff_mult = 1.2 //its a bullpup still
 	akimbo_additional_delay = 1.5
 	damage_mult = 0.9
-	force = 15
+	attachable_allowed = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/gyro,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/flashlight/under,
+		/obj/item/attachable/foldable/bipod,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/bayonet/converted,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonet/som,
+		/obj/item/attachable/compensator,
+		/obj/item/weapon/gun/pistol/plasma_pistol,
+		/obj/item/weapon/gun/shotgun/combat/masterkey,
+		/obj/item/weapon/gun/pistol/g22/tranq,
+		/obj/item/weapon/gun/flamer/mini_flamer,
+		/obj/item/weapon/gun/grenade_launcher/underslung,
+		/obj/item/attachable/motiondetector,
+		/obj/item/attachable/buildasentry,
+		/obj/item/weapon/gun/rifle/pepperball/pepperball_mini,
+		/obj/item/weapon/gun/flamer/hydro_cannon,
+		/obj/item/attachable/shoulder_mount,
+	)
 
 //standard mag
 /obj/item/ammo_magazine/rifle/nt_halter
-	name = "\improper NT 'Halter' magazine (7.62x39mm)"
+	name = "\improper SFMC 'Halter' magazine (7.62x39mm)"
 	desc = "A magazine filled with 7.62x39mm rifle rounds for the Halter series of firearms."
 	caliber = CALIBER_762X39
 	icon_state = "halter"
@@ -297,12 +324,10 @@
 /datum/ammo/bullet/rifle/heavy/halter
 	name = "heavy rifle bullet"
 	//same caliber as mpi km
-	penetration = 15
-	sundering = 1.75
 
 //extended mag
 /obj/item/ammo_magazine/rifle/nt_halter/extended
-	name = "\improper NT 'Halter' extended magazine (7.62x39mm)"
+	name = "\improper SFMC 'Halter' extended magazine (7.62x39mm)"
 	desc = "An extended magazine filled with 7.62x39mm rifle rounds for the Halter series of firearms."
 	max_rounds = 58 //close to mpi-km roughly
 	icon_state = "halter_ex"
@@ -313,7 +338,7 @@
 
 //drum mag
 /obj/item/ammo_magazine/rifle/nt_halter/drum
-	name = "\improper NT 'Halter' drum magazine (7.62x39mm)"
+	name = "\improper SFMC 'Halter' drum magazine (7.62x39mm)"
 	desc = "An drum magazine filled with 7.62x39mm rifle rounds for the Halter series of firearms."
 	max_rounds = 80
 	icon_state = "halter_drum"
@@ -325,7 +350,7 @@
 
 //emp mag
 /obj/item/ammo_magazine/rifle/nt_halter/charged
-	name = "\improper NT 'Halter' taser magazine (7.62x39mm Taser)"
+	name = "\improper SFMC 'Halter' taser magazine (7.62x39mm Taser)"
 	desc = "A magazine filled with specialized 7.62x39mm rifle rounds to deliver a powerful shock ontop of blunt force, for the Halter series of firearms. This has a 15% chance per shot to deliver an EM pulse."
 	icon_state = "halter_charged"
 	bonus_overlay = "halter_charged"
@@ -370,7 +395,7 @@
 
 //smart mag
 /obj/item/ammo_magazine/rifle/nt_halter/smart
-	name = "\improper NT 'Halter' smart magazine (7.62x39mm Smart)"
+	name = "\improper SFMC 'Halter' smart magazine (7.62x39mm Smart)"
 	desc = "A magazine filled with specialized 7.62x39mm rifle rounds that slightly sways to avoid friendlies but loses overall power, for the Halter series of firearms."
 	icon_state = "halter_smart"
 	bonus_overlay = "halter_smart"
@@ -385,14 +410,14 @@
 
 //foxfire mag
 /obj/item/ammo_magazine/rifle/nt_halter/foxfire
-	name = "\improper NT 'Halter' foxfire magazine (7.62x39mm AP-I)"
+	name = "\improper SFMC 'Halter' incendiary magazine (7.62x39mm AP-I)"
 	desc = "A magazine filled with specialized 7.62x39mm AP-I rifle rounds that pierce armor and ignite targets, for the Halter series of firearms."
 	icon_state = "halter_foxfire"
 	bonus_overlay = "halter_foxfire"
 	default_ammo = /datum/ammo/bullet/rifle/heavy/ap/foxfire
 
 /datum/ammo/bullet/rifle/heavy/ap/foxfire
-	name = "armor-piercing foxfire heavy rifle bullet"
+	name = "armor-piercing incendiary heavy rifle bullet"
 	hud_state = "rifle_ap"
 	//bit less crazy than actual heavy ap
 	damage = 25
@@ -411,7 +436,7 @@
 
 //laser mag
 /obj/item/ammo_magazine/rifle/nt_halter/laser
-	name = "\improper NT 'Halter' laser magazine (7.62x39mm LE)"
+	name = "\improper SFMC 'Halter' laser magazine (7.62x39mm LE)"
 	desc = "A magazine filled with specialized 7.62x39mm single shot laser emitter rounds that shoots laser bolts instead of a standard round."
 	icon_state = "halter_laser"
 	bonus_overlay = "halter_laser"
@@ -425,7 +450,7 @@
 
 //extended mag
 /obj/item/ammo_magazine/rifle/nt_halter/laser/extended
-	name = "\improper NT 'Halter' extended laser magazine (7.62x39mm LE)"
+	name = "\improper SFMC 'Halter' extended laser magazine (7.62x39mm LE)"
 	desc = "An extended magazine filled with 7.62x39mm laser emitter rounds for the Halter series of firearms."
 	max_rounds = 58
 	icon_state = "halter_laser_ex"
@@ -437,7 +462,7 @@
 
 //extended mag
 /obj/item/ammo_magazine/rifle/nt_halter/laser/drum
-	name = "\improper NT 'Halter' drum laser magazine (7.62x39mm)"
+	name = "\improper SFMC 'Halter' drum laser magazine (7.62x39mm)"
 	desc = "An drum magazine filled with 7.62x39mm laser emitter rounds for the Halter series of firearms."
 	max_rounds = 80
 	icon_state = "halter_laser_drum"
@@ -449,7 +474,7 @@
 
 //rubber mags
 /obj/item/ammo_magazine/rifle/nt_halter/rubber
-	name = "\improper NT 'Halter' rubber magazine (7.62x39mm rub)"
+	name = "\improper SFMC 'Halter' rubber magazine (7.62x39mm rub)"
 	desc = "A magazine filled with 7.62x39mm rubber rifle rounds for the Halter series of firearms."
 	icon_state = "halter_rub"
 	icon = 'ntf_modular/icons/obj/items/ammo/rifle.dmi'
@@ -461,7 +486,7 @@
 	sundering = 1.75
 
 /obj/item/ammo_magazine/rifle/nt_halter/rubber/extended
-	name = "\improper NT 'Halter' extended rubber magazine (7.62x39mm rub)"
+	name = "\improper SFMC 'Halter' extended rubber magazine (7.62x39mm rub)"
 	desc = "An extended magazine filled with 7.62x39mm rubber rounds for the Halter series of firearms."
 	max_rounds = 58
 	icon_state = "halter_rub_ex"

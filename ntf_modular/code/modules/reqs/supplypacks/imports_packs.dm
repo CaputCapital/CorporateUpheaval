@@ -49,44 +49,44 @@
 	cost = 100
 
 /datum/supply_packs/imports/halterex
-	name = "NT Halter extended mag (x1)"
+	name = "SFMC Halter extended mag (x1)"
 	contains = list(/obj/item/ammo_magazine/rifle/nt_halter/extended)
 	cost = 15
 
 /datum/supply_packs/imports/halterdrum
-	name = "NT Halter drum mag (x1)"
+	name = "SFMC Halter drum mag (x1)"
 	contains = list(/obj/item/ammo_magazine/rifle/nt_halter/drum)
-	cost = 30
+	cost = 40
 
 /datum/supply_packs/imports/halterexlaser
-	name = "NT Halter extended laser mag (x1)"
+	name = "SFMC Halter extended laser mag (x1)"
 	contains = list(/obj/item/ammo_magazine/rifle/nt_halter/laser/extended)
 	cost = 15
 
 /datum/supply_packs/imports/halterexrub
-	name = "NT Halter extended rubber mag (x1)"
+	name = "SFMC Halter extended rubber mag (x1)"
 	contains = list(/obj/item/ammo_magazine/rifle/nt_halter/rubber/extended)
 	cost = 10
 
 /datum/supply_packs/imports/halterdrumlaser
-	name = "NT Halter drum laser mag (x1)"
+	name = "SFMC Halter drum laser mag (x1)"
 	contains = list(/obj/item/ammo_magazine/rifle/nt_halter/laser/drum)
-	cost = 30
+	cost = 40
 
 /datum/supply_packs/imports/haltercharged
-	name = "NT Halter taser mag (x1)"
+	name = "SFMC Halter taser mag (x1)"
 	contains = list(/obj/item/ammo_magazine/rifle/nt_halter/charged)
-	cost = 60
+	cost = 100
 
 /datum/supply_packs/imports/haltersmart
-	name = "NT Halter smart mag (x1)"
+	name = "SFMC Halter smart mag (x1)"
 	contains = list(/obj/item/ammo_magazine/rifle/nt_halter/smart)
-	cost = 5 //its pretty ass and small cap anyway.
+	cost = 25
 
 /datum/supply_packs/imports/halterfoxfire
-	name = "NT Halter foxfire mag (x1)"
+	name = "SFMC Halter incendiary mag (x1)"
 	contains = list(/obj/item/ammo_magazine/rifle/nt_halter/foxfire)
-	cost = 20
+	cost = 35
 
 /datum/supply_packs/imports/unity_ammo
 	name = "NT105 Unity Revolver Ammo"
