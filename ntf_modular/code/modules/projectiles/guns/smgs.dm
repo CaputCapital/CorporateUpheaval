@@ -2,7 +2,7 @@
 
 /obj/item/weapon/gun/smg/minib
 	name = "\improper MINI-B machinepistol"
-	desc = "A niche classic refurbished and improved by Kaizoku Zaibatsu for bodyguards and field adjutants, the MINI-B is a take on the SMG-2 platform and uses specialized highpowered 9MM armor piercing munitions."
+	desc = "A niche classic refurbished and improved by Grunwald-Svarog Werke for bodyguards and field adjutants, the MINI-B is a take on the SMG-2 platform and uses specialized highpowered 9MM armor piercing munitions."
 	icon = 'ntf_modular/icons/obj/items/guns/submachineguns.dmi'
 	worn_icon_state = "minib"
 	worn_icon_list = list(
@@ -81,7 +81,7 @@
 
 /obj/item/weapon/gun/smg/vortex
 	name = "\improper NT Vortex rapid-fire EM SMG"
-	desc = "The Ninetails Vortex electromagnetic submachinegun is the specialized weapon made by commission for Novamed Trauma Teams, calibered in 9x19mm Parabellum but it uses special rounds without a primer or anything for it's electromagnetic operation. Made to be used by hospital security and combat medics. Though much like other new-world design weapons, this lacks fire-modes and it is always on full-auto. - With it's foldable design, it is easily carried around in satchels until need arises. It is designed in such a way it retains great accuracy in rapid fire but the accuracy quickly decays on sustained fire and must be rested a little while to let heatsinks do it's work, and since it is firing electromagnetically, it does not have muzzle flash or much sound... But it is rather muzzle attachment-unfriendly due to being packable. Use Unique action key to deploy/undeploy it."
+	desc = "The SFMC Vortex electromagnetic submachinegun is the specialized weapon made by commission for Novamed Trauma Teams, calibered in 9x19mm Parabellum but it uses special rounds without a primer or anything for it's electromagnetic operation. Made to be used by hospital security and combat medics. Though much like other new-world design weapons, this lacks fire-modes and it is always on full-auto. - With it's foldable design, it is easily carried around in satchels until need arises. It is designed in such a way it retains great accuracy in rapid fire but the accuracy quickly decays on sustained fire and must be rested a little while to let heatsinks do it's work, and since it is firing electromagnetically, it does not have muzzle flash or much sound... But it is rather muzzle attachment-unfriendly due to being packable. Use Unique action key to deploy/undeploy it."
 	icon_state = "vortex"
 	icon = 'ntf_modular/icons/obj/items/guns/submachineguns64.dmi'
 	worn_icon_list = list(

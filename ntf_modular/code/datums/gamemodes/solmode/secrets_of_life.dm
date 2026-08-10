@@ -588,8 +588,8 @@ alt gamemodes
 	)
 
 /datum/game_mode/infestation/secret_of_life/alienonly
-	name = "Secret of Life - NTF vs Alien only"
-	config_tag = "Secret of Life - NTF vs Alien only"
+	name = "Secret of Life - SFMC vs Alien only"
+	config_tag = "Secret of Life - SFMC vs Alien only"
 	factions = list(FACTION_TERRAGOV, FACTION_XENO)
 	human_factions = list(FACTION_TERRAGOV)
 	valid_job_types = list(
@@ -631,8 +631,8 @@ alt gamemodes
 	)
 
 /datum/game_mode/infestation/secret_of_life/ntf_vs_clf
-	name = "Secret of Life - NTF vs Cult"
-	config_tag = "Secret of Life - NTF vs Cult"
+	name = "Secret of Life - SFMC vs Cult"
+	config_tag = "Secret of Life - SFMC vs Cult"
 	factions = list(FACTION_TERRAGOV, FACTION_ICC, FACTION_XENO, FACTION_CLF)
 	human_factions = list(FACTION_TERRAGOV, FACTION_ICC, FACTION_CLF)
 	valid_job_types = list(

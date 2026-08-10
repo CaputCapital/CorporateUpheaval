@@ -458,7 +458,7 @@ GLOBAL_LIST_INIT(hugger_to_latching, list(
 /obj/item/clothing/mask/facehugger/latching/chemical/medical
 	name = "medi-hugger"
 	desc = "This truly bizzare creature has MASSIVE, bloated balls and his slippery, massive cock drips with strange reagents... \
-	This one has the Novamed and Ninetails Corp logo tattooed on his left and right ballsack seperately. Looks like it can reproduce <b>injected</b> chemicals given \
+	This one has the Novamed and SFMC logo tattooed on his left and right ballsack seperately. Looks like it can reproduce <b>injected</b> chemicals given \
 	time and inject people in his own way or can be removed by drawing from it using a syringe perhaps. \ <br><br>Clearly this creature is one of a kind, bioengineered greatenss and can not be replaced without assistance of high command and research division's efforts all over again. Handle with care and keep away from ungas."
 	cock_flavor = "medicine-coated cock"
 	hivenumber = XENO_HIVE_CORRUPTED

@@ -42,7 +42,7 @@
 
 /obj/item/weapon/gun/shotgun/combat
 	name = "\improper SH-221 tactical shotgun"
-	desc = "The Ninetails SH-221 Shotgun, a quick-firing semi-automatic shotgun based on the centuries old Benelli M4 shotgun. Only issued to the NTC in small numbers."
+	desc = "The SFMC SH-221 Shotgun, a quick-firing semi-automatic shotgun based on the centuries old Benelli M4 shotgun. Only issued to the SFMC in small numbers."
 	equip_slot_flags = ITEM_SLOT_BACK
 	icon_state = "mk221"
 	worn_icon_state = "mk221"
@@ -76,7 +76,7 @@
 
 /obj/item/weapon/gun/shotgun/combat/standardmarine
 	name = "\improper SH-39 combat shotgun"
-	desc = "The Archercorp SH-39 combat shotgun is a semi automatic shotgun used by breachers and pointmen within the NTC squads. Uses 12 gauge shells."
+	desc = "The Archercorp SH-39 combat shotgun is a semi automatic shotgun used by breachers and pointmen within the SFMC squads. Uses 12 gauge shells."
 	force = 20 //Has a stock already
 	equip_slot_flags = ITEM_SLOT_BACK
 	icon = 'icons/obj/items/guns/shotguns64.dmi'
@@ -202,7 +202,7 @@
 
 /obj/item/weapon/gun/shotgun/double/marine
 	name = "\improper SH-34 double barrel shotgun"
-	desc = "A double barreled shotgun of archaic, but sturdy design used by the NTC. Due to reports of barrel bursting, the abiility to fire both barrels has been disabled. Uses 12 gauge shells, but can only hold 2 at a time."
+	desc = "A double barreled shotgun of archaic, but sturdy design used by the SFMC. Due to reports of barrel bursting, the abiility to fire both barrels has been disabled. Uses 12 gauge shells, but can only hold 2 at a time."
 	equip_slot_flags = ITEM_SLOT_BACK
 	icon_state = "ts34"
 	worn_icon_state = "ts34"
@@ -450,7 +450,7 @@
 
 /obj/item/weapon/gun/shotgun/pump/sh23
 	name = "\improper SH-23-NT heavy pump shotgun"
-	desc = "An NTF clone of an ICC classic, slow to chamber but hits like a truck. Due to the reinforcement needed to slam 6 gauge downrange, the body of this shotgun has no attachment mounting points\n<b>Requires a pump, which is the Unique Action key.</b>"
+	desc = "An SFMC clone of an ICC classic, slow to chamber but hits like a truck. Due to the reinforcement needed to slam 6 gauge downrange, the body of this shotgun has no attachment mounting points\n<b>Requires a pump, which is the Unique Action key.</b>"
 	equip_slot_flags = ITEM_SLOT_BACK
 	icon = 'ntf_modular/icons/obj/items/guns/shotguns64.dmi'
 	icon_state = "sh23"
@@ -1100,7 +1100,7 @@
 
 /obj/item/weapon/gun/shotgun/combat/shq6
 	name = "\improper SH-46 combat shotgun"
-	desc = "The SH-46, is a semi-automatic, 12 Gauge, gas piston-operated shotgun, released for NTC by CAU."
+	desc = "The SH-46, is a semi-automatic, 12 Gauge, gas piston-operated shotgun, released for SFMC by CAU."
 	force = 20 //Has a stock already
 	icon = 'ntf_modular/icons/obj/items/guns/shotguns64.dmi'
 	icon_state = "shq6"
