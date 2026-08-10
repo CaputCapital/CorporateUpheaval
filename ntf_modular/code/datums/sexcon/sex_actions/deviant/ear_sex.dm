@@ -11,9 +11,6 @@
 /datum/sex_action/ear_sex/can_perform(mob/living/carbon/user, mob/living/carbon/target)
 	if(user == target)
 		return FALSE
-
-	if(!user.sexcon.can_use_penis())
-		return FALSE
 	return TRUE
 
 /datum/sex_action/ear_sex/on_start(mob/living/carbon/user, mob/living/carbon/target)
@@ -41,10 +38,10 @@
 		user.sexcon.perform_sex_action(target, 1.2, 3, FALSE)
 	else
 		user.sexcon.perform_sex_action(target, 2.4, 7, FALSE)
-	var/flags = target.client.prefs.harmful_sex_flags
-	if(flags & HARMFUL_SEX_ROUGH_SEX)
+	var/flags = target.client.prefs.sex_pref_flags
+	if(flags & SEXPREF_ROUGH_SEX)
 		if(ishuman(target))
-			if(flags & HARMFUL_SEX_ROUGH_SEX)
+			if(flags & SEXPREF_ROUGH_SEX)
 				if(sc.force > SEX_FORCE_HIGH)
 					target.adjust_ear_damage(0.2)
 				if(sc.force > SEX_FORCE_HIGH)
