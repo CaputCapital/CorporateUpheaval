@@ -152,7 +152,7 @@
 
 /obj/item/weapon/gun/energy/lasgun/M43
 	name = "\improper M43 Sunfury Lasgun MK1"
-	desc = "An accurate, recoilless laser based battle rifle with an integrated charge selector. Ideal for longer range engagements. It was the standard lasrifle for NTC soldiers until it was replaced by the LR-73, due to its extremely modular lens system."
+	desc = "An accurate, recoilless laser based battle rifle with an integrated charge selector. Ideal for longer range engagements. It was the standard lasrifle for SFMC soldiers until it was replaced by the LR-73, due to its extremely modular lens system."
 	force = 20 //Large and hefty! Includes stock bonus.
 	icon_state = "m43"
 	worn_icon_state = "m43"
@@ -201,7 +201,7 @@
 
 /obj/item/weapon/gun/energy/lasgun/pulse
 	name = "\improper M19C4 pulse energy rifle"
-	desc = "A heavy-duty, multifaceted energy weapon that uses pulse-based beam generation technology to emit powerful laser blasts. Because of its complexity and cost, it is rarely seen in use except by specialists and front-line combat personnel. This is a testing model issued only for Asset Protection units and offshore elite Ninetails squads."
+	desc = "A heavy-duty, multifaceted energy weapon that uses pulse-based beam generation technology to emit powerful laser blasts. Because of its complexity and cost, it is rarely seen in use except by specialists and front-line combat personnel. This is a testing model issued only for Asset Protection units and offshore elite SFMC squads."
 	force = 23 //Slightly more heftier than the M43, but without the stock.
 	icon_state = "m19c4"
 	worn_icon_state = "m19c4"
@@ -567,8 +567,8 @@
 ///TE Standard Laser Pistol
 
 /obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_pistol
-	name = "\improper Terra-Experimental laser pistol"
-	desc = "A Ninetails standard issue laser pistol since it's stock is in such high amounts in some Terra-Experimental 'TE' warehouse back on earth. It has an integrated charge selector for normal, heat and taser settings. Uses standard Terra-Experimental (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
+	name = "\improper old world laser pistol"
+	desc = "A SFMC standard issue laser pistol since it's stock is in such high amounts in some old world 'TE' warehouse back on earth. It has an integrated charge selector for normal, heat and taser settings. Uses standard old world (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
 	reload_sound = 'sound/weapons/guns/interact/standard_laser_pistol_reload.ogg'
 	fire_sound = 'sound/weapons/guns/fire/Laser Pistol Standard.ogg'
 	icon_state = "tep"
@@ -651,8 +651,8 @@
 //TE Standard Laser Carbine
 
 /obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_carbine
-	name = "\improper Terra-Experimental laser carbine"
-	desc = "A Ninetails standard issue laser carbine. Has multiple firemodes for tactical flexibility. Uses standard Terra-Experimental (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
+	name = "\improper old world laser carbine"
+	desc = "A SFMC standard issue laser carbine. Has multiple firemodes for tactical flexibility. Uses standard old world (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
 	reload_sound = 'sound/weapons/guns/interact/standard_laser_rifle_reload.ogg'
 	fire_sound = 'sound/weapons/guns/fire/Laser Rifle Standard.ogg'
 	icon_state = "tec"

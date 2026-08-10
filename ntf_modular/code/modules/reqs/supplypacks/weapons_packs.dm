@@ -66,7 +66,7 @@
 	cost = 3
 
 /datum/supply_packs/weapons/moonbeam
-	name = "NTC 'Moonbeam' tranq sniper rifle"
+	name = "SFMC 'Moonbeam' tranq sniper rifle"
 	contains = list(/obj/item/weapon/gun/rifle/chambered/nonlethal/fitted)
 	faction_lock = list(FACTION_TERRAGOV)
 	cost = 400

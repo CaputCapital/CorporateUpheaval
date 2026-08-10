@@ -1,7 +1,7 @@
 //non lethal edition of SR-127, meant to be slightly better.
 /obj/item/weapon/gun/rifle/chambered/nonlethal
-	name = "\improper NTC 'Moonbeam' NL sniper rifle"
-	desc = "A light framed custom made bolt action rifle used by the NTC Specops, featuring a night vision scope and integrated IFF system... It is only able to fire non lethal rounds designed for it. In cases you wanna be an asshole. Through careful aim allows fire support from behind allies. It can have more types of attachments than standard sniper rifles. Uses 8.6×70mm magazines. Can also shoot regular ammo."
+	name = "\improper SFMC 'Moonbeam' NL sniper rifle"
+	desc = "A light framed custom made bolt action rifle used by the SFMC Specops, featuring a night vision scope and integrated IFF system... It is only able to fire non lethal rounds designed for it. In cases you wanna be an asshole. Through careful aim allows fire support from behind allies. It can have more types of attachments than standard sniper rifles. Uses 8.6×70mm magazines. Can also shoot regular ammo."
 	icon = 'ntf_modular/icons/obj/items/guns/marksman64.dmi'
 	gun_crosshair = 'icons/UI_Icons/gun_crosshairs/sniper.dmi'
 	inhand_x_dimension = 64
@@ -177,7 +177,7 @@
 /obj/item/weapon/gun/rifle/nt_halter
 	//Abomination of AR-21, PR-412, AR-18 and MPI-KM
 	name = "\improper NT 'Halter' assault rifle"
-	desc = "The standardized NTC bullpup AR design made to be used as their default primary firearm Chambered in 7.62x39mm."
+	desc = "The standardized SFMC bullpup AR design made to be used as their default primary firearm Chambered in 7.62x39mm."
 	icon = 'ntf_modular/icons/obj/items/guns/rifles64.dmi'
 	icon_state = "halter"
 	worn_icon_state = "halter"
@@ -263,7 +263,7 @@
 /obj/item/weapon/gun/rifle/nt_halter/cqb
 	//more accurate but less AP version of v34 basically without stock option since its a bullpup, it IS the stock.
 	name = "\improper NT 'Halter-CQB' carbine"
-	desc = "A variant of Halter series standardized NTC bullpup AR design made into a carbine, Chambered in 7.62x39mm. This one is altered for close combat. The smaller frame make it lighter and easier to handle in close range encounters but it suffers from range reduction and overall accuracy."
+	desc = "A variant of Halter series standardized SFMC bullpup AR design made into a carbine, Chambered in 7.62x39mm. This one is altered for close combat. The smaller frame make it lighter and easier to handle in close range encounters but it suffers from range reduction and overall accuracy."
 	icon = 'ntf_modular/icons/obj/items/guns/rifles64.dmi'
 	attachable_offset = list("muzzle_x" = 39, "muzzle_y" = 19,"rail_x" = 19, "rail_y" = 23, "under_x" = 29, "under_y" = 13, "stock_x" = 0, "stock_y" = 13)
 	icon_state = "haltercqb"
@@ -1078,7 +1078,7 @@
 
 /obj/item/attachable/stock/mparmil
 	name = "\improper MPAR milspec-variant stock"
-	desc = "An irremovable, polymer milspec stock for the NTF variant of the Multi-Purpose Adaptive Marksman Rifle. Possess a magnetic attachment strip so the operator doesn't lose their rifle."
+	desc = "An irremovable, polymer milspec stock for the SFMC variant of the Multi-Purpose Adaptive Marksman Rifle. Possess a magnetic attachment strip so the operator doesn't lose their rifle."
 	icon = 'ntf_modular/icons/obj/items/guns/attachments/stock.dmi'
 	icon_state = "m1amil"
 	wield_delay_mod = 0.075 SECONDS
