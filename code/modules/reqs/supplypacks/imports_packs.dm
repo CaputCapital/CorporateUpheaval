@@ -365,36 +365,6 @@ Imports
 	contains = list(/obj/item/ammo_magazine/pistol/m1911)
 	cost = 3
 
-/datum/supply_packs/imports/lassniper
-	name = "old world laser sniper rifle"
-	contains = list(/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_sniper)
-	cost = 300
-
-/datum/supply_packs/imports/lasrifle
-	name = "old world laser rifle"
-	contains = list(/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_rifle)
-	cost = 300
-
-/datum/supply_packs/imports/lasmachinegun
-	name = "old world laser machine gun"
-	contains = list(/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_mlaser)
-	cost = 300
-
-/datum/supply_packs/imports/lascarbine
-	name = "old world laser carbine"
-	contains = list(/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_carbine)
-	cost = 300
-
-/datum/supply_packs/imports/laspistol
-	name = "old world laser pistol"
-	contains = list(/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_pistol)
-	cost = 100
-
-/datum/supply_packs/imports/lasguncell
-	name = "old world standard battery"
-	contains = list(/obj/item/cell/lasgun/lasrifle)
-	cost = 10
-
 /datum/supply_packs/imports/strawhat
 	name = "Straw hat"
 	contains = list(/obj/item/clothing/head/strawhat)

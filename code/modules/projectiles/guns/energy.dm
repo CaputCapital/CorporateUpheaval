@@ -377,8 +377,8 @@
 
 //Tesla gun
 /obj/item/weapon/gun/energy/lasgun/lasrifle/tesla
-	name = "\improper old world tesla shock rifle"
-	desc = "an old world energy rifle that fires balls of elecricity that shock all those near them, it is meant to drain the plasma of unidentified creatures from within, limiting their abilities. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts. Uses standard old world (TE) power cells."
+	name = "\improper Terra-Experimental tesla shock rifle"
+	desc = "an Terra-Experimental energy rifle that fires balls of elecricity that shock all those near them, it is meant to drain the plasma of unidentified creatures from within, limiting their abilities. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts. Uses standard Terra-Experimental (TE) power cells."
 	icon_state = "tesla"
 	worn_icon_state = "tesla"
 	reload_sound = 'sound/weapons/guns/interact/standard_laser_rifle_reload.ogg'
@@ -461,8 +461,8 @@
 //TE Standard Laser rifle
 
 /obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_rifle
-	name = "\improper old world laser rifle"
-	desc = "an old world laser rifle. Has multiple firemodes for tactical flexibility. Uses standard old world (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
+	name = "\improper Terra-Experimental laser rifle"
+	desc = "an Terra-Experimental laser rifle. Has multiple firemodes for tactical flexibility. Uses standard Terra-Experimental (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
 	reload_sound = 'sound/weapons/guns/interact/standard_laser_rifle_reload.ogg'
 	fire_sound = 'sound/weapons/guns/fire/Laser Rifle Standard.ogg'
 	icon_state = "ter"
@@ -567,8 +567,8 @@
 ///TE Standard Laser Pistol
 
 /obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_pistol
-	name = "\improper old world laser pistol"
-	desc = "A SFMC standard issue laser pistol since it's stock is in such high amounts in some old world 'TE' warehouse back on earth. It has an integrated charge selector for normal, heat and taser settings. Uses standard old world (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
+	name = "\improper Terra-Experimental laser pistol"
+	desc = "A SFMC standard issue laser pistol since it's stock is in such high amounts in some Terra-Experimental 'TE' warehouse back on earth. It has an integrated charge selector for normal, heat and taser settings. Uses standard Terra-Experimental (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
 	reload_sound = 'sound/weapons/guns/interact/standard_laser_pistol_reload.ogg'
 	fire_sound = 'sound/weapons/guns/fire/Laser Pistol Standard.ogg'
 	icon_state = "tep"
@@ -651,8 +651,8 @@
 //TE Standard Laser Carbine
 
 /obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_carbine
-	name = "\improper old world laser carbine"
-	desc = "A SFMC standard issue laser carbine. Has multiple firemodes for tactical flexibility. Uses standard old world (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
+	name = "\improper Terra-Experimental laser carbine"
+	desc = "A SFMC standard issue laser carbine. Has multiple firemodes for tactical flexibility. Uses standard Terra-Experimental (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
 	reload_sound = 'sound/weapons/guns/interact/standard_laser_rifle_reload.ogg'
 	fire_sound = 'sound/weapons/guns/fire/Laser Rifle Standard.ogg'
 	icon_state = "tec"
@@ -805,8 +805,8 @@
 //TE Standard Sniper
 
 /obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_sniper
-	name = "\improper old world laser sniper rifle"
-	desc = "The T-ES, an old world standard issue laser sniper rifle, has multiple powerful firemodes, although the lack of aim mode can limit its tactical flexibility. Uses standard old world (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
+	name = "\improper Terra-Experimental laser sniper rifle"
+	desc = "The T-ES, an Terra-Experimental standard issue laser sniper rifle, has multiple powerful firemodes, although the lack of aim mode can limit its tactical flexibility. Uses standard Terra-Experimental (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
 	reload_sound = 'sound/weapons/guns/interact/standard_laser_sniper_reload.ogg'
 	fire_sound = 'sound/weapons/guns/fire/Laser Sniper Standard.ogg'
 	icon_state = "tes"
@@ -918,8 +918,8 @@
 // TE Standard MG
 
 /obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_mlaser
-	name = "\improper old world laser machine gun"
-	desc = "an old world standard issue machine laser gun. High efficiency modulators ensure the weapon has an extremely high fire count, and multiple firemodes makes it a flexible infantry support gun. Uses standard old world (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
+	name = "\improper Terra-Experimental laser machine gun"
+	desc = "an Terra-Experimental standard issue machine laser gun. High efficiency modulators ensure the weapon has an extremely high fire count, and multiple firemodes makes it a flexible infantry support gun. Uses standard Terra-Experimental (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
 	reload_sound = 'sound/weapons/guns/interact/standard_machine_laser_reload.ogg'
 	fire_sound = 'sound/weapons/guns/fire/Laser Rifle Standard.ogg'
 	icon_state = "tem"
@@ -1040,8 +1040,8 @@
 // TE X-Ray
 
 /obj/item/weapon/gun/energy/lasgun/lasrifle/xray
-	name = "\improper old world X-Ray laser rifle"
-	desc = "an old world X-Ray laser rifle. It has an integrated charge selector for normal and high settings. Uses standard old world (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
+	name = "\improper Terra-Experimental X-Ray laser rifle"
+	desc = "an Terra-Experimental X-Ray laser rifle. It has an integrated charge selector for normal and high settings. Uses standard Terra-Experimental (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts."
 	reload_sound = 'sound/weapons/guns/interact/standard_laser_rifle_reload.ogg'
 	fire_sound = 'sound/weapons/guns/fire/laser3.ogg'
 	icon_state = "tex"
