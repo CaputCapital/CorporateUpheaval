@@ -233,6 +233,7 @@
 /area/gleichseitig16/indoors/north/crawlergarages
 	name = "Gleichseitig-16 - North - Crawler Garages"
 	icon_state = "g16f_ncrawler_garages"
+	minimap_color = MINIMAP_AREA_REQ
 
 /area/gleichseitig16/outdoors/north/phoronex/yard
 	name = "Gleichseitig-16 - North - PhoronEX Yard"
@@ -249,6 +250,7 @@
 /area/gleichseitig16/indoors/north/phoronex/garage
 	name = "Gleichseitig-16 - North - PhoronEX Garage"
 	icon_state = "g16f_nphoronex_storage"
+	minimap_color = MINIMAP_AREA_REQ
 
 /area/gleichseitig16/indoors/north/guardianmotorpost
 	name = "Gleichseitig-16 - North - Guardian Outpost"
