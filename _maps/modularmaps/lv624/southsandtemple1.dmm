@@ -10,36 +10,33 @@
 /area/lv624/ground/sand9)
 "bt" = (
 /turf/open/floor/plating/ground/dirt/typethree,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "bE" = (
 /turf/open/liquid/water/river/autosmooth,
 /area/lv624/ground/sand3)
 "bM" = (
 /turf/open/floor/plating/ground/dirt/typezero,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "bU" = (
 /obj/structure/showcase/six,
 /obj/structure/platform{
 	dir = 10
 	},
-/turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/turf/open/floor/plating/mainship,
+/area/lv624/lazarus/sandtemple/garbledradio)
 "cK" = (
 /turf/open/floor/plating/ground/dirtgrassborder{
 	dir = 4
 	},
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "cT" = (
 /obj/effect/ai_node,
 /turf/open/floor/plating/ground/dirt,
 /area/lv624/ground/sand9)
 "dm" = (
 /obj/structure/platform_decoration,
-/obj/effect/turf_decal/grassdecal{
-	dir = 1
-	},
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "dH" = (
 /turf/open/floor/plating/ground/dirtgrassborder/corner2{
 	dir = 4
@@ -47,7 +44,7 @@
 /area/lv624/ground/sand9)
 "er" = (
 /turf/open/floor/plating/ground/dirtgrassborder/corner,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "fi" = (
 /obj/effect/landmark/weed_node,
 /turf/open/floor/plating/ground/dirt,
@@ -65,7 +62,7 @@
 	dir = 8
 	},
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "jL" = (
 /obj/structure/platform_decoration{
 	dir = 4
@@ -80,15 +77,12 @@
 /obj/structure/platform_decoration{
 	dir = 1
 	},
-/obj/effect/turf_decal/grassdecal{
-	dir = 1
-	},
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "ls" = (
 /obj/effect/landmark/weed_node,
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "lD" = (
 /turf/open/ground/grass,
 /area/lv624/ground/jungle8)
@@ -96,33 +90,21 @@
 /obj/structure/flora/ausbushes/palebush,
 /turf/open/liquid/water/river/autosmooth,
 /area/lv624/ground/river3)
-"px" = (
-/obj/structure/stairs/seamless/platform{
-	dir = 1
-	},
-/turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
 "pM" = (
 /turf/open/floor/plating/ground/dirtgrassborder{
 	dir = 1
 	},
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "qf" = (
 /turf/closed/wall/r_wall/chigusa,
-/area/lv624/lazarus/sandtemple)
-"qU" = (
-/obj/structure/stairs/seamless{
-	dir = 4
-	},
-/turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "rS" = (
 /obj/docking_port/stationary/crashmode,
 /obj/structure/stairs/seamless{
 	dir = 8
 	},
 /turf/open/floor/plating/ground/dirt,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "sb" = (
 /turf/open/floor/plating/ground/dirt,
 /area/lv624/ground/sand3)
@@ -133,7 +115,7 @@
 	},
 /obj/structure/showcase,
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "um" = (
 /obj/effect/ai_node,
 /turf/open/liquid/water/river/autosmooth,
@@ -168,15 +150,15 @@
 /obj/structure/platform{
 	dir = 5
 	},
-/turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/turf/open/floor/plating/mainship,
+/area/lv624/lazarus/sandtemple/garbledradio)
 "wv" = (
 /obj/structure/platform_decoration{
 	dir = 4
 	},
 /obj/structure/stairs/corner_seamless,
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "wB" = (
 /obj/structure/flora/grass/brown,
 /turf/open/liquid/water/river/autosmooth,
@@ -197,7 +179,7 @@
 /turf/open/floor/plating/ground/dirtgrassborder/corner{
 	dir = 8
 	},
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "zx" = (
 /turf/closed/gm/dense,
 /area/lv624/ground/caves/rock)
@@ -208,7 +190,7 @@
 /area/lv624/ground/jungle8)
 "Am" = (
 /turf/open/floor/plating/ground/dirtgrassborder,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "AA" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/floor/plating/ground/dirtgrassborder/corner{
@@ -220,24 +202,18 @@
 /area/lv624/ground/sand9)
 "Bi" = (
 /turf/open/floor/plating/ground/dirt,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "Bo" = (
 /turf/open/floor/plating/ground/dirtgrassborder/corner{
 	dir = 1
 	},
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "BP" = (
 /obj/structure/stairs/corner_seamless{
 	dir = 4
 	},
-/turf/open/floor/plating/ground/dirt,
-/area/lv624/lazarus/sandtemple)
-"CB" = (
-/obj/effect/turf_decal/grassdecal{
-	dir = 1
-	},
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "Dk" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/ground/grass,
@@ -248,32 +224,32 @@
 	dir = 2;
 	name = "Strange Temple"
 	},
-/turf/open/floor/plating/ground/dirt,
-/area/lv624/lazarus/sandtemple)
+/turf/open/floor/tile/whiteyellow/full,
+/area/lv624/lazarus/sandtemple/garbledradio)
 "ES" = (
 /obj/structure/platform_decoration,
 /obj/structure/stairs/seamless{
 	dir = 8
 	},
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "Fc" = (
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "Gj" = (
 /obj/structure/stairs/seamless{
 	dir = 4
 	},
-/turf/open/floor/plating/ground/dirt,
-/area/lv624/lazarus/sandtemple)
+/turf/open/floor/tile/whiteyellow/full,
+/area/lv624/lazarus/sandtemple/garbledradio)
 "GR" = (
 /obj/structure/stairs/seamless/platform,
-/turf/open/floor/plating/ground/dirt,
-/area/lv624/lazarus/sandtemple)
+/turf/open/floor/tile/whiteyellow/full,
+/area/lv624/lazarus/sandtemple/garbledradio)
 "GT" = (
 /obj/effect/ai_node,
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "Hq" = (
 /obj/effect/turf_decal/warning_stripes/thin{
 	dir = 1
@@ -288,8 +264,8 @@
 /obj/structure/platform{
 	dir = 9
 	},
-/turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/turf/open/floor/plating/mainship,
+/area/lv624/lazarus/sandtemple/garbledradio)
 "Ix" = (
 /obj/structure/flora/jungle/vines,
 /turf/open/floor/plating/ground/dirtgrassborder{
@@ -328,17 +304,19 @@
 	dir = 8
 	},
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "Nz" = (
-/obj/structure/stairs/seamless/platform,
-/turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/obj/structure/stairs/seamless{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/lv624/lazarus/sandtemple/garbledradio)
 "NH" = (
 /obj/structure/stairs/corner_seamless{
 	dir = 1
 	},
-/turf/open/floor/plating/ground/dirt,
-/area/lv624/lazarus/sandtemple)
+/turf/open/floor/tile/whiteyellow/full,
+/area/lv624/lazarus/sandtemple/garbledradio)
 "NU" = (
 /obj/effect/decal/remains/xeno{
 	pixel_x = 1;
@@ -346,21 +324,17 @@
 	},
 /obj/structure/showcase,
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "Ow" = (
 /obj/structure/stairs/seamless/platform{
 	dir = 1
 	},
-/turf/open/floor/plating/ground/dirt,
-/area/lv624/lazarus/sandtemple)
+/turf/open/floor/tile/whiteyellow/full,
+/area/lv624/lazarus/sandtemple/garbledradio)
 "Pw" = (
 /obj/effect/ai_node,
 /turf/open/floor/plating/ground/dirt,
 /area/lv624/ground/sand3)
-"PR" = (
-/obj/structure/flora/jungle/vines,
-/turf/open/liquid/water/river/autosmooth,
-/area/lv624/ground/sand6)
 "PV" = (
 /obj/structure/flora/grass/green,
 /turf/open/liquid/water/river/autosmooth,
@@ -370,47 +344,50 @@
 	dir = 8
 	},
 /turf/open/floor/plating/ground/dirt,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "Qt" = (
 /turf/open/floor/plating/ground/dirtgrassborder/corner{
 	dir = 4
 	},
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "QK" = (
 /obj/effect/ai_node,
 /turf/open/floor/plating/ground/dirt,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "QQ" = (
 /turf/open/floor/plating/ground/dirtgrassborder/corner2{
 	dir = 1
 	},
 /area/lv624/ground/river3)
 "Ri" = (
-/turf/open/ground/grass,
-/area/lv624/lazarus/sandtemple)
+/obj/effect/turf_decal/grassdecal{
+	dir = 1
+	},
+/turf/open/floor/tile/whiteyellow/full,
+/area/lv624/lazarus/sandtemple/garbledradio)
 "RZ" = (
 /turf/open/floor/plating/ground/dirt/typeone,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "Sq" = (
 /obj/effect/landmark/weed_node,
 /turf/open/floor/plating/ground/dirt/typetwo,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "Su" = (
 /obj/structure/platform,
 /turf/open/ground/grass,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "SR" = (
 /turf/open/floor/plating/ground/dirtgrassborder{
 	dir = 8
 	},
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "Uc" = (
 /obj/structure/showcase/six,
 /obj/structure/platform{
 	dir = 6
 	},
-/turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/turf/open/floor/plating/mainship,
+/area/lv624/lazarus/sandtemple/garbledradio)
 "Ue" = (
 /obj/structure/flora/jungle/plantbot1/alien,
 /turf/open/liquid/water/river/autosmooth,
@@ -446,7 +423,7 @@
 "YA" = (
 /obj/item/clothing/suit/armor/vest/admiral,
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "YR" = (
 /turf/open/liquid/water/river/autosmooth,
 /area/lv624/ground/river3)
@@ -458,14 +435,14 @@
 	dir = 4
 	},
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "ZM" = (
 /obj/structure/flora/jungle/vines,
 /turf/open/floor/plating/ground/dirt,
 /area/lv624/ground/sand6)
 "ZP" = (
 /turf/open/floor/plating/ground/dirt/dug,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 
 (1,1,1) = {"
 Ww
@@ -520,7 +497,7 @@ YR
 YR
 "}
 (3,1,1) = {"
-PR
+Ww
 um
 aw
 Pw
@@ -598,7 +575,7 @@ AP
 YR
 "}
 (6,1,1) = {"
-Nz
+GR
 iX
 Qq
 Qq
@@ -615,7 +592,7 @@ AP
 AP
 AP
 Mb
-Qq
+iX
 Ie
 GR
 ES
@@ -634,11 +611,11 @@ Fc
 qf
 qf
 HW
-Nz
+GR
 iX
 iX
-Qq
-Qq
+iX
+iX
 Ie
 er
 cK
@@ -683,14 +660,14 @@ Fc
 GT
 Fc
 Fc
-QK
+GT
 EE
 Fc
 ls
 Fc
 Fc
 Fc
-CB
+Fc
 Ri
 Am
 QK
@@ -738,9 +715,9 @@ Fc
 qf
 qf
 HW
-px
-qU
-qU
+Ow
+Gj
+Gj
 Gj
 Gj
 vg
@@ -754,12 +731,12 @@ AP
 YR
 "}
 (12,1,1) = {"
-px
-qU
+Ow
 Gj
-Gj
-Gj
-Gj
+Nz
+Nz
+Nz
+Nz
 qf
 qf
 HW

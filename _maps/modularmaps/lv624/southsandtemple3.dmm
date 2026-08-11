@@ -12,13 +12,7 @@
 "dv" = (
 /obj/effect/decal/cleanable/blood/splatter/animated,
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
-"er" = (
-/obj/structure/stairs/seamless{
-	dir = 4
-	},
-/turf/open/floor/plating/ground/dirt,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "eP" = (
 /obj/structure/flora/grass/brown,
 /turf/open/liquid/water/river/autosmooth,
@@ -40,11 +34,8 @@
 /turf/open/floor,
 /area/lv624/ground/sand9)
 "hG" = (
-/obj/structure/stairs/seamless{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/dirt,
-/area/lv624/lazarus/sandtemple)
+/turf/open/liquid/water/river/autosmooth,
+/area/space)
 "jh" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/ground/grass,
@@ -71,7 +62,7 @@
 /area/lv624/ground/jungle8)
 "mz" = (
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "mL" = (
 /turf/closed/gm/dense,
 /area/lv624/ground/caves/rock)
@@ -90,7 +81,7 @@
 	dir = 1
 	},
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "oY" = (
 /obj/effect/landmark/weed_node,
 /turf/open/floor/plating/ground/dirt,
@@ -116,11 +107,11 @@
 "sC" = (
 /obj/effect/ai_node,
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "tf" = (
 /obj/structure/stairs/seamless/platform,
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "tl" = (
 /obj/effect/decal/cleanable/blood/splatter/animated,
 /obj/effect/landmark/weed_node,
@@ -133,22 +124,18 @@
 "ut" = (
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "vZ" = (
 /obj/machinery/floodlight/colony,
 /turf/open/floor/plating/ground/dirt,
 /area/lv624/ground/sand9)
-"wT" = (
-/obj/structure/flora/jungle/vines,
-/turf/open/liquid/water/river/autosmooth,
-/area/lv624/ground/sand6)
 "yc" = (
 /turf/open/floor/plating/ground/dirt,
 /area/lv624/ground/sand6)
 "zi" = (
 /obj/structure/showcase,
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "Ai" = (
 /obj/structure/glowshroom,
 /turf/open/floor/plating/ground/dirt,
@@ -190,7 +177,7 @@
 	dir = 8
 	},
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "PL" = (
 /obj/structure/flora/jungle/plantbot1/alien,
 /turf/open/liquid/water/river/autosmooth,
@@ -224,13 +211,13 @@
 	dir = 4
 	},
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "Tp" = (
 /turf/open/liquid/water/river/autosmooth,
 /area/lv624/ground/river3)
 "Tt" = (
 /turf/closed/wall/r_wall/chigusa,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "TX" = (
 /obj/effect/ai_node,
 /turf/open/floor/plating/ground/dirt,
@@ -244,8 +231,8 @@
 /obj/structure/stairs/seamless{
 	dir = 8
 	},
-/turf/open/floor/plating/ground/dirt,
-/area/lv624/lazarus/sandtemple)
+/turf/open/floor/tile/whiteyellow/full,
+/area/lv624/lazarus/sandtemple/garbledradio)
 "Wt" = (
 /turf/open/floor/plating/ground/dirt,
 /area/lv624/ground/sand9)
@@ -256,15 +243,15 @@
 "WB" = (
 /obj/effect/landmark/weed_node,
 /turf/open/floor/tile/whiteyellow/full,
-/area/lv624/lazarus/sandtemple)
+/area/lv624/lazarus/sandtemple/garbledradio)
 "Xv" = (
 /obj/machinery/door/airlock/mainship/generic{
 	desc = "This strange temple is covered in runes. It looks extremely ancient.";
 	dir = 2;
 	name = "Strange Temple"
 	},
-/turf/open/floor/plating/ground/dirt,
-/area/lv624/lazarus/sandtemple)
+/turf/open/floor/tile/whiteyellow/full,
+/area/lv624/lazarus/sandtemple/garbledradio)
 "Xx" = (
 /turf/closed/mineral/smooth,
 /area/lv624/ground/caves/rock)
@@ -302,7 +289,7 @@ qK
 Wt
 Wt
 Tp
-Tp
+hG
 "}
 (2,1,1) = {"
 Mo
@@ -331,7 +318,7 @@ Tp
 Tp
 "}
 (3,1,1) = {"
-wT
+JK
 rc
 yc
 Lh
@@ -411,9 +398,9 @@ Tp
 (6,1,1) = {"
 tf
 OZ
-hG
-hG
-hG
+OZ
+OZ
+OZ
 UW
 Tt
 Tt
@@ -567,10 +554,10 @@ Tp
 (12,1,1) = {"
 oG
 SJ
-er
-er
-er
-er
+SJ
+SJ
+SJ
+SJ
 Tt
 Tt
 Wt
