@@ -39,7 +39,7 @@
 	scatter = 10
 	throw_range = 4
 	fire_delay = 0.15 SECONDS
-	accuracy_mult = 0.7
+	accuracy_mult = 0.6
 	ammo_datum_type = /datum/ammo/bullet/rifle/nut
 	default_ammo_type = /obj/item/ammo_magazine/rifle/nut_ammo
 	allowed_ammo_types = list(/obj/item/ammo_magazine/rifle/nut_ammo)
@@ -138,9 +138,7 @@
 	drag_delay = 0.5
 	knockdown_threshold = 25
 	allow_pass_flags = PASSABLE|HOVERING
-	/* add this if those shit are too hard to fight.
 	obj_flags = CAN_BE_HIT|PROJ_IGNORE_DENSITY
-	*/
 	density = FALSE //so it wont block people.
 	atom_flags = BUMP_ATTACKABLE
 	var/movement_delay = 0.7 SECONDS
