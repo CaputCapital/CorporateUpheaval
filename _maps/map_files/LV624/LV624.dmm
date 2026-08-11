@@ -5397,7 +5397,7 @@
 /obj/structure/stairs/corner_seamless{
 	dir = 8
 	},
-/turf/open/floor/tile/whiteyellow/full,
+/turf/open/floor/plating/ground/dirt,
 /area/lv624/lazarus/sandtemple/garbledradio)
 "eDi" = (
 /obj/effect/spawner/random/engineering/tech_supply,
@@ -8774,6 +8774,12 @@
 /obj/structure/window_frame/colony,
 /turf/open/floor/plating,
 /area/lv624/lazarus/overgrown)
+"iAo" = (
+/obj/structure/stairs/seamless{
+	dir = 1
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/lv624/lazarus/sandtemple/garbledradio)
 "iAC" = (
 /turf/closed/wall/r_wall,
 /area/lv624/lazarus/canteen)
@@ -15474,6 +15480,10 @@
 /obj/structure/window_frame/colony,
 /turf/open/floor/plating/ground/dirtgrassborder/autosmooth,
 /area/lv624/lazarus/overgrown)
+"qvA" = (
+/obj/structure/stairs/corner_seamless,
+/turf/open/floor/plating/ground/dirt,
+/area/lv624/lazarus/sandtemple/garbledradio)
 "qvP" = (
 /obj/machinery/computer/intel_computer,
 /turf/open/floor/tile/purple/whitepurple{
@@ -57460,7 +57470,7 @@ snv
 snv
 snv
 snv
-iyS
+iAo
 osJ
 osJ
 hQb
@@ -57642,7 +57652,7 @@ snv
 fXE
 snv
 snv
-iyS
+iAo
 osJ
 osJ
 hQb
@@ -57824,7 +57834,7 @@ snv
 snv
 snv
 snv
-iyS
+iAo
 vcW
 osJ
 mpL
@@ -58006,7 +58016,7 @@ snv
 snv
 snv
 snv
-iyS
+iAo
 fnP
 osJ
 hQb
@@ -58188,7 +58198,7 @@ snv
 snv
 snv
 snv
-iyS
+iAo
 osJ
 osJ
 hQb
@@ -58370,7 +58380,7 @@ snv
 snv
 snv
 snv
-soz
+qvA
 iwX
 iwX
 iwX
