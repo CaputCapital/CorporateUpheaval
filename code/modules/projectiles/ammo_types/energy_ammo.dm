@@ -535,7 +535,7 @@
 	icon_state = "microwavelaser"
 	hud_state = "laser_disabler"
 	damage = 100
-	penetration = 30
+	penetration = 5 // Severely reduced penetration for increased damage
 	ammo_behavior_flags = AMMO_ENERGY|AMMO_HITSCAN|AMMO_BETTER_COVER_RNG|AMMO_SNIPER
 	sundering = 1
 	hitscan_effect_icon = "u_laser_beam"
