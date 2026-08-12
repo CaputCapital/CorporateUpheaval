@@ -141,6 +141,7 @@
 		slot_l_hand_str = 'ntf_modular/icons/mob/inhands/guns/energy_left_64.dmi',
 		slot_r_hand_str = 'ntf_modular/icons/mob/inhands/guns/energy_right_64.dmi',
 	)
+	gun_firemode = GUN_FIREMODE_AUTOMATIC
 	gun_firemode_list = list(GUN_FIREMODE_AUTOMATIC)
 	caliber = CALIBER_PLASMA
 	max_shots = 20
