@@ -31,20 +31,20 @@
 	contains = list(/obj/structure/largecrate/supply/medicine/medivend)
 	containertype = null
 	cost = 2500
-	access = ACCESS_MARINE_MEDBAY
+	access = null
 
 /obj/structure/largecrate/supply/medicine/marinemed
 	name = "\improper NovaMed Plus crate (x1)"
 	desc = "A crate containing one fully-stocked Novamed Plus medical vendor."
-	supplies = list(/obj/machinery/vending/medical = 1)
+	supplies = list(/obj/structure/largecrate/supply/medicine/medivend = 1)
 
 /datum/supply_packs/medical/marinemed
 	name = "MarineMed crate (x1)"
 	notes = "A crate containing one fully-stocked MarineMed medical vendor."
-	contains = list(/obj/machinery/vending/MarineMed)
+	contains = list(/obj/structure/largecrate/supply/medicine/marinemed)
 	containertype = null
 	cost = 1500
-	access = ACCESS_MARINE_MEDBAY
+	access = null
 
 /datum/supply_packs/medical/soldering_tool
 	name = "Soldering tool"
