@@ -20,6 +20,12 @@
 
 /datum/ai_behavior/human/g16separatism/deserter
 	minimum_health = 0.4
+	new_move_chat = list("I'm going.", "Cover me, I'm moving.", "Let me move.", "I need to move.", "I'll move!", "Keep distance apart!", "We gotta' go!", "Moving!", "Go go go!!", "Let's  go.", "I'm leaving.", "I'm running.")
+	new_follow_chat = list("Following.", "Following you.", "Gehen sie voran.", "Ubernimm die fuhrung.", "Bewegen!", "Let's go!", "Stay together!", "In formation.", "Where to?",)
+	new_target_chat = list("Get out of here!!", "Fuck off!!", "Holy shit!", "Oh fuck!", "Federal troops!", "What the-", "I need backup!", "The enemy has arrived!", "Importiert fuck off!", "Aw shit.", "Take 'em out!", "This is our home!!", "We're under attack!", "Scheisse!!", "Retreat!!", "Run!!")
+	retreating_chat = list("I'm fucking hurt!", "Scheisse, ich blute!!", "Fick!!", "I'm hit!", "Somebody fucking help me!", "Augh fick, ich hau ab!", "Hilf mir!", "Need help here!", "I'm getting the fuck outta' here!", "Oh no.", "I'm getting hit!", "I'm getting shot at!", "Run for it!")
+	medical_rating = AI_MED_DOCTOR
+	engineer_rating = AI_ENGIE_EXPERT
 
 /datum/ai_behavior/human/g16separatism/advisor
 	new_move_chat = list("Shevelis!", "Cover me, I'm moving.", "Let me move.", "I need to move.", "I'll move!", "Keep distance apart!", "We gotta' go!", "Moving!", "Go go go!!", "Let's  go.", "I'm leaving.", "I'm running.")
@@ -44,6 +50,12 @@
 /datum/ai_behavior/human/g16separatism/deserteridle
 	base_action = IDLE
 	minimum_health = 0.4
+	new_move_chat = list("I'm going.", "Cover me, I'm moving.", "Let me move.", "I need to move.", "I'll move!", "Keep distance apart!", "We gotta' go!", "Moving!", "Go go go!!", "Let's  go.", "I'm leaving.", "I'm running.")
+	new_follow_chat = list("Following.", "Following you.", "Gehen sie voran.", "Ubernimm die fuhrung.", "Bewegen!", "Let's go!", "Stay together!", "In formation.", "Where to?",)
+	new_target_chat = list("Get out of here!!", "Fuck off!!", "Holy shit!", "Oh fuck!", "Federal troops!", "What the-", "I need backup!", "The enemy has arrived!", "Importiert fuck off!", "Aw shit.", "Take 'em out!", "This is our home!!", "We're under attack!", "Scheisse!!", "Retreat!!", "Run!!")
+	retreating_chat = list("I'm fucking hurt!", "Scheisse, ich blute!!", "Fick!!", "I'm hit!", "Somebody fucking help me!", "Augh fick, ich hau ab!", "Hilf mir!", "Need help here!", "I'm getting the fuck outta' here!", "Oh no.", "I'm getting hit!", "I'm getting shot at!", "Run for it!")
+	medical_rating = AI_MED_DOCTOR
+	engineer_rating = AI_ENGIE_EXPERT
 
 /datum/ai_behavior/human/g16separatism/advisoridle
 	new_move_chat = list("Shevelis!", "Cover me, I'm moving.", "Let me move.", "I need to move.", "I'll move!", "Keep distance apart!", "We gotta' go!", "Moving!", "Go go go!!", "Let's  go.", "I'm leaving.", "I'm running.")
