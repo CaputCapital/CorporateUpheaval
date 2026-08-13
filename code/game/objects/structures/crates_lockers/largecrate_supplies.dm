@@ -372,7 +372,7 @@
 	supplies = list(/obj/machinery/vending/medical = 1)
 
 /obj/structure/largecrate/supply/medicine/marinemed
-	name = "\improper Marinemed crate (x1)"
+	name = "\improper MarineMed crate (x1)"
 	desc = "A crate containing one SFMC Plus medical vendor."
 	supplies = list(/obj/machinery/vending/MarineMed = 1)
 
