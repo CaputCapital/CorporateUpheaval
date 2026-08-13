@@ -1,5 +1,4 @@
-#define PINGID_ADMIN_PING
-//"1532223004506062978"
+#define PINGID_ADMIN_PING "1532223004506062978"
 
 /proc/amia_ahelprelay(ticketid, initckey, msg)
 	SHOULD_NOT_SLEEP(TRUE)
