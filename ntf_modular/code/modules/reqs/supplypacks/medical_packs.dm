@@ -28,15 +28,15 @@
 /datum/supply_packs/medical/medvend
 	name = "NovaMed Plus crate (x1)"
 	notes = "A crate containing one fully-stocked Novamed Plus medical vendor."
-	contains = list(/obj/structure/largecrate/supply/medicine/medivend)
+	contains = list(/obj/structure/largecrate/supply/medicine/novamed)
 	containertype = null
 	cost = 2500
 	access = null
 
-/obj/structure/largecrate/supply/medicine/marinemed
+/obj/structure/largecrate/supply/medicine/novamed
 	name = "\improper NovaMed Plus crate (x1)"
 	desc = "A crate containing one fully-stocked Novamed Plus medical vendor."
-	supplies = list(/obj/structure/largecrate/supply/medicine/medivend = 1)
+	supplies = list(/obj/structure/largecrate/supply/medicine/novamed = 1)
 
 /datum/supply_packs/medical/marinemed
 	name = "MarineMed crate (x1)"
