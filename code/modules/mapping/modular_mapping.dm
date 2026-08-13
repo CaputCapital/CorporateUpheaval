@@ -1672,7 +1672,7 @@
 
 /datum/map_template/modular/gleichseitig16fp/efinanceone
 	name = "East Financial"
-	mappath = "_maps/modularmaps/gleichseitig16fp/efinancevar2.dmm"
+	mappath = "_maps/modularmaps/gleichseitig16fp/efinancevar1.dmm"
 	modular_id = "g16fpfinancial"
 	template_width = 17
 	template_height = 27
@@ -1683,6 +1683,20 @@
 	modular_id = "g16fpfinancial"
 	template_width = 17
 	template_height = 27
+
+/datum/map_template/modular/gleichseitig16fp/swlargeblockone
+	name = "Leopold Stadium"
+	mappath = "_maps/modularmaps/gleichseitig16fp/swlargeblockvar1.dmm"
+	modular_id = "g16fpswlargeblock"
+	template_width = 62
+	template_height = 37
+
+/datum/map_template/modular/gleichseitig16fp/swlargeblocktwo
+	name = "Cerulean Hotel"
+	mappath = "_maps/modularmaps/gleichseitig16fp/swlargeblockvar2.dmm"
+	modular_id = "g16fpswlargeblock"
+	template_width = 62
+	template_height = 37
 
 /datum/map_template/modular/gleichseitig16fp/nineeintersectionone
 	name = "Street"
