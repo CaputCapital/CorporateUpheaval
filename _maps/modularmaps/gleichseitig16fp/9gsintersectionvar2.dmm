@@ -14,6 +14,14 @@
 /obj/effect/mapping_helpers/barricade/wired,
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/outdoors/south/streets)
+"f" = (
+/obj/structure/barricade/sandbags{
+	faction = "Hostile";
+	dir = 1
+	},
+/obj/effect/mapping_helpers/barricade/wired,
+/turf/open/urban/street/asphalt,
+/area/gleichseitig16/outdoors/south/streets)
 "i" = (
 /obj/effect/urban/decal/road/road_edge/six,
 /obj/structure/barricade/sandbags{
@@ -52,6 +60,14 @@
 "z" = (
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/outdoors/south/streets)
+"F" = (
+/obj/effect/mapping_helpers/barricade/wired,
+/obj/structure/barricade/sandbags{
+	faction = "Hostile";
+	dir = 1
+	},
+/turf/open/urban/street/asphalt,
+/area/gleichseitig16/outdoors/south/streets)
 "G" = (
 /obj/structure/barricade/folding{
 	dir = 1;
@@ -62,13 +78,14 @@
 /area/gleichseitig16/outdoors/south/streets)
 "I" = (
 /obj/effect/urban/decal/road/road_edge/seven,
-/obj/structure/barricade/sandbags{
-	faction = "Hostile"
-	},
 /obj/effect/mapping_helpers/barricade/wired,
 /obj/structure/barricade/sandbags{
 	dir = 8;
 	faction = "Hostile"
+	},
+/obj/structure/barricade/sandbags{
+	faction = "Hostile";
+	dir = 1
 	},
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/outdoors/south/streets)
@@ -92,13 +109,14 @@
 /area/gleichseitig16/outdoors/south/streets)
 "U" = (
 /obj/effect/urban/decal/road/road_edge/eight,
-/obj/structure/barricade/sandbags{
-	faction = "Hostile"
-	},
 /obj/effect/mapping_helpers/barricade/wired,
 /obj/structure/barricade/sandbags{
 	dir = 4;
 	faction = "Hostile"
+	},
+/obj/structure/barricade/sandbags{
+	faction = "Hostile";
+	dir = 1
 	},
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/outdoors/south/streets)
@@ -127,7 +145,7 @@ k
 i
 "}
 (2,1,1) = {"
-o
+F
 O
 z
 Z
@@ -141,7 +159,7 @@ z
 a
 "}
 (4,1,1) = {"
-o
+f
 Z
 z
 O

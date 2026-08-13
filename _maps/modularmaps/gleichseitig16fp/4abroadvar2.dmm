@@ -105,7 +105,7 @@
 /turf/open/floor/plating/ground/snow/layer1,
 /area/gleichseitig16/outdoors/northwest/streets)
 "Q" = (
-/obj/effect/landmark/spawn_marker/euseparatists/militantidle,
+/obj/effect/landmark/spawn_marker/euseparatists/deserteridle,
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/outdoors/northwest/streets)
 "R" = (

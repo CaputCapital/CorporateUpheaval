@@ -52,6 +52,10 @@
 	},
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/outdoors/northwest/streets)
+"Q" = (
+/obj/effect/landmark/spawn_marker/euseparatists/deserteridle,
+/turf/open/urban/street/asphalt,
+/area/gleichseitig16/outdoors/northwest/streets)
 "U" = (
 /obj/structure/barricade/sandbags{
 	faction = "Hostile";
@@ -101,7 +105,7 @@ a
 t
 a
 G
-p
+Q
 a
 "}
 (4,1,1) = {"
