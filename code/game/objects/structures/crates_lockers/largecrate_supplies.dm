@@ -369,7 +369,7 @@
 /obj/structure/largecrate/supply/medicine/medivend
 	name = "\improper SFMCMed Plus crate (x1)"
 	desc = "A crate containing one SFMC Plus medical vendor."
-	supplies = list(/obj/machinery/vending/medical = 1)
+	supplies = list(/obj/machinery/vending/MarineMed = 1)
 
 
 /obj/structure/largecrate/machine
