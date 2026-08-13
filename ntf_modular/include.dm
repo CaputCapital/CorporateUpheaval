@@ -193,6 +193,7 @@
 #include "code\modules\cm_phone\internal_phone.dm"
 #include "code\modules\cm_phone\phone.dm"
 #include "code\modules\condor\cas_chair.dm"
+#include "code\modules\discord_webhooks\webhook.dm"
 #include "code\modules\factory\howtopaper.dm"
 #include "code\modules\factory\parts.dm"
 #include "code\modules\factory\unboxer.dm"
