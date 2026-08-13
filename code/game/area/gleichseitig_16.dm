@@ -1101,6 +1101,21 @@
 	icon_state = "g16f_stadium_swgens"
 	minimap_color = MINIMAP_AREA_LIVING
 
+/area/gleichseitig16/indoors/southwest/ceruleanhotel
+	name = "Gleichseitig-16 - Southwest - Cerulean Hotel"
+	icon_state = "g16_swceruleanhotel"
+	minimap_color = MINIMAP_AREA_LIVING
+
+/area/gleichseitig16/indoors/southwest/ceruleanhotel/parking
+	name = "Gleichseitig-16 - Southwest - Cerulean Hotel Parking"
+	icon_state = "g16_ceruleanhotel_swparking"
+	minimap_color = MINIMAP_AREA_COLONY
+
+/area/gleichseitig16/indoors/southwest/powerstation
+	name = "Gleichseitig-16 - Southwest - Power Station"
+	icon_state = "g16f_power_swstation"
+	minimap_color = MINIMAP_AREA_ENGI
+
 /area/gleichseitig16/outdoors/southwest/ehruni/grounds
 	name = "Gleichseitig-16 - Southwest - EHR-UNI Grounds"
 	icon_state = "g16f_university_swgrounds"
