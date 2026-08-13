@@ -407,6 +407,11 @@
 	spawner_width = 17
 	spawner_height = 27
 
+/obj/effect/spawner/modularmap/gleichseitig16fp/southwestlargeblock
+	mapid = "g16fpswlargeblock"
+	spawner_width = 62
+	spawner_height = 37
+
 /obj/effect/spawner/modularmap/gleichseitig16fp/nineeintersection
 	mapid = "g16fp9eintersect"
 	spawner_width = 5
