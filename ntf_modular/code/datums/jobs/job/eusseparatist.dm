@@ -169,14 +169,14 @@ GLOBAL_LIST_EMPTY(spawn_eusmilitia)
 //EUS Deserter, Medium-Tier Infantry
 /datum/job/g16separatism/union/deserter
 	title = "Separatist Deserter"
-	skills_type = /datum/skills/civilian/survivor/atmos
+	skills_type = /datum/skills/veteran
 	outfit = /datum/outfit/job/g16separatism/deserter
 	npc_type = "deserter"
 	paygrade = "EUS-DSRTR"
 
 /datum/job/g16separatism/union/deserteridle
 	title = "Separatist Deserter"
-	skills_type = /datum/skills/civilian/survivor/atmos
+	skills_type = /datum/skills/veteran
 	outfit = /datum/outfit/job/g16separatism/deserter
 	npc_type = "idledeserter"
 	paygrade = "EUS-DSRTR"
