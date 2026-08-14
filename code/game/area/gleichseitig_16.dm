@@ -56,23 +56,25 @@
 	name = "Gleichseitig-16 - LZ1 - Flight Control Building"
 	icon_state = "g16f_lz1_flight_ctrl"
 	ceiling = CEILING_METAL
+	minimap_color = MINIMAP_AREA_ENGI
 
 /area/gleichseitig16/indoors/landing_zone_1/lz1_console
 	name = "Gleichseitig-16 - LZ1 - Dropship Normandy Console"
 	icon_state = "g16f_lz1_console"
 	requires_power = FALSE
 	ceiling = CEILING_METAL
+	minimap_color = MINIMAP_AREA_ENGI
 
 // Landing Zone 2
 /area/gleichseitig16/outdoors/landing_zone_2
-	name = "Gleichseitig-16 - LZ1 - Apartment Courtyard"
+	name = "Gleichseitig-16 - LZ2 - Apartment Courtyard"
 	icon_state = "g16f_lz2_apts"
 	minimap_color = MINIMAP_AREA_LZ
 	ceiling = CEILING_NONE
 	area_flavor = AREA_FLAVOR_URBAN
 
 /area/gleichseitig16/outdoors/landing_zone_2/parking
-	name = "Gleichseitig-16 - LZ1 - Apartment Parking Lot"
+	name = "Gleichseitig-16 - LZ2 - Apartment Parking Lot"
 	icon_state = "g16f_lz2_apts_parking"
 	ceiling = CEILING_NONE
 	minimap_color = MINIMAP_AREA_COLONY
