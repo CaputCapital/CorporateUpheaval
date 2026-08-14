@@ -1620,7 +1620,6 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
-/obj/effect/landmark/spawn_marker/euseparatists/deserteridle,
 /turf/open/floor/urban/tile/tilegrey,
 /area/gleichseitig16/indoors/southwest/ehruni/sec)
 "DB" = (
@@ -2032,6 +2031,10 @@
 /obj/structure/table/reinforced/prison,
 /obj/machinery/light/mainship,
 /turf/open/floor/prison/bright_clean/two,
+/area/gleichseitig16/indoors/southwest/ehruni/scitech)
+"Kd" = (
+/obj/effect/landmark/xeno_tunnel_spawn,
+/turf/open/ground/jungle/clear,
 /area/gleichseitig16/indoors/southwest/ehruni/scitech)
 "Ke" = (
 /obj/structure/bed/chair/office/dark{
@@ -3289,7 +3292,7 @@ EY
 QG
 EY
 EY
-EY
+Kd
 Gs
 Ls
 PH

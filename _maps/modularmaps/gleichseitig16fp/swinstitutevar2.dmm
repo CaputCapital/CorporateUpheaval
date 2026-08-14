@@ -1121,6 +1121,10 @@
 /obj/item/storage/bible,
 /turf/open/floor/carpet/black,
 /area/gleichseitig16/indoors/southwest/milacademy)
+"Aa" = (
+/obj/effect/landmark/xeno_tunnel_spawn,
+/turf/open/urban/street/cement2,
+/area/gleichseitig16/indoors/southwest/milacademy)
 "Ai" = (
 /obj/effect/ai_node{
 	pixel_x = 1
@@ -2392,7 +2396,7 @@ Ct
 Ct
 Qh
 fC
-Dt
+Aa
 Dt
 KY
 fw

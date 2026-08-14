@@ -246,7 +246,7 @@
 	},
 /area/gleichseitig16/indoors/south/militarysurplus)
 "mY" = (
-/obj/effect/landmark/spawn_marker/euseparatists/advisormg,
+/obj/effect/landmark/spawn_marker/euseparatists/advisorbreacher,
 /turf/open/floor/prison,
 /area/gleichseitig16/indoors/south/militarysurplus)
 "nn" = (
@@ -328,7 +328,7 @@
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/outdoors/south/streets)
 "qT" = (
-/obj/effect/landmark/spawn_marker/euseparatists/advisorbreacher,
+/obj/effect/landmark/spawn_marker/euseparatists/advisormg,
 /turf/open/floor/prison/whitered{
 	dir = 1;
 	color = "#919191"
@@ -423,7 +423,6 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/effect/ai_node,
 /turf/open/floor/urban/tile/tilewhite,
 /area/gleichseitig16/indoors/south/militarysurplus)
 "uC" = (
@@ -1421,7 +1420,7 @@ Mg
 hn
 Mg
 os
-qT
+pA
 pc
 wH
 Mg
@@ -1492,7 +1491,7 @@ Mg
 (23,1,1) = {"
 eJ
 Mg
-pA
+qT
 Pf
 Pf
 Ug
