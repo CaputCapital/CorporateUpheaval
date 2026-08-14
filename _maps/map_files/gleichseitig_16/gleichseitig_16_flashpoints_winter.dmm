@@ -288,12 +288,6 @@
 	dir = 1
 	},
 /area/gleichseitig16/indoors/northeast/warehouse)
-"ajD" = (
-/obj/structure/bed/chair/sofa/corsat/left,
-/turf/open/floor/prison{
-	color = "#e1f5ff"
-	},
-/area/gleichseitig16/indoors/southeast/kh/station)
 "akf" = (
 /turf/open/shuttle/dropship/six,
 /area/gleichseitig16/indoors/northeast/spaceport/pmcship)
@@ -372,6 +366,11 @@
 /obj/machinery/light,
 /turf/open/floor/grayscale/white,
 /area/gleichseitig16/indoors/west/studycenter/lecturehall3)
+"amL" = (
+/obj/structure/cable,
+/obj/effect/landmark/spawn_marker/euseparatists/sapperidle,
+/turf/open/floor/prison/darkyellow,
+/area/gleichseitig16/indoors/northeast/powerplant)
 "amO" = (
 /obj/effect/landmark/static_comms/net_two,
 /turf/open/floor/engine,
@@ -1412,6 +1411,10 @@
 /obj/machinery/light,
 /turf/open/floor/urban/tile/tilered,
 /area/gleichseitig16/indoors/south/pizzagalaxy)
+"bic" = (
+/obj/effect/landmark/spawn_marker/euseparatists/sapperidle,
+/turf/open/urban/street/cement3,
+/area/gleichseitig16/indoors/northeast/factory/assembly)
 "bir" = (
 /obj/effect/urban/decal/trash/four,
 /turf/open/urban/street/sidewalkfull,
@@ -1858,6 +1861,11 @@
 "bBb" = (
 /turf/closed/wall/r_wall/urban,
 /area/gleichseitig16/indoors/northeast/security/checkpoint)
+"bBq" = (
+/obj/structure/cable,
+/obj/effect/landmark/spawn_marker/euseparatists/advisorbreacher,
+/turf/open/urban/street/cement3,
+/area/gleichseitig16/indoors/northwest/union/consulting)
 "bCH" = (
 /turf/open/floor/plating/ground/snow{
 	color = "#ffe1af"
@@ -2640,9 +2648,9 @@
 	},
 /area/gleichseitig16/indoors/northeast/powerplant)
 "cmP" = (
-/obj/effect/landmark/spawn_marker/euseparatists/militant,
-/turf/open/floor/iron/checker,
-/area/gleichseitig16/indoors/southwest/plazamall/barber)
+/obj/effect/landmark/spawn_marker/euseparatists/militantidle,
+/turf/open/urban/street/asphalt,
+/area/gleichseitig16/indoors/northeast/exports)
 "cmV" = (
 /obj/structure/mirror{
 	dir = 1
@@ -3939,6 +3947,13 @@
 	dir = 9
 	},
 /area/gleichseitig16/indoors/west/rsr/mrestroom)
+"dsE" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/obj/effect/landmark/spawn_marker/euseparatists/militantidle,
+/turf/open/urban/street/cement3,
+/area/gleichseitig16/indoors/northwest/union/consulting)
 "dtA" = (
 /obj/machinery/door/poddoor/shutters/urban/security_lockdown{
 	id = "northeastcheckpoint_inspection_s";
@@ -4356,6 +4371,10 @@
 	},
 /turf/closed/wall/r_wall/urban,
 /area/gleichseitig16/outdoors/northwest/parking)
+"dNl" = (
+/obj/effect/landmark/spawn_marker/euseparatists/advisorrecon,
+/turf/open/urban/street/asphalt,
+/area/gleichseitig16/indoors/west/rsr/garage)
 "dNo" = (
 /obj/effect/turf_decal/warning_stripes/thin{
 	pixel_y = -1
@@ -4550,6 +4569,10 @@
 	},
 /turf/open/urban/street/sidewalkfull,
 /area/gleichseitig16/outdoors/northeast/streets)
+"dTY" = (
+/obj/effect/landmark/xeno_tunnel_spawn,
+/turf/open/ground/jungle/clear,
+/area/gleichseitig16/indoors/west/rsr/xbops)
 "dUl" = (
 /turf/open/urban/street/sidewalkfull,
 /area/gleichseitig16/outdoors/north/streets)
@@ -5502,13 +5525,11 @@
 /turf/open/shuttle/escapepod/plain,
 /area/gleichseitig16/indoors/west/rsr/whalls)
 "eKL" = (
-/obj/structure/bed/chair/office/dark,
-/obj/structure/transmitter/colony_net/auto_id{
-	dir = 8;
-	pixel_x = 16
+/obj/structure/bed/chair/sofa/corsat/left,
+/turf/open/floor/prison{
+	color = "#e1f5ff"
 	},
-/turf/open/urban/street/cement3,
-/area/gleichseitig16/indoors/northwest/union/consulting)
+/area/gleichseitig16/indoors/southeast/kh/station)
 "eKP" = (
 /obj/effect/urban/decal/dirt,
 /obj/structure/cable,
@@ -5523,6 +5544,7 @@
 	light_range = 5;
 	pixel_y = 32
 	},
+/obj/effect/landmark/spawn_marker/euseparatists/militantidle,
 /turf/open/urban/street/cement3,
 /area/gleichseitig16/indoors/northwest/union/railways)
 "eMo" = (
@@ -5624,6 +5646,10 @@
 	dir = 8
 	},
 /area/gleichseitig16/outdoors/south/streets)
+"ePv" = (
+/obj/effect/landmark/spawn_marker/euseparatists/advisorpyro,
+/turf/open/floor/prison/plate,
+/area/gleichseitig16/indoors/northeast/powerplant)
 "eQA" = (
 /obj/effect/urban/decal/dirt,
 /obj/effect/urban/decal/road/road_edge/three,
@@ -5733,6 +5759,10 @@
 	},
 /turf/open/urban/street/cement1,
 /area/gleichseitig16/indoors/northeast/warehouse)
+"eYn" = (
+/obj/effect/landmark/spawn_marker/euseparatists/militantidle,
+/turf/open/floor/grayscale,
+/area/gleichseitig16/indoors/southeast/supermarket)
 "eYC" = (
 /obj/machinery/streetlight/street{
 	level = 7;
@@ -6609,12 +6639,6 @@
 /obj/structure/prop/urban/vehicles/large/mega_hauler_truck/red_stripe,
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/indoors/northeast/factory/insideparking)
-"fLR" = (
-/obj/structure/bed/chair/sofa/corsat/right,
-/turf/open/floor/prison{
-	color = "#e1f5ff"
-	},
-/area/gleichseitig16/indoors/southeast/kh/station)
 "fLX" = (
 /obj/effect/urban/decal/trash/nine,
 /turf/open/urban/street/cement3,
@@ -6969,9 +6993,11 @@
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/indoors/northwest/union/railways)
 "gbj" = (
-/obj/effect/landmark/spawn_marker/euseparatists/advisorrifleman,
-/turf/open/urban/street/cement3,
-/area/gleichseitig16/indoors/northwest/union/consulting)
+/obj/effect/landmark/spawn_marker/euseparatists/deserteridle,
+/turf/open/urban/street/sidewalk{
+	dir = 1
+	},
+/area/gleichseitig16/outdoors/southeast/kh)
 "gbD" = (
 /obj/structure/window/framed/urban/reinforced{
 	dir = 8
@@ -7023,6 +7049,10 @@
 /obj/machinery/light/small,
 /turf/open/floor/kutjevo/fake_wood,
 /area/gleichseitig16/indoors/northeast/phoronex)
+"gdA" = (
+/obj/effect/landmark/spawn_marker/euseparatists/deserteridle,
+/turf/open/floor/prison/bright_clean,
+/area/gleichseitig16/indoors/northeast/powerplant)
 "geb" = (
 /obj/machinery/light/small,
 /turf/open/floor/engine,
@@ -7870,6 +7900,10 @@
 /obj/machinery/door/airlock/mainship/generic,
 /turf/open/floor/multi_tiles,
 /area/gleichseitig16/indoors/landing_zone_2/apartment2)
+"gPj" = (
+/obj/effect/landmark/spawn_marker/euseparatists/advisorinfil,
+/turf/open/floor/grayscale/darkgray,
+/area/gleichseitig16/indoors/west/rsr/coffices)
 "gPn" = (
 /turf/open/floor/plating/ground/snow/layer2,
 /area/gleichseitig16/outdoors/landing_zone_2)
@@ -8098,6 +8132,7 @@
 /obj/structure/bed/chair/office/dark/north{
 	dir = 4
 	},
+/obj/effect/landmark/spawn_marker/euseparatists/deserteridle,
 /turf/open/floor/prison/bright_clean,
 /area/gleichseitig16/indoors/northeast/powerplant)
 "hax" = (
@@ -8150,12 +8185,6 @@
 	},
 /turf/open/urban/street/sidewalkfull,
 /area/gleichseitig16/indoors/northeast/exports)
-"hcV" = (
-/obj/effect/landmark/spawn_marker/euseparatists/advisorcommando,
-/turf/open/floor/tile/red/whitered/full{
-	color = "#afebff"
-	},
-/area/gleichseitig16/indoors/west/rsr/garagesec)
 "hdQ" = (
 /turf/closed/wall/urban/colony,
 /area/gleichseitig16/indoors/south/motel/room2)
@@ -8330,6 +8359,11 @@
 	},
 /turf/open/floor/urban/tile/blacktileshiny,
 /area/gleichseitig16/indoors/landing_zone_2/apartment2)
+"hjw" = (
+/obj/structure/bed/chair/office/dark,
+/obj/effect/landmark/spawn_marker/euseparatists/militantidle,
+/turf/open/urban/street/cement3,
+/area/gleichseitig16/indoors/northwest/union/consulting)
 "hjK" = (
 /obj/machinery/streetlight/street{
 	level = 7;
@@ -8407,10 +8441,6 @@
 	},
 /turf/open/floor/plating,
 /area/gleichseitig16/indoors/northeast/exports)
-"hme" = (
-/obj/effect/landmark/spawn_marker/euseparatists/advisorinfil,
-/turf/open/floor/grayscale/darkgray,
-/area/gleichseitig16/indoors/west/rsr/mhalls)
 "hmh" = (
 /obj/effect/turf_decal/tile/corsatstraight/lightpurple{
 	dir = 8
@@ -8551,6 +8581,12 @@
 	color = "#afebff"
 	},
 /area/gleichseitig16/indoors/east/rsr/secpost)
+"hrE" = (
+/obj/effect/landmark/spawn_marker/euseparatists/sapperidle,
+/turf/open/floor/prison/darkyellow{
+	dir = 1
+	},
+/area/gleichseitig16/indoors/northeast/powerplant)
 "hse" = (
 /turf/open/floor/prison/bright_clean,
 /area/gleichseitig16/indoors/southeast/gunthersconvenience)
@@ -9112,6 +9148,11 @@
 "hPa" = (
 /turf/closed/wall/r_wall/urban,
 /area/gleichseitig16/indoors/northwest/union/consulting)
+"hPe" = (
+/obj/structure/bed/chair,
+/obj/effect/landmark/spawn_marker/euseparatists/militantidle,
+/turf/open/floor/urban/tile/supermartfloor2,
+/area/gleichseitig16/indoors/northeast/factory/breakroom)
 "hPh" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
@@ -9124,10 +9165,6 @@
 	},
 /turf/open/floor/urban/tile/beige_bigtile,
 /area/gleichseitig16/indoors/northeast/factory)
-"hPL" = (
-/obj/effect/landmark/spawn_marker/euseparatists/advisorrecon,
-/turf/open/urban/street/asphalt,
-/area/gleichseitig16/indoors/west/rsr/garage)
 "hQf" = (
 /obj/structure/cable,
 /turf/open/urban/street/sidewalk{
@@ -9472,6 +9509,10 @@
 	},
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/indoors/northwest/union/nwstorage)
+"ifQ" = (
+/obj/effect/landmark/spawn_marker/euseparatists/sapperidle,
+/turf/open/floor/plating,
+/area/gleichseitig16/indoors/west/rsr/nmaints)
 "ifR" = (
 /obj/structure/filingcabinet/nondense{
 	pixel_x = -8;
@@ -9750,6 +9791,14 @@
 	},
 /turf/open/floor/plating,
 /area/gleichseitig16/indoors/southeast/kh/gens)
+"isb" = (
+/obj/item/weapon/gun/sentry/ads_system/premade{
+	faction = "Hostile"
+	},
+/turf/open/urban/street/sidewalk{
+	dir = 1
+	},
+/area/gleichseitig16/outdoors/southeast/kh)
 "ise" = (
 /turf/open/floor/prison{
 	color = "#e1f5ff"
@@ -9784,6 +9833,13 @@
 "itx" = (
 /turf/closed/wall/r_wall,
 /area/gleichseitig16/indoors/west/rsr/coffices)
+"itD" = (
+/obj/structure/cable,
+/obj/effect/landmark/spawn_marker/euseparatists/sapperidle,
+/turf/open/floor/prison/darkyellow{
+	dir = 1
+	},
+/area/gleichseitig16/indoors/northeast/powerplant)
 "ivd" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1
@@ -10820,6 +10876,12 @@
 	},
 /turf/open/urban/street/sidewalkfull,
 /area/gleichseitig16/outdoors/north/streets)
+"jkc" = (
+/obj/item/weapon/gun/sentry/ads_system/premade{
+	faction = "Hostile"
+	},
+/turf/open/urban/street/sidewalk,
+/area/gleichseitig16/outdoors/southeast/kh)
 "jke" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 1
@@ -10878,13 +10940,6 @@
 	},
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/outdoors/northwest/parking)
-"jmO" = (
-/obj/structure/window,
-/obj/effect/landmark/spawn_marker/euseparatists/deserteridle,
-/turf/open/floor/prison{
-	color = "#e1f5ff"
-	},
-/area/gleichseitig16/indoors/southeast/kh)
 "jmZ" = (
 /obj/effect/urban/decal/road/lines2,
 /obj/effect/urban/decal/road/lines1,
@@ -10968,6 +11023,12 @@
 	},
 /turf/open/floor/bcircuit/off,
 /area/gleichseitig16/indoors/east/rsr/tcomms)
+"jqi" = (
+/obj/effect/landmark/spawn_marker/euseparatists/advisormg,
+/turf/open/floor/tile/red/whitered/full{
+	color = "#afebff"
+	},
+/area/gleichseitig16/indoors/east/rsr/secpost)
 "jqy" = (
 /turf/open/floor/prison/darkyellow{
 	dir = 8
@@ -11155,6 +11216,10 @@
 /obj/structure/cable,
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/outdoors/south/streets)
+"jzq" = (
+/obj/effect/landmark/spawn_marker/euseparatists/sapperidle,
+/turf/open/urban/street/cement2,
+/area/gleichseitig16/indoors/north/mechanic)
 "jzt" = (
 /obj/machinery/photocopier,
 /turf/open/floor/kutjevo/tiles,
@@ -11731,6 +11796,12 @@
 /obj/structure/transmitter/colony_net/desk/auto_id,
 /turf/open/urban/street/cement3,
 /area/gleichseitig16/indoors/northwest/union/consulting)
+"jXt" = (
+/obj/docking_port/stationary/crashmode,
+/turf/open/floor/plating/ground/snow{
+	color = "#ffe1af"
+	},
+/area/gleichseitig16/outdoors/northeast/phoronex/yard)
 "jXV" = (
 /obj/structure/window/framed/urban/reinforced,
 /turf/open/floor/urban/tile/tileblue,
@@ -12409,6 +12480,10 @@
 	},
 /turf/open/floor/grayscale/darkgray,
 /area/gleichseitig16/indoors/east/rsr/breakroom)
+"kAO" = (
+/obj/effect/landmark/spawn_marker/euseparatists/deserteridle,
+/turf/open/floor/urban/carpet/carpetdarkerblue,
+/area/gleichseitig16/indoors/southeast/kh)
 "kAP" = (
 /turf/closed/wall/urban/colony,
 /area/gleichseitig16/indoors/south/cuppajoe)
@@ -12621,9 +12696,12 @@
 /turf/open/urban/street/sidewalk,
 /area/gleichseitig16/outdoors/northeast/streets)
 "kIZ" = (
-/obj/effect/landmark/spawn_marker/euseparatists/militant,
-/turf/open/floor/urban/tile/tileblackcheckered,
-/area/gleichseitig16/indoors/southwest/plazamall/steakgrill)
+/obj/machinery/light/mainship{
+	dir = 1
+	},
+/obj/effect/landmark/spawn_marker/euseparatists/sapperidle,
+/turf/open/urban/street/sidewalkcenter,
+/area/gleichseitig16/indoors/northeast/exports)
 "kJa" = (
 /obj/structure/window/framed/urban/reinforced,
 /turf/open/floor/grayscale/darkgray,
@@ -12956,6 +13034,11 @@
 	},
 /turf/open/floor/grayscale/darkgray,
 /area/gleichseitig16/indoors/west/rsr/noffices)
+"kXp" = (
+/obj/structure/platform/nondense,
+/obj/effect/landmark/spawn_marker/euseparatists/deserteridle,
+/turf/open/floor/prison,
+/area/gleichseitig16/indoors/north/guardianmotorpost)
 "kXu" = (
 /obj/structure/largecrate/random/case/double,
 /obj/machinery/light{
@@ -12997,10 +13080,10 @@
 	color = "#afebff"
 	},
 /area/gleichseitig16/indoors/west/rsr/ofsec)
-"kYh" = (
-/obj/effect/landmark/spawn_marker/euseparatists/advisorrifleman,
-/turf/open/floor/grayscale/darkgray,
-/area/gleichseitig16/indoors/west/rsr/lobby)
+"kYl" = (
+/obj/effect/landmark/spawn_marker/euseparatists/advisorrecon,
+/turf/open/floor/plating,
+/area/gleichseitig16/indoors/east/rsr/nmaints)
 "kYy" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -13068,6 +13151,12 @@
 	},
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/outdoors/southeast/streets)
+"lbQ" = (
+/obj/effect/landmark/spawn_marker/euseparatists/advisorcommando,
+/turf/open/floor/tile/red/whitered/full{
+	color = "#afebff"
+	},
+/area/gleichseitig16/indoors/west/rsr/garagesec)
 "lcj" = (
 /obj/machinery/light/mainship{
 	dir = 1
@@ -13394,6 +13483,10 @@
 /obj/effect/urban/decal/road/road_edge/eight,
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/outdoors/northeast/streets)
+"lnq" = (
+/obj/effect/landmark/spawn_marker/euseparatists/sapperidle,
+/turf/open/floor/prison/darkyellow,
+/area/gleichseitig16/indoors/northeast/powerplant)
 "lnF" = (
 /obj/structure/cable,
 /turf/open/urban/street/asphalt,
@@ -13518,6 +13611,7 @@
 /obj/structure/bed/chair/office/dark/north{
 	dir = 8
 	},
+/obj/effect/landmark/spawn_marker/euseparatists/deserteridle,
 /turf/open/urban/street/cement2,
 /area/gleichseitig16/indoors/northeast/exports)
 "lrn" = (
@@ -14298,6 +14392,13 @@
 	},
 /turf/open/floor/urban/tile/tilelightbeige,
 /area/gleichseitig16/indoors/northwest/union/nwstorage)
+"maA" = (
+/obj/structure/bed/chair/comfy{
+	dir = 1
+	},
+/obj/effect/landmark/spawn_marker/euseparatists/militantidle,
+/turf/open/floor/kutjevo/fake_wood,
+/area/gleichseitig16/indoors/northwest/phoronex)
 "maJ" = (
 /obj/machinery/light{
 	dir = 1
@@ -14730,6 +14831,10 @@
 /obj/structure/cable,
 /turf/open/floor/prison/bright_clean,
 /area/gleichseitig16/indoors/northeast/powerplant)
+"mxI" = (
+/obj/effect/landmark/spawn_marker/euseparatists/medicidle,
+/turf/open/floor/prison/sterilewhite,
+/area/gleichseitig16/indoors/southeast/supermarket)
 "mxO" = (
 /obj/effect/urban/decal/road/lines2,
 /obj/effect/urban/decal/road/lines4,
@@ -15019,6 +15124,12 @@
 	},
 /turf/open/floor/urban/tile/supermartfloor2,
 /area/gleichseitig16/indoors/northwest/union/press)
+"mLa" = (
+/obj/structure/bed/chair/sofa/corsat/right,
+/turf/open/floor/prison{
+	color = "#e1f5ff"
+	},
+/area/gleichseitig16/indoors/southeast/kh/station)
 "mLh" = (
 /obj/machinery/portable_atmospherics/scrubber,
 /obj/machinery/light{
@@ -15369,6 +15480,10 @@
 	dir = 8
 	},
 /area/gleichseitig16/outdoors/southeast/streets)
+"nco" = (
+/obj/docking_port/stationary/crashmode,
+/turf/open/floor/engine,
+/area/gleichseitig16/indoors/northwest/radiostation)
 "ncq" = (
 /turf/open/urban/street/sidewalkfull,
 /area/gleichseitig16/indoors/southeast/kh)
@@ -15741,7 +15856,6 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 8
 	},
-/obj/effect/landmark/spawn_marker/euseparatists/medic,
 /turf/open/floor/tile/red/whitered/full{
 	color = "#afebff"
 	},
@@ -15773,10 +15887,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/textured,
 /area/gleichseitig16/indoors/southeast/ganongym)
-"nuX" = (
-/obj/effect/landmark/spawn_marker/euseparatists/advisorrifleman,
-/turf/open/floor/grayscale/darkgray,
-/area/gleichseitig16/indoors/west/rsr/breakroom)
 "nvc" = (
 /obj/machinery/light{
 	dir = 4
@@ -15942,13 +16052,6 @@
 	},
 /turf/open/floor/plating/ground/snow/layer2,
 /area/gleichseitig16/outdoors/southeast/openspace)
-"nAN" = (
-/obj/machinery/light/mainship,
-/obj/effect/landmark/spawn_marker/euseparatists/advisorrifleman,
-/turf/open/floor/prison{
-	color = "#e1f5ff"
-	},
-/area/gleichseitig16/indoors/southeast/kh)
 "nAR" = (
 /obj/structure/bed/chair/comfy/black,
 /obj/effect/turf_decal/tile/corsatsemi/white,
@@ -15963,6 +16066,10 @@
 "nBi" = (
 /turf/open/floor/urban/metal/zbrownfloor_corner,
 /area/gleichseitig16/indoors/southeast/dealership)
+"nBr" = (
+/obj/effect/landmark/spawn_marker/euseparatists/militantidle,
+/turf/open/urban/street/cement1,
+/area/gleichseitig16/indoors/northeast/warehouse)
 "nBH" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -16434,6 +16541,7 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 4
 	},
+/obj/effect/landmark/spawn_marker/euseparatists/militantidle,
 /turf/open/urban/street/cement3,
 /area/gleichseitig16/indoors/northwest/union/railways)
 "nSC" = (
@@ -16512,14 +16620,6 @@
 	},
 /turf/open/floor/grayscale/darkgray,
 /area/gleichseitig16/indoors/west/rsr/whalls)
-"nWV" = (
-/obj/item/weapon/gun/sentry/ads_system/premade{
-	faction = "Hostile"
-	},
-/turf/open/urban/street/sidewalk{
-	dir = 1
-	},
-/area/gleichseitig16/outdoors/southeast/kh)
 "nXj" = (
 /obj/machinery/factory/heater{
 	anchored = 1
@@ -16720,6 +16820,7 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 8
 	},
+/obj/effect/landmark/spawn_marker/euseparatists/militantidle,
 /turf/open/urban/street/cement3,
 /area/gleichseitig16/indoors/northwest/union/consulting)
 "oda" = (
@@ -16829,6 +16930,10 @@
 /obj/effect/spawner/modularmap/gleichseitig16fp/centralconsulate,
 /turf/open/space/basic,
 /area/space)
+"oge" = (
+/obj/effect/landmark/spawn_marker/euseparatists/sapperidle,
+/turf/open/urban/street/cement3,
+/area/gleichseitig16/indoors/northeast/warehouse)
 "ogD" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -16879,7 +16984,8 @@
 /obj/vehicle/sealed/armored/multitile/apc{
 	dir = 8;
 	color = "#e1f5ff";
-	name = "\improper Ehrman APC - Athena"
+	name = "\improper Ehrman APC - Athena";
+	faction = list("Hostiles","Sol Federation Marine Corps")
 	},
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/indoors/north/guardianmotorpost)
@@ -17061,7 +17167,6 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/effect/landmark/spawn_marker/euseparatists/advisorpyro,
 /turf/open/floor/grayscale/darkgray,
 /area/gleichseitig16/indoors/west/rsr/moffices)
 "opR" = (
@@ -17959,6 +18064,10 @@
 	},
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/outdoors/south/streets)
+"pht" = (
+/obj/effect/landmark/spawn_marker/euseparatists/advisorpyro,
+/turf/open/floor/grayscale/darkgray,
+/area/gleichseitig16/indoors/east/rsr/lobby)
 "phy" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/drained{
@@ -18040,6 +18149,10 @@
 	},
 /turf/open/floor/plating,
 /area/gleichseitig16/indoors/east/rsr/wmaints)
+"plA" = (
+/obj/effect/landmark/spawn_marker/euseparatists/sapperidle,
+/turf/open/floor/plating,
+/area/gleichseitig16/indoors/southeast/supermarket)
 "plI" = (
 /obj/structure/prop/urban/misc/trash/blue,
 /obj/structure/cable,
@@ -18724,20 +18837,12 @@
 /turf/open/urban/street/cement3,
 /area/gleichseitig16/indoors/northwest/union/foremancorner)
 "pPA" = (
-/obj/structure/table/reinforced,
-/obj/item/weapon/gun/rifle/sniper/pmc_railgun,
-/obj/item/ammo_magazine/railgun/pmc{
-	pixel_y = -8;
-	pixel_x = -6
+/obj/machinery/light{
+	dir = 1
 	},
-/obj/item/ammo_magazine/railgun/pmc{
-	pixel_y = -8;
-	pixel_x = 5
-	},
-/turf/open/floor/prison{
-	color = "#e1f5ff"
-	},
-/area/gleichseitig16/indoors/southeast/kh)
+/obj/docking_port/stationary/crashmode,
+/turf/open/floor/urban/carpet/carpetblack,
+/area/gleichseitig16/indoors/southeast/kicksklub)
 "pPI" = (
 /obj/machinery/light/mainship,
 /turf/open/urban/street/asphalt,
@@ -19021,6 +19126,10 @@
 /obj/effect/ai_node,
 /turf/open/floor/plating,
 /area/gleichseitig16/indoors/northeast/powerstation)
+"qcV" = (
+/obj/docking_port/stationary/crashmode,
+/turf/open/urban/street/asphalt,
+/area/gleichseitig16/outdoors/northeast/alleys)
 "qda" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door_control{
@@ -19744,6 +19853,11 @@
 /obj/structure/largecrate/random/barrel/brown,
 /turf/open/urban/street/cement3,
 /area/gleichseitig16/indoors/northwest/union/foremancorner)
+"qHV" = (
+/obj/structure/bed/chair/sofa/corsat/right,
+/obj/effect/landmark/spawn_marker/euseparatists/militantidle,
+/turf/open/urban/street/cement3,
+/area/gleichseitig16/indoors/northwest/union/railways)
 "qIg" = (
 /obj/machinery/streetlight/street{
 	level = 7;
@@ -20143,6 +20257,12 @@
 	dir = 8
 	},
 /area/gleichseitig16/indoors/northeast/exports)
+"rbc" = (
+/obj/effect/landmark/xeno_tunnel_spawn,
+/turf/open/floor/prison{
+	color = "#e1f5ff"
+	},
+/area/gleichseitig16/indoors/southeast/kh/station)
 "rby" = (
 /obj/effect/urban/decal/road/road_edge/four,
 /obj/effect/urban/decal/road/lines2,
@@ -20189,6 +20309,10 @@
 	},
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/outdoors/northwest/parking)
+"rdI" = (
+/obj/effect/landmark/spawn_marker/euseparatists/sapperidle,
+/turf/open/urban/street/cement3,
+/area/gleichseitig16/indoors/north/mechanic)
 "rdP" = (
 /obj/machinery/photocopier,
 /turf/open/floor/urban/tile/beige_bigtile,
@@ -20475,9 +20599,16 @@
 /turf/open/floor/urban/tile/tilebeigecheckered,
 /area/gleichseitig16/indoors/northwest/union/consulting)
 "rsq" = (
-/obj/effect/landmark/spawn_marker/euseparatists/sapper,
-/turf/open/floor/grayscale/round,
-/area/gleichseitig16/indoors/southwest/plazamall/phones)
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/bed/chair/sofa/corsat,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/landmark/spawn_marker/euseparatists/militantidle,
+/turf/open/urban/street/cement3,
+/area/gleichseitig16/indoors/northwest/union/consulting)
 "rsA" = (
 /obj/structure/bookcase,
 /turf/open/floor/grayscale/darkgray,
@@ -20521,6 +20652,13 @@
 	dir = 1
 	},
 /area/gleichseitig16/outdoors/southeast/streets)
+"rwP" = (
+/obj/structure/window,
+/obj/effect/landmark/spawn_marker/euseparatists/deserteridle,
+/turf/open/floor/prison{
+	color = "#e1f5ff"
+	},
+/area/gleichseitig16/indoors/southeast/kh)
 "rxp" = (
 /obj/machinery/light/small,
 /obj/structure/cable,
@@ -20754,6 +20892,11 @@
 	},
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/outdoors/northeast/streets)
+"rFb" = (
+/obj/structure/bed/chair/sofa/corsat/left,
+/obj/effect/landmark/spawn_marker/euseparatists/militantidle,
+/turf/open/urban/street/cement3,
+/area/gleichseitig16/indoors/northwest/union/railways)
 "rFm" = (
 /turf/open/floor/plating,
 /area/gleichseitig16/indoors/east/rsr/nmaints)
@@ -21846,7 +21989,7 @@
 "sAm" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/drained{
-	dir = 8
+	dir = 1
 	},
 /turf/open/floor/plating,
 /area/gleichseitig16/indoors/southeast/supermarket)
@@ -22405,6 +22548,13 @@
 	},
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/outdoors/landing_zone_1/unionspaceport)
+"sQL" = (
+/obj/structure/bed/chair,
+/obj/effect/landmark/spawn_marker/euseparatists/deserteridle,
+/turf/open/floor/prison{
+	color = "#e1f5ff"
+	},
+/area/gleichseitig16/indoors/north/guardianmotorpost)
 "sQP" = (
 /obj/machinery/light{
 	dir = 4
@@ -22472,6 +22622,10 @@
 	dir = 8
 	},
 /area/gleichseitig16/outdoors/south/streets)
+"sTu" = (
+/obj/docking_port/stationary/crashmode,
+/turf/open/floor/iron/checker,
+/area/gleichseitig16/indoors/southeast/supermarket)
 "sTH" = (
 /obj/machinery/light{
 	dir = 4
@@ -22620,6 +22774,10 @@
 	},
 /turf/open/floor/grayscale/darkgray,
 /area/gleichseitig16/indoors/west/studycenter/lecturehall2)
+"sYB" = (
+/obj/effect/landmark/spawn_marker/euseparatists/militantidle,
+/turf/open/floor/iron/checker,
+/area/gleichseitig16/indoors/southeast/supermarket)
 "sYC" = (
 /obj/machinery/light{
 	dir = 4
@@ -22844,6 +23002,10 @@
 	},
 /turf/open/urban/street/sidewalkcenter,
 /area/gleichseitig16/indoors/northeast/exports)
+"thF" = (
+/obj/effect/landmark/spawn_marker/euseparatists/deserteridle,
+/turf/open/urban/street/cement3,
+/area/gleichseitig16/indoors/northeast/factory/hallway)
 "thH" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light/mainship{
@@ -23167,6 +23329,10 @@
 	},
 /turf/open/floor/mech_bay_recharge_floor,
 /area/gleichseitig16/indoors/northeast/spaceport)
+"twL" = (
+/obj/docking_port/stationary/crashmode,
+/turf/closed/wall/r_wall/urban,
+/area/gleichseitig16/indoors/northeast/factory/breakroom)
 "twW" = (
 /turf/open/urban/street/sidewalk{
 	dir = 8
@@ -23888,10 +24054,6 @@
 	},
 /turf/open/urban/street/cement2,
 /area/gleichseitig16/indoors/northwest/union/nwstorage)
-"tZl" = (
-/obj/effect/landmark/spawn_marker/euseparatists/deserteridle,
-/turf/open/urban/street/sidewalk,
-/area/gleichseitig16/outdoors/southeast/kh)
 "tZu" = (
 /obj/structure/prop/urban/misc/machinery/screens/redalertblank{
 	light_color = "#FF0000";
@@ -23987,12 +24149,6 @@
 	dir = 4
 	},
 /area/gleichseitig16/outdoors/northeast/parking)
-"uei" = (
-/obj/effect/landmark/spawn_marker/euseparatists/advisorrifleman,
-/turf/open/floor/prison{
-	color = "#e1f5ff"
-	},
-/area/gleichseitig16/indoors/southeast/kh)
 "uek" = (
 /obj/structure/toilet{
 	dir = 8
@@ -24050,6 +24206,10 @@
 	},
 /turf/open/urban/street/cement3,
 /area/gleichseitig16/indoors/northeast/security/checkpoint)
+"uhn" = (
+/obj/effect/landmark/spawn_marker/euseparatists/advisorinfil,
+/turf/open/floor/plating,
+/area/gleichseitig16/indoors/east/rsr/smaints)
 "uhv" = (
 /obj/structure/table/reinforced,
 /turf/open/urban/street/cement1,
@@ -24058,12 +24218,6 @@
 /obj/structure/cable,
 /turf/open/urban/street/sidewalkfull,
 /area/gleichseitig16/outdoors/northwest/parking)
-"uhB" = (
-/obj/item/weapon/gun/sentry/ads_system/premade{
-	faction = "Hostile"
-	},
-/turf/open/urban/street/sidewalk,
-/area/gleichseitig16/outdoors/southeast/kh)
 "uhL" = (
 /obj/structure/table/reinforced/prison{
 	color = "#6b675e"
@@ -24745,6 +24899,10 @@
 /obj/structure/bed/chair/comfy/black,
 /turf/open/floor/grayscale/white,
 /area/gleichseitig16/indoors/west/studycenter/lecturehall3)
+"uOA" = (
+/obj/docking_port/stationary/crashmode,
+/turf/open/urban/street/asphalt,
+/area/gleichseitig16/indoors/northeast/security/checkpoint)
 "uOH" = (
 /obj/structure/largecrate/random/case/small,
 /turf/open/floor/plating/ground/snow{
@@ -24826,6 +24984,10 @@
 "uSG" = (
 /turf/open/shuttle/escapepod/eight,
 /area/gleichseitig16/indoors/west/rsr/whalls)
+"uSX" = (
+/obj/effect/landmark/spawn_marker/euseparatists/advisorrifleman,
+/turf/open/floor/grayscale/darkgray,
+/area/gleichseitig16/indoors/west/rsr/breakroom)
 "uTc" = (
 /obj/machinery/door/airlock/mainship/medical/glass/free_access{
 	name = "\improper Mindful Yoga";
@@ -24922,6 +25084,10 @@
 	},
 /turf/open/floor/urban/metal/metalwhitefull,
 /area/gleichseitig16/indoors/south/motel/room2)
+"uWn" = (
+/obj/effect/landmark/spawn_marker/euseparatists/sapperidle,
+/turf/open/floor/plating,
+/area/gleichseitig16/indoors/northeast/exports)
 "uWu" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -25052,6 +25218,11 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/gleichseitig16/indoors/southeast/powerstation)
+"vaT" = (
+/obj/structure/bed/chair/sofa/corsat,
+/obj/effect/landmark/spawn_marker/euseparatists/militantidle,
+/turf/open/urban/street/cement3,
+/area/gleichseitig16/indoors/northwest/union/railways)
 "vbs" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -25158,6 +25329,10 @@
 /obj/effect/landmark/start/job/xenomorph,
 /turf/open/ground/jungle/clear,
 /area/gleichseitig16/indoors/west/rsr/xbops)
+"vhI" = (
+/obj/effect/landmark/spawn_marker/euseparatists/militantidle,
+/turf/open/urban/street/cement3,
+/area/gleichseitig16/indoors/northwest/union/consulting)
 "vhP" = (
 /obj/machinery/door/airlock/multi_tile/mainship/generic,
 /obj/structure/cable,
@@ -25233,6 +25408,12 @@
 /obj/machinery/light/mainship,
 /turf/open/floor/plating,
 /area/gleichseitig16/indoors/northeast/exports)
+"vkf" = (
+/obj/effect/landmark/spawn_marker/euseparatists/advisorbreacher,
+/turf/open/floor/prison{
+	color = "#e1f5ff"
+	},
+/area/gleichseitig16/indoors/north/guardianmotorpost)
 "vkt" = (
 /obj/machinery/door/poddoor/shutters/mainship/hangar{
 	dir = 8;
@@ -25449,6 +25630,14 @@
 "vsO" = (
 /turf/closed/shuttle/dropship_white/interior_corner,
 /area/gleichseitig16/indoors/northeast/spaceport/pmcship)
+"vtb" = (
+/obj/effect/landmark/spawn_marker/euseparatists/advisorrifleman,
+/turf/open/floor/grayscale/darkgray,
+/area/gleichseitig16/indoors/west/rsr/lobby)
+"vtt" = (
+/obj/effect/landmark/spawn_marker/euseparatists/militantidle,
+/turf/open/urban/street/sidewalkfull,
+/area/gleichseitig16/indoors/northeast/exports)
 "vtD" = (
 /obj/effect/ai_node{
 	pixel_x = 1
@@ -25605,6 +25794,12 @@
 "vAd" = (
 /turf/open/urban/street/sidewalkfull,
 /area/gleichseitig16/outdoors/south/alleys)
+"vAk" = (
+/obj/effect/landmark/spawn_marker/euseparatists/advisorbreacher,
+/turf/open/floor/prison{
+	color = "#e1f5ff"
+	},
+/area/gleichseitig16/indoors/southeast/kh)
 "vAo" = (
 /turf/open/floor/plating/ground/snow{
 	color = "#ffe1af"
@@ -25960,6 +26155,10 @@
 /obj/structure/closet/cabinet,
 /turf/open/floor/urban/wood/redwood,
 /area/gleichseitig16/indoors/landing_zone_2/apartment6)
+"vOP" = (
+/obj/effect/landmark/spawn_marker/euseparatists/deserteridle,
+/turf/open/urban/street/sidewalk,
+/area/gleichseitig16/outdoors/southeast/kh)
 "vPi" = (
 /turf/open/floor/grayscale/black,
 /area/gleichseitig16/indoors/southeast/ganongymparking)
@@ -25986,6 +26185,10 @@
 	},
 /turf/open/urban/street/sidewalkcenter,
 /area/gleichseitig16/indoors/north/gasstation/pumps)
+"vPY" = (
+/obj/effect/landmark/xeno_tunnel_spawn,
+/turf/open/urban/street/cement3,
+/area/gleichseitig16/indoors/northwest/union/foremancorner)
 "vQl" = (
 /obj/machinery/door/airlock/multi_tile/mainship/generic,
 /turf/open/floor,
@@ -26731,6 +26934,12 @@
 /obj/structure/cable,
 /turf/open/urban/street/sidewalk,
 /area/gleichseitig16/outdoors/northwest/parking)
+"wAb" = (
+/obj/effect/landmark/spawn_marker/euseparatists/deserteridle,
+/turf/open/floor/prison{
+	color = "#e1f5ff"
+	},
+/area/gleichseitig16/indoors/north/guardianmotorpost)
 "wAU" = (
 /obj/effect/spawner/random/misc/structure/broken_reinforced_window/colonyspawn,
 /turf/open/floor/grayscale/darkgray,
@@ -27057,6 +27266,12 @@
 	},
 /turf/open/floor/grayscale/darkgray,
 /area/gleichseitig16/indoors/west/studycenter/restrooms)
+"wQU" = (
+/obj/effect/landmark/spawn_marker/euseparatists/advisorrifleman,
+/turf/open/floor/prison{
+	color = "#e1f5ff"
+	},
+/area/gleichseitig16/indoors/southeast/kh)
 "wRe" = (
 /obj/machinery/door/poddoor/mainship/indestructible{
 	name = "indestructible border doors";
@@ -27085,6 +27300,10 @@
 "wRX" = (
 /turf/open/floor/urban/tile/blacktileshiny,
 /area/gleichseitig16/indoors/landing_zone_2/apartment3)
+"wSi" = (
+/obj/effect/landmark/spawn_marker/euseparatists/advisormg,
+/turf/open/floor/prison/plate,
+/area/gleichseitig16/indoors/northeast/powerplant)
 "wSr" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/drained{
@@ -27258,10 +27477,6 @@
 	},
 /turf/open/floor/plating,
 /area/gleichseitig16/indoors/southeast/kh)
-"wYz" = (
-/obj/effect/landmark/spawn_marker/euseparatists/deserteridle,
-/turf/open/floor/urban/carpet/carpetdarkerblue,
-/area/gleichseitig16/indoors/southeast/kh)
 "wYR" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light{
@@ -27319,12 +27534,6 @@
 	dir = 10
 	},
 /area/gleichseitig16/outdoors/east/alleys)
-"xbR" = (
-/obj/effect/landmark/spawn_marker/euseparatists/deserteridle,
-/turf/open/urban/street/sidewalk{
-	dir = 1
-	},
-/area/gleichseitig16/outdoors/southeast/kh)
 "xbY" = (
 /obj/structure/bed/chair/office/dark/north{
 	dir = 8
@@ -28205,6 +28414,10 @@
 	},
 /turf/open/urban/street/cement3,
 /area/gleichseitig16/indoors/northeast/botanywarehouse)
+"xMg" = (
+/obj/effect/landmark/spawn_marker/euseparatists/militantidle,
+/turf/open/floor/prison,
+/area/gleichseitig16/indoors/northeast/warehouse)
 "xMo" = (
 /obj/effect/urban/decal/doubleroad/lines2{
 	pixel_y = -14
@@ -28236,6 +28449,7 @@
 /area/gleichseitig16/indoors/northwest/union/nwstorage)
 "xMY" = (
 /obj/structure/bed/chair/office/dark/north,
+/obj/effect/landmark/spawn_marker/euseparatists/deserteridle,
 /turf/open/floor/prison/bright_clean,
 /area/gleichseitig16/indoors/northeast/powerplant)
 "xNl" = (
@@ -28244,6 +28458,10 @@
 	},
 /turf/open/urban/street/cement3,
 /area/gleichseitig16/indoors/northeast/security/checkpoint)
+"xNm" = (
+/obj/effect/landmark/xeno_tunnel_spawn,
+/turf/open/ground/jungle/clear,
+/area/gleichseitig16/indoors/east/rsr/xenobio)
 "xNo" = (
 /turf/open/floor/multi_tiles,
 /area/gleichseitig16/indoors/northeast/storageunits/five)
@@ -28428,6 +28646,10 @@
 /obj/effect/ai_node,
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/outdoors/northeast/phoronex/yard)
+"xUx" = (
+/obj/docking_port/stationary/crashmode,
+/turf/open/urban/street/sidewalkfull,
+/area/gleichseitig16/outdoors/northwest/union/nwalleys)
 "xUD" = (
 /obj/machinery/light/small,
 /turf/open/floor/multi_tiles,
@@ -29256,7 +29478,7 @@ rkH
 ssp
 uzG
 uzG
-jcg
+vPY
 sxC
 jcg
 uzG
@@ -29584,7 +29806,7 @@ kbe
 vht
 jFm
 kbe
-kbe
+dTY
 rZX
 kbe
 kbe
@@ -30630,7 +30852,7 @@ wcd
 uOH
 phX
 ebp
-ahg
+maA
 tIc
 ebp
 ebp
@@ -31246,7 +31468,7 @@ mIq
 sHZ
 lYg
 lYg
-tch
+vaT
 lYg
 lYg
 sHZ
@@ -32339,7 +32561,7 @@ ptM
 sHZ
 lYg
 lYg
-eNo
+rFb
 lYg
 lYg
 sHZ
@@ -32757,7 +32979,7 @@ ptM
 sHZ
 lYg
 lYg
-uul
+qHV
 lYg
 lYg
 sHZ
@@ -34569,7 +34791,7 @@ tTh
 tAq
 tTh
 tTh
-nuX
+uSX
 tTh
 axB
 ncu
@@ -34772,7 +34994,7 @@ wXd
 wXd
 ggW
 hfv
-ghb
+ifQ
 iFu
 ghb
 ghb
@@ -35636,7 +35858,7 @@ dLw
 dLw
 uJq
 dLw
-hPL
+dNl
 dLw
 dLw
 pUJ
@@ -36455,7 +36677,7 @@ vZY
 kro
 kro
 hPa
-kro
+vhI
 kro
 hPa
 lsX
@@ -36879,7 +37101,7 @@ hPa
 rpH
 kro
 kro
-gbj
+kro
 kro
 sOm
 kro
@@ -36958,7 +37180,7 @@ ayJ
 ayJ
 ayJ
 ayJ
-hme
+ayJ
 ayJ
 ayJ
 ayJ
@@ -37111,7 +37333,7 @@ kro
 rxv
 kro
 kro
-gbj
+kro
 kro
 kro
 kro
@@ -37824,7 +38046,7 @@ itx
 wNb
 wNb
 wbe
-wNb
+gPj
 xas
 itx
 ayJ
@@ -37965,7 +38187,7 @@ kro
 kro
 kro
 vZY
-sOw
+dsE
 kro
 fSL
 kro
@@ -38188,7 +38410,7 @@ hPa
 qyW
 afT
 afT
-afT
+bBq
 afT
 afT
 afT
@@ -38846,7 +39068,7 @@ hPa
 gqi
 kro
 hPa
-kro
+vhI
 kro
 kro
 kro
@@ -39493,7 +39715,7 @@ kro
 kro
 kro
 kro
-gbj
+kro
 kro
 rxv
 kro
@@ -39698,7 +39920,7 @@ tAw
 kPo
 hPa
 kee
-gbj
+kro
 kro
 kro
 mHB
@@ -39914,7 +40136,7 @@ xqf
 wkN
 kPo
 hPa
-eZz
+rsq
 kro
 kro
 rxv
@@ -40139,7 +40361,7 @@ kro
 gRD
 hPa
 uaW
-kro
+hjw
 bxJ
 kro
 mHB
@@ -40190,7 +40412,7 @@ ggW
 peU
 peU
 xxa
-hcV
+lbQ
 vjn
 iBi
 iBi
@@ -40356,7 +40578,7 @@ eUP
 dgQ
 hPa
 lsX
-eKL
+ddX
 kro
 kro
 jOP
@@ -41221,7 +41443,7 @@ pNH
 qpc
 wOb
 wOb
-wOb
+xUx
 qpc
 pNH
 qpc
@@ -41299,7 +41521,7 @@ doi
 eqd
 hpU
 jue
-kYh
+vtb
 woj
 tLG
 sjV
@@ -43950,7 +44172,7 @@ bDL
 lqj
 jke
 pen
-kIZ
+pen
 bDL
 lqj
 jke
@@ -44078,7 +44300,7 @@ glc
 xEH
 cws
 aaN
-cws
+nco
 mAx
 fls
 ggz
@@ -46989,7 +47211,7 @@ fjQ
 sBC
 qeE
 fjQ
-rsq
+fjQ
 sde
 grt
 oBc
@@ -47189,7 +47411,7 @@ vqg
 vqg
 ecY
 vqg
-cmP
+vqg
 ecY
 vqg
 vqg
@@ -49918,7 +50140,7 @@ mgD
 sQc
 ise
 poc
-ise
+wAb
 ise
 ise
 sQc
@@ -50341,7 +50563,7 @@ igV
 igV
 mcv
 mgD
-pHR
+kXp
 qHQ
 qHQ
 qHQ
@@ -50783,7 +51005,7 @@ rrf
 fdd
 fdd
 mgD
-ise
+wAb
 tqd
 pyS
 pyS
@@ -52077,7 +52299,7 @@ jiZ
 igV
 mcv
 mgD
-ise
+vkf
 ise
 poc
 ise
@@ -52300,7 +52522,7 @@ ise
 ise
 mgD
 eNk
-seC
+sQL
 dAh
 pkc
 poc
@@ -55993,7 +56215,7 @@ nFe
 dUl
 dUl
 rRB
-naE
+jzq
 naE
 gtf
 naE
@@ -58382,7 +58604,7 @@ tWE
 oFl
 sDT
 iJo
-hnK
+rdI
 hnK
 pub
 rRB
@@ -60761,7 +60983,7 @@ nDZ
 nDZ
 nDZ
 ilz
-nDZ
+qcV
 nDZ
 nDZ
 nDZ
@@ -60884,7 +61106,7 @@ udR
 jaJ
 fsJ
 jaJ
-frx
+pPA
 ikG
 jaJ
 koq
@@ -63395,7 +63617,7 @@ eYd
 eYd
 eYd
 eYd
-sbp
+twL
 sbp
 azP
 iGp
@@ -63615,7 +63837,7 @@ sbp
 sbp
 qjj
 azP
-oDA
+thF
 oDA
 azP
 vLr
@@ -64202,7 +64424,7 @@ qGC
 qBG
 qOk
 uhv
-eTR
+nBr
 dQw
 ltH
 ouo
@@ -64429,7 +64651,7 @@ gHe
 gHe
 gHe
 gHe
-pwB
+xMg
 pwB
 pwB
 ltH
@@ -64660,7 +64882,7 @@ xvB
 qXc
 qBG
 pqd
-cHq
+vtt
 gbZ
 hlM
 lyI
@@ -64690,7 +64912,7 @@ lgH
 sbp
 qFb
 gDN
-rLT
+hPe
 kaX
 rIg
 gDN
@@ -65052,7 +65274,7 @@ xof
 uYj
 xof
 kPl
-nAN
+iGl
 jxC
 rkH
 "}
@@ -65108,7 +65330,7 @@ dPL
 dPL
 dPL
 dPL
-dPL
+cmP
 fnY
 cHq
 pqd
@@ -65269,7 +65491,7 @@ xof
 nBY
 xof
 kPl
-xof
+vAk
 jxC
 rkH
 "}
@@ -65506,7 +65728,7 @@ sSz
 jTq
 sIg
 sJW
-sSz
+oge
 ckx
 nmZ
 nom
@@ -65556,7 +65778,7 @@ xvB
 qXc
 qBG
 sPq
-bJe
+bic
 rRS
 vIB
 haF
@@ -66402,7 +66624,7 @@ dPL
 dPL
 nBc
 pqd
-tgU
+kIZ
 dPL
 srQ
 dPL
@@ -67706,7 +67928,7 @@ xLv
 pqd
 pqd
 pqd
-lyI
+uWn
 ylw
 lyI
 euS
@@ -68113,7 +68335,7 @@ qoZ
 kbt
 kbt
 kbt
-kbt
+uOA
 kbt
 kbt
 kbt
@@ -68518,7 +68740,7 @@ wSy
 hfY
 xof
 xof
-uei
+wQU
 xof
 xof
 xof
@@ -68821,7 +69043,7 @@ bnf
 bnf
 vKk
 kPe
-okK
+ePv
 kPe
 uzK
 bnf
@@ -69511,7 +69733,7 @@ eej
 vKc
 vKc
 vKc
-vKc
+jqi
 hrt
 vKc
 vKc
@@ -69682,7 +69904,7 @@ adz
 dqJ
 bnf
 qBR
-uxT
+gdA
 uFh
 uxT
 uxT
@@ -69696,7 +69918,7 @@ pEa
 uxT
 uxT
 uFh
-uxT
+gdA
 uxT
 bnf
 dqJ
@@ -70683,7 +70905,7 @@ fFI
 vFB
 eIs
 eIs
-wYz
+kAO
 eIs
 uYj
 xof
@@ -70777,7 +70999,7 @@ awL
 gez
 awL
 gez
-dNr
+amL
 mxD
 pEa
 obM
@@ -71322,7 +71544,7 @@ bOx
 bOx
 bOx
 jxC
-uhB
+jkc
 fFI
 fFI
 fFI
@@ -71464,7 +71686,7 @@ ldz
 ldz
 ufu
 aQN
-erk
+pht
 erk
 hmi
 erk
@@ -71556,7 +71778,7 @@ wXJ
 uYj
 wyV
 hBC
-pPA
+wyV
 uYj
 iJb
 xof
@@ -71639,7 +71861,7 @@ obM
 drQ
 pEa
 kwF
-vKk
+hrE
 gez
 kPe
 qEn
@@ -71931,7 +72153,7 @@ vGA
 dPj
 vxW
 wbH
-aFz
+mxI
 iOZ
 aRV
 vjT
@@ -71939,7 +72161,7 @@ vjT
 vjT
 vjT
 vjT
-vjT
+sYB
 vjT
 vjT
 cAX
@@ -72048,7 +72270,7 @@ iYW
 iYW
 iYW
 ixm
-iYW
+jXt
 iYW
 iYW
 iYW
@@ -72411,7 +72633,7 @@ sNe
 sNe
 sNe
 sWn
-tZl
+vOP
 fFI
 fFI
 iOI
@@ -73242,14 +73464,14 @@ vjT
 cAX
 vjT
 vjT
-vjT
+sTu
 vjT
 vjT
 vjT
 vjT
 uTI
 vlE
-vlE
+plA
 vlE
 vxW
 mUI
@@ -73598,7 +73820,7 @@ kPe
 atL
 kPe
 gez
-uzK
+lnq
 kwF
 pEa
 obM
@@ -73709,7 +73931,7 @@ pFB
 bOx
 bOx
 jxC
-uhB
+jkc
 fFI
 fFI
 fFI
@@ -73938,7 +74160,7 @@ fFI
 ieS
 vFB
 qss
-jmO
+rwP
 jPn
 uYj
 jPn
@@ -74162,7 +74384,7 @@ xof
 wyV
 wyV
 uYj
-ajD
+eKL
 ofr
 ofr
 bTG
@@ -74269,7 +74491,7 @@ voF
 ktE
 vYk
 pjL
-rFm
+kYl
 llJ
 llJ
 llJ
@@ -74294,7 +74516,7 @@ kFo
 kFo
 kFo
 dnY
-dnY
+uhn
 bZy
 vSz
 vSz
@@ -74319,7 +74541,7 @@ dPj
 vxW
 uZQ
 kib
-kib
+eYn
 aRV
 vjT
 vjT
@@ -74379,7 +74601,7 @@ xof
 xof
 xof
 uYj
-fLR
+mLa
 ofr
 ofr
 bTG
@@ -74460,7 +74682,7 @@ rSy
 obM
 pEa
 mxD
-riq
+itD
 gez
 awL
 gez
@@ -75247,7 +75469,7 @@ xof
 xof
 xof
 uYj
-ajD
+eKL
 ofr
 ofr
 bTG
@@ -75464,7 +75686,7 @@ xof
 xof
 xof
 uYj
-fLR
+mLa
 ofr
 ofr
 bTG
@@ -75671,7 +75893,7 @@ fFI
 fFI
 sHf
 fFI
-xbR
+gbj
 jxC
 xof
 hfO
@@ -76322,7 +76544,7 @@ fFI
 fFI
 fFI
 fFI
-nWV
+isb
 jxC
 xof
 xof
@@ -76332,7 +76554,7 @@ xof
 xof
 xof
 uYj
-ajD
+eKL
 soK
 ofr
 bTG
@@ -76416,7 +76638,7 @@ bnf
 bnf
 vKk
 kPe
-okK
+wSi
 kPe
 uzK
 bnf
@@ -76549,7 +76771,7 @@ xof
 xof
 xof
 uYj
-fLR
+mLa
 ofr
 fUW
 bTG
@@ -76875,7 +77097,7 @@ awN
 ktE
 ktE
 gBy
-pyV
+xNm
 pyV
 oYr
 fHo
@@ -77201,7 +77423,7 @@ kmM
 xof
 uYj
 ofr
-ofr
+rbc
 ofr
 bTG
 rLi
