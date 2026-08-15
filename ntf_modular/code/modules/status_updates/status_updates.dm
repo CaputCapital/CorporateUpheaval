@@ -29,6 +29,7 @@ GLOBAL_LIST_INIT(mode_to_pingid, list(
 	"Redfin - NTF vs Xenos only" = PINGID_SOL_MODE_PING,
 	"Redfin - NTF vs Cult" = PINGID_SOL_MODE_PING,
 	"Redfin - Faction Chaos" = PINGID_SOL_MODE_PING,
+	"Prison Fall" = PINGID_PRISON_FALL_PING,
 	"Whiskey Outpost" = PINGID_WHISKEY_OUTPOST,
 	"Encounter" = PINGID_ENCOUNTER,
 ))
