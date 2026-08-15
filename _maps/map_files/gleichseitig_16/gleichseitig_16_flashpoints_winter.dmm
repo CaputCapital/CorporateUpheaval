@@ -16985,7 +16985,7 @@
 	dir = 8;
 	color = "#e1f5ff";
 	name = "\improper Ehrman APC - Athena";
-	faction = list("Hostiles","Sol Federation Marine Corps")
+	faction = list("Hostile","Sol Federation Marine Corps")
 	},
 /turf/open/urban/street/asphalt,
 /area/gleichseitig16/indoors/north/guardianmotorpost)
