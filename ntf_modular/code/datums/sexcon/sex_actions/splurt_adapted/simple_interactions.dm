@@ -259,6 +259,7 @@
 	perform_message = "%USER% slaps %TARGET%'s ass."
 	user_arousal = 2
 	target_pain = 10
+	heal_sex = FALSE
 
 /datum/sex_action/simple_interaction/handjob
 	name = "Handjob"
