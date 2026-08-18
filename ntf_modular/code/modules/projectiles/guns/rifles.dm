@@ -1466,3 +1466,56 @@
 		staggerstun(target_mob, proj, paralyze = 0, stun = 0, stagger = 1 SECONDS, knockback = 1, slowdown = 1)
 	else
 		staggerstun(target_mob, proj, paralyze = 0 SECONDS, stagger = 1 SECONDS, knockback = 1, slowdown = 1)
+
+/datum/ammo/bullet/shotgun/slug/sg
+	name = "smart shotgun slug"
+	icon_state = "bullet_large_red"
+	handful_icon = 'ntf_modular/icons/obj/items/ammo/handful.dmi'
+	handful_icon_state = "sg_shotgun_slug"
+	bullet_color = COLOR_SOFT_RED //Red bullets to indicate friendly fire restriction
+	ammo_behavior_flags = AMMO_BALLISTIC
+	shell_speed = 3
+	max_range = 10
+	damage = 50
+	penetration = 15
+	sundering = 5
+
+/datum/ammo/bullet/shotgun/slug/sg/on_hit_mob(mob/target_mob, atom/movable/projectile/proj)
+	if(ishuman(target_mob))
+		staggerstun(target_mob, proj, paralyze = 0, stun = 0, stagger = 1 SECONDS, knockback = 1, slowdown = 1)
+	else
+		staggerstun(target_mob, proj, paralyze = 0 SECONDS, stagger = 1 SECONDS, knockback = 1, slowdown = 1)
+
+/obj/item/ammo_magazine/rifle/sg12_autoshotgun/explosive
+	name = "SG-12 Autoshotgun High Explosive drum (12G)"
+	desc = "A drum magazine filled with 12G HE smart-shells for the SG-12, perfect for clearing weeds, obstructions and dealing with grouped targets."
+	caliber = CALIBER_20
+	icon = 'ntf_modular/icons/obj/items/ammo/rifle.dmi'
+	icon_state = "sg12he"
+	default_ammo = /datum/ammo/bullet/shotgun/flak/sg
+	max_rounds = 20
+	reload_delay = 10
+	icon_state_mini = "mag_dmr"
+
+/datum/ammo/bullet/shotgun/flak/sg
+	name = "smart shotgun flak shell"
+	icon_state = "bullet_large_red"
+	handful_icon = 'ntf_modular/icons/obj/items/ammo/handful.dmi'
+	handful_icon_state = "sg_shotgun_he"
+	hud_state = "sniper_flak"
+	ammo_behavior_flags = AMMO_BALLISTIC|AMMO_TARGET_TURF
+	shell_speed = 2.75
+	max_range = 10
+	damage = 55
+	penetration = 5
+	sundering = 2.5
+
+	var/autocannon_wall_bonus = 25
+	///Damage done via airburst
+	var/burst_damage = 50
+
+/datum/ammo/bullet/shotgun/flak/sg/on_hit_mob(mob/target_mob, atom/movable/projectile/proj)
+	airburst(target_mob, proj, burst_damage)
+
+/datum/ammo/bullet/shotgun/flak/sg/do_at_max_range(turf/target_turf, atom/movable/projectile/proj)
+	airburst(target_turf, proj, burst_damage)
