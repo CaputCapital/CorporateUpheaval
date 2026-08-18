@@ -1506,13 +1506,13 @@
 	ammo_behavior_flags = AMMO_BALLISTIC|AMMO_TARGET_TURF
 	shell_speed = 2.75
 	max_range = 10
-	damage = 55
+	damage = 25
 	penetration = 5
 	sundering = 2.5
 
 	var/autocannon_wall_bonus = 25
 	///Damage done via airburst
-	var/burst_damage = 50
+	var/burst_damage = 25
 
 /datum/ammo/bullet/shotgun/flak/sg/on_hit_mob(mob/target_mob, atom/movable/projectile/proj)
 	airburst(target_mob, proj, burst_damage)
