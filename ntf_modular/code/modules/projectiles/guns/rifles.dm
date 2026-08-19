@@ -1354,7 +1354,7 @@
 	gun_features_flags = GUN_AMMO_COUNTER|GUN_IFF|GUN_SMOKE_PARTICLES
 	gun_firemode_list = list(GUN_FIREMODE_AUTOMATIC)
 	gun_skill_category = SKILL_SMARTGUN //Uses SG skill for the penalties.
-	attachable_offset = list("muzzle_x" = 52, "muzzle_y" = 17,"rail_x" = 22, "rail_y" = 20, "under_x" = 30, "under_y" = 13, "stock_x" = 1, "stock_y" = 16)
+	attachable_offset = list("muzzle_x" = 47, "muzzle_y" = 17,"rail_x" = 22, "rail_y" = 20, "under_x" = 30, "under_y" = 13, "stock_x" = 1, "stock_y" = 16)
 	fire_delay = 0.15 SECONDS
 	burst_amount = 0
 	accuracy_mult = 1
@@ -1435,7 +1435,7 @@
 	accuracy_mult = 1
 	accuracy_mult_unwielded = 0.4
 	scatter_unwielded = 40
-	damage_falloff_mult = 5
+	damage_falloff_mult = 4
 	aim_slowdown = 0.75
 	wield_delay = 1.35 SECONDS
 	burst_amount = 1
@@ -1462,9 +1462,10 @@
 	handful_icon_state = "sg_shotgun_slug"
 	bullet_color = COLOR_SOFT_RED //Red bullets to indicate friendly fire restriction
 	ammo_behavior_flags = AMMO_BALLISTIC
+	accurate_range = 8
 	shell_speed = 3
 	max_range = 10
-	damage = 50
+	damage = 60
 	penetration = 10
 	sundering = 4
 
@@ -1497,7 +1498,7 @@
 	max_range = 10
 	damage = 20
 	penetration = 5
-	sundering = 2.5
+	sundering = 2
 
 	var/autocannon_wall_bonus = 20
 	///Damage done via airburst
