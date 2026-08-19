@@ -50,12 +50,12 @@ SMARTGUNS
 	contains = list(/obj/item/weapon/gun/rifle/sg_autoshotgun)
 	cost = 400
 
-/datum/supply_packs/smartguns/smart_autoshotgun
+/datum/supply_packs/smartguns/smart_autoshotgun_ammo
 	name = "SG-12 slug ammo drum"
 	contains = list(/obj/item/ammo_magazine/rifle/sg_autoshotgun)
 	cost = 40
 
-/datum/supply_packs/smartguns/smart_autoshotgun/flak
+/datum/supply_packs/smartguns/smart_autoshotgun_ammo/flak
 	name = "SG-12 flak ammo drum"
 	contains = list(/obj/item/ammo_magazine/rifle/sg_autoshotgun/explosive)
 	cost = 40
