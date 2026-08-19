@@ -566,6 +566,7 @@
 
 			/obj/item/clothing/underwear/shirt/polo = -1,
 			/obj/item/clothing/underwear/shirt/normal = -1,
+			/obj/item/clothing/underwear/shirt/longsleeverolled = -1,
 			/obj/item/clothing/underwear/shirt/longsleeve = -1,
 			/obj/item/clothing/underwear/shirt/tanktop_midriff = -1,
 			/obj/item/clothing/underwear/shirt/tanktop_midriff_alt = -1,
