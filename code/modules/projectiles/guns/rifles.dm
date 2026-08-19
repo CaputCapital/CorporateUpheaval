@@ -1909,7 +1909,7 @@
 	icon_state = "t81"
 	worn_icon_state = "t81"
 	gun_crosshair = 'icons/UI_Icons/gun_crosshairs/sniper.dmi'
-	fire_sound = 'sound/weapons/guns/fire/sniper.ogg'
+	fire_sound = 'sound/weapons/guns/fire/iffautosniper1.ogg'
 	dry_fire_sound = 'sound/weapons/guns/fire/sniper_empty.ogg'
 	unload_sound = 'sound/weapons/guns/interact/m41a_unload.ogg'
 	reload_sound = 'sound/weapons/guns/interact/m41a_reload.ogg'
