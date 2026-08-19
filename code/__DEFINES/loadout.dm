@@ -216,8 +216,8 @@ GLOBAL_LIST_INIT(smartgunner_gear_listed_products, list(
 	/obj/item/ammo_magazine/minigun_powerpack/smartgun = list(CAT_SGSUP, "SG-85 Powerpack", 10, "black"),
 	/obj/item/ammo_magazine/packet/smart_minigun = list(CAT_SGSUP, "SG-85 Ammo Bin", 4, "black"),
 	/obj/item/weapon/gun/rifle/sg_autoshotgun = list(CAT_SGSUP, "SG-12 Smart Assault Shotgun", 21, "orange"), //If a smartgunner buys a SG-12, then they should be able to buy 12 ammo drums
-	/obj/item/ammo_magazine/rifle/sg12_autoshotgun = list(CAT_SGSUP, "SG-12 Smart Slug Drum", 2, "black"),
-	/obj/item/ammo_magazine/rifle/sg12_autoshotgun/explosive = list(CAT_SGSUP, "SG-12 Smart Flak Drum", 2, "black"),
+	/obj/item/ammo_magazine/rifle/sg_autoshotgun = list(CAT_SGSUP, "SG-12 Smart Slug Drum", 2, "black"),
+	/obj/item/ammo_magazine/rifle/sg_autoshotgun/explosive = list(CAT_SGSUP, "SG-12 Smart Flak Drum", 2, "black"),
 	/obj/item/storage/box/crate/loot/targetrifle_pack_spec = list(CAT_SGSUP, "SG-62 Target Rifle (and fuckton of ammo)", 15, "orange"), //If a SG buys a SG-62, they'll have 15 points left, should be enough to buy some mags and or extra SR ammo.
 	/obj/item/ammo_magazine/rifle/standard_smarttargetrifle = list(CAT_SGSUP, "SG-62 Target Rifle Magazine", 1, "orange"),
 	/obj/item/ammo_magazine/packet/smart_targetrifle = list(CAT_SGSUP, "SG-62 Target Rifle Ammo Bin", 2, "black"),
