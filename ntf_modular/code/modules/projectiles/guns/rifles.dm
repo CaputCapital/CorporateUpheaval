@@ -1309,6 +1309,8 @@
 	worn_icon_list = list(
 		slot_l_hand_str = 'ntf_modular/icons/mob/inhands/guns/rifles_left_1.dmi',
 		slot_r_hand_str = 'ntf_modular/icons/mob/inhands/guns/rifles_right_1.dmi',
+		slot_s_store_str = 'ntf_modular/icons/mob/suit_slot.dmi',
+		slot_back_str = 'ntf_modular/icons/mob/clothing/back.dmi',
 	)
 	caliber = CALIBER_300 //codex
 	max_shells = 45 //codex
@@ -1359,7 +1361,7 @@
 	scatter = 0
 	accuracy_mult_unwielded = 0.5
 	scatter_unwielded = 30
-	damage_falloff_mult = 2.5
+	damage_falloff_mult = 2
 
 //SMARTCARBINE AMMUNITION
 
@@ -1377,7 +1379,7 @@
 	shell_speed = 3
 
 /obj/item/ammo_magazine/rifle/standard_smartcarbine
-	name = "\improper SG-300 magazine (.300 AAC)"
+	name = "\improper SG-30 magazine (.300 AAC)"
 	desc = "A .300 assault rifle magazine."
 	icon = 'ntf_modular/icons/obj/items/ammo/rifle.dmi'
 	caliber = CALIBER_300
@@ -1398,6 +1400,8 @@
 	worn_icon_list = list(
 		slot_l_hand_str = 'ntf_modular/icons/mob/inhands/guns/shotguns_left_1.dmi',
 		slot_r_hand_str = 'ntf_modular/icons/mob/inhands/guns/shotguns_right_1.dmi',
+		slot_s_store_str = 'ntf_modular/icons/mob/suit_slot.dmi',
+		slot_back_str = 'ntf_modular/icons/mob/clothing/back.dmi',
 	)
 	gun_crosshair = 'icons/UI_Icons/gun_crosshairs/shotgun.dmi'
 	fire_sound = 'sound/weapons/guns/fire/smartgunautoshotgun1.ogg'
@@ -1405,9 +1409,9 @@
 	caliber = CALIBER_12G //codex
 	max_shells = 20 //codex
 	force = 20
-	default_ammo_type = /obj/item/ammo_magazine/rifle/sg12_autoshotgun
+	default_ammo_type = /obj/item/ammo_magazine/rifle/sg_autoshotgun
 	allowed_ammo_types = list(
-		/obj/item/ammo_magazine/rifle/sg12_autoshotgun,
+		/obj/item/ammo_magazine/rifle/sg_autoshotgun,/obj/item/ammo_magazine/rifle/sg_autoshotgun/explosive
 	)
 	attachable_allowed = list(
 		/obj/item/attachable/bayonet/converted,
@@ -1424,19 +1428,20 @@
 
 	gun_features_flags = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_IFF|GUN_WIELDED_FIRING_ONLY|GUN_SMOKE_PARTICLES //Its a shotgun type weapon effectively, most shotgun type weapons shouldn't be able to point blank 1 handed.
 	gun_firemode_list = list(GUN_FIREMODE_AUTOMATIC)
-	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 26,"rail_x" = 26, "rail_y" = 24, "under_x" = 30, "under_y" = 10, "stock_x" = 26, "stock_y" = 13)
+	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 26,"rail_x" = 15, "rail_y" = 24, "under_x" = 32, "under_y" = 12, "stock_x" = 26, "stock_y" = 13)
 	gun_skill_category = SKILL_SMARTGUN //Uses SG skill for the penalties.
 
 	fire_delay = 0.4 SECONDS
 	accuracy_mult = 1
-	accuracy_mult_unwielded = 0.25
+	accuracy_mult_unwielded = 0.4
+	scatter_unwielded = 40
 	damage_falloff_mult = 5
 	aim_slowdown = 0.75
-	wield_delay = 1.5 SECONDS
+	wield_delay = 1.35 SECONDS
 	burst_amount = 1
-	movement_acc_penalty_mult = 4
+	movement_acc_penalty_mult = 2
 
-/obj/item/ammo_magazine/rifle/sg12_autoshotgun
+/obj/item/ammo_magazine/rifle/sg_autoshotgun
 	name = "\improper SG-12 Autoshotgun slug drum magazine (12G)"
 	desc = "A drum magazine filled with 12G slug smart-shells for the SG-12."
 	caliber = CALIBER_12G
@@ -1444,7 +1449,9 @@
 	icon_state = "sg12"
 	default_ammo = /datum/ammo/bullet/shotgun/slug/sg
 	max_rounds = 20
+	reload_delay = 10
 	icon_state_mini = "mag_rifle_big"
+	w_class = WEIGHT_CLASS_NORMAL
 	aim_speed_mod = 0.2
 	wield_delay_mod = 0.2 SECONDS
 
@@ -1458,8 +1465,8 @@
 	shell_speed = 3
 	max_range = 10
 	damage = 50
-	penetration = 15
-	sundering = 5
+	penetration = 10
+	sundering = 4
 
 /datum/ammo/bullet/shotgun/slug/sg/on_hit_mob(mob/target_mob, atom/movable/projectile/proj)
 	if(ishuman(target_mob))
@@ -1467,26 +1474,7 @@
 	else
 		staggerstun(target_mob, proj, paralyze = 0 SECONDS, stagger = 1 SECONDS, knockback = 1, slowdown = 1)
 
-/datum/ammo/bullet/shotgun/slug/sg
-	name = "smart shotgun slug"
-	icon_state = "bullet_large_red"
-	handful_icon = 'ntf_modular/icons/obj/items/ammo/handful.dmi'
-	handful_icon_state = "sg_shotgun_slug"
-	bullet_color = COLOR_SOFT_RED //Red bullets to indicate friendly fire restriction
-	ammo_behavior_flags = AMMO_BALLISTIC
-	shell_speed = 3
-	max_range = 10
-	damage = 50
-	penetration = 15
-	sundering = 5
-
-/datum/ammo/bullet/shotgun/slug/sg/on_hit_mob(mob/target_mob, atom/movable/projectile/proj)
-	if(ishuman(target_mob))
-		staggerstun(target_mob, proj, paralyze = 0, stun = 0, stagger = 1 SECONDS, knockback = 1, slowdown = 1)
-	else
-		staggerstun(target_mob, proj, paralyze = 0 SECONDS, stagger = 1 SECONDS, knockback = 1, slowdown = 1)
-
-/obj/item/ammo_magazine/rifle/sg12_autoshotgun/explosive
+/obj/item/ammo_magazine/rifle/sg_autoshotgun/explosive
 	name = "SG-12 Autoshotgun High Explosive drum (12G)"
 	desc = "A drum magazine filled with 12G HE smart-shells for the SG-12, perfect for clearing weeds, obstructions and dealing with grouped targets."
 	caliber = CALIBER_20
@@ -1496,6 +1484,7 @@
 	max_rounds = 20
 	reload_delay = 10
 	icon_state_mini = "mag_dmr"
+	w_class = WEIGHT_CLASS_NORMAL
 
 /datum/ammo/bullet/shotgun/flak/sg
 	name = "smart shotgun flak shell"
@@ -1506,13 +1495,13 @@
 	ammo_behavior_flags = AMMO_BALLISTIC|AMMO_TARGET_TURF
 	shell_speed = 2.75
 	max_range = 10
-	damage = 25
+	damage = 20
 	penetration = 5
 	sundering = 2.5
 
-	var/autocannon_wall_bonus = 25
+	var/autocannon_wall_bonus = 20
 	///Damage done via airburst
-	var/burst_damage = 25
+	var/burst_damage = 40
 
 /datum/ammo/bullet/shotgun/flak/sg/on_hit_mob(mob/target_mob, atom/movable/projectile/proj)
 	airburst(target_mob, proj, burst_damage)
