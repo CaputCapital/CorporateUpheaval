@@ -1,6 +1,6 @@
 /obj/item/weapon/gun/pistol/xmdivider/ntc
 	name = "\improper NT/105 'Unity' Revolver"
-	desc = "NTC's special production replica of Intertech's one of a kind 'Divider' revolver, named Unity after reverse engineering a sample. Fires .357 and .357 Foxfire rounds, This model has no burst fire but it has greater stopping power than it's original. They indeed let it get into enemy hands."
+	desc = "SFMC's special production replica of Intertech's one of a kind 'Divider' revolver, named Unity after reverse engineering a sample. Fires .357 and .357 Foxfire rounds, This model has no burst fire but it has greater stopping power than it's original. They indeed let it get into enemy hands."
 	icon = 'ntf_modular/icons/obj/items/guns/pistols.dmi'
 	icon_state = "nt105"
 	worn_icon_state = "nt105"

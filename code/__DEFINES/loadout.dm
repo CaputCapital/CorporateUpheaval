@@ -1250,7 +1250,7 @@ GLOBAL_LIST_INIT(synthetic_clothes_listed_products, list(
 		/obj/effect/vendor_bundle/synth = list(CAT_ESS, "Essential synthetic set", 0, "white"),
 		/obj/item/clothing/glasses/meson = list(CAT_GLA, "Optical Meson Scanner", 0, "white"),
 		/obj/item/clothing/under/lewd/gear_harness = list(CAT_STD, "Gear harness", 0, "black"),
-		/obj/item/clothing/under/marine = list(CAT_STD, "NTC marine uniform", 0, "black"),
+		/obj/item/clothing/under/marine = list(CAT_STD, "SFMC marine uniform", 0, "black"),
 		/obj/item/clothing/under/rank/medical/blue = list(CAT_STD, "Medical scrubs (blue)", 0, "black"),
 		/obj/item/clothing/under/rank/medical/green = list(CAT_STD, "Medical scrubs (green)", 0, "black"),
 		/obj/item/clothing/under/rank/medical/purple = list(CAT_STD, "Medical scrubs (purple)", 0, "black"),
@@ -1293,9 +1293,9 @@ GLOBAL_LIST_INIT(synthetic_clothes_listed_products, list(
 		/obj/item/clothing/suit/wcoat = list(CAT_SMR, "Waistcoat", 0, "synth-cosmetic"),
 		/obj/item/clothing/suit/ianshirt = list(CAT_SMR, "Ian Shirt", 0, "synth-cosmetic"),
 		/obj/item/clothing/suit/suspenders = list(CAT_SMR, "Suspenders", 0, "synth-cosmetic"),
-		/obj/item/storage/backpack/marine/corpsman = list(CAT_BAK, "NTC corpsman backpack", 0, "black"),
-		/obj/item/storage/backpack/marine/tech = list(CAT_BAK, "NTC technician backpack", 0, "black"),
-		/obj/item/storage/backpack/marine/engineerpack = list(CAT_BAK, "NTC technician welderpack", 0, "black"),
+		/obj/item/storage/backpack/marine/corpsman = list(CAT_BAK, "SFMC corpsman backpack", 0, "black"),
+		/obj/item/storage/backpack/marine/tech = list(CAT_BAK, "SFMC technician backpack", 0, "black"),
+		/obj/item/storage/backpack/marine/engineerpack = list(CAT_BAK, "SFMC technician welderpack", 0, "black"),
 		/obj/item/storage/backpack/marine/radiopack = list(CAT_BAK, "Radio Pack", 0, "black"),
 		/obj/item/storage/backpack/lightpack = list(CAT_BAK, "Lightweight combat pack", 0, "black"),
 		/obj/item/storage/backpack/marine/satchel/officer_cloak = list(CAT_BAK, "Officer cloak", 0, "black"),
@@ -1585,7 +1585,7 @@ GLOBAL_LIST_INIT(vsd_standard_clothes_listed_products, list(
 		/obj/item/storage/pouch/grenade/slightlyfull = list(CAT_POU, "Grenade pouch (grenades included)", 0,"black"),
 		/obj/item/storage/pouch/construction/full = list(CAT_POU, "Construction pouch (materials included)", 0,"black"),
 		/obj/item/storage/pouch/magazine/pistol/large = list(CAT_POU, "Pistol magazine pouch", 0,"black"),
-		/obj/item/clothing/mask/gas/vsd = list(CAT_MAS, "KZ armored commando balaclava", 0,"black"),
+		/obj/item/clothing/mask/gas/vsd = list(CAT_MAS, "GSW armored commando balaclava", 0,"black"),
 		/obj/item/clothing/mask/gas/icc = list(CAT_MAS, "Modello/60 gas mask", 0,"black"),
 	))
 
@@ -1604,7 +1604,7 @@ GLOBAL_LIST_INIT(vsd_medic_clothes_listed_products, list(
 		/obj/item/storage/belt/hypospraybelt/full = list(CAT_BEL, "Hypospray belt", 0, "black"),
 		/obj/item/storage/pouch/medical_injectors/firstaid = list(CAT_POU, "Advanced Autoinjector pouch", 0, "orange"),
 		/obj/item/storage/pouch/medkit/medic = list(CAT_POU, "Medkit pouch", 0, "orange"),
-		/obj/item/clothing/mask/gas/vsd = list(CAT_MAS, "KZ armored commando balaclava", 0,"black"),
+		/obj/item/clothing/mask/gas/vsd = list(CAT_MAS, "GSW armored commando balaclava", 0,"black"),
 		/obj/item/clothing/mask/gas/icc = list(CAT_MAS, "Modello/60 gas mask", 0,"black"),
 	))
 
@@ -1643,7 +1643,7 @@ GLOBAL_LIST_INIT(vsd_engineer_clothes_listed_products, list(
 		/obj/item/storage/pouch/medical_injectors/firstaid = list(CAT_POU, "Combat injector pouch", 0, "orange"),
 		/obj/item/storage/pouch/magazine/pistol/large = list(CAT_POU, "Pistol magazine pouch", 0, "black"),
 		/obj/item/storage/pouch/pistol = list(CAT_POU, "Sidearm pouch", 0, "black"),
-		/obj/item/clothing/mask/gas/vsd = list(CAT_MAS, "KZ armored commando balaclava", 0,"black"),
+		/obj/item/clothing/mask/gas/vsd = list(CAT_MAS, "GSW armored commando balaclava", 0,"black"),
 		/obj/item/clothing/mask/gas/icc = list(CAT_MAS, "Modello/60 gas mask", 0,"black"),
 	))
 
@@ -1672,7 +1672,7 @@ GLOBAL_LIST_INIT(vsd_specialist_clothes_listed_products, list(
 		/obj/item/storage/pouch/grenade/slightlyfull = list(CAT_POU, "Grenade pouch (grenades included)", 0,"black"),
 		/obj/item/storage/pouch/construction/full = list(CAT_POU, "Construction pouch (materials included)", 0,"black"),
 		/obj/item/storage/pouch/magazine/pistol/large = list(CAT_POU, "Pistol magazine pouch", 0,"black"),
-		/obj/item/clothing/mask/gas/vsd = list(CAT_MAS, "KZ armored commando balaclava", 0,"black"),
+		/obj/item/clothing/mask/gas/vsd = list(CAT_MAS, "GSW armored commando balaclava", 0,"black"),
 		/obj/item/clothing/mask/gas/icc = list(CAT_MAS, "Modello/60 gas mask", 0,"black"),
 	))
 
@@ -1700,7 +1700,7 @@ GLOBAL_LIST_INIT(vsd_leader_clothes_listed_products, list(
 		/obj/item/storage/pouch/grenade/slightlyfull = list(CAT_POU, "Grenade pouch (grenades included)", 0,"black"),
 		/obj/item/storage/pouch/construction/full = list(CAT_POU, "Construction pouch (materials included)", 0,"black"),
 		/obj/item/storage/pouch/magazine/pistol/large = list(CAT_POU, "Pistol magazine pouch", 0,"black"),
-		/obj/item/clothing/mask/gas/vsd = list(CAT_MAS, "KZ armored commando balaclava", 0,"black"),
+		/obj/item/clothing/mask/gas/vsd = list(CAT_MAS, "GSW armored commando balaclava", 0,"black"),
 		/obj/item/clothing/mask/gas/icc = list(CAT_MAS, "Modello/60 gas mask", 0,"black"),
 	))
 

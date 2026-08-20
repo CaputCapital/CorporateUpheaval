@@ -247,11 +247,11 @@
 	icon_state = "uk"
 
 /obj/item/clothing/underwear/shirt/shirt_nano
-	name = "Shirt - NTC"
+	name = "Shirt - SFMC"
 	icon_state = "shirt_nano"
 
 /obj/item/clothing/underwear/shirt/iloventc
-	name = "Shirt - I Love NTC"
+	name = "Shirt - I Love SFMC"
 	icon_state = "ilovent"
 
 /obj/item/clothing/underwear/shirt/lover

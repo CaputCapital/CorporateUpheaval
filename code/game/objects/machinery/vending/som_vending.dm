@@ -45,6 +45,15 @@
 			/obj/item/weapon/gun/energy/lasgun/lasrifle/volkite/serpenta = 2,
 			/obj/item/cell/lasgun/volkite/small = -1,
 			/obj/item/cell/lasgun/volkite = -1,
+			/obj/item/cell/lasgun/lasrifle = -1,
+			/obj/item/cell/lasgun/volkite/powerpack/marine = -1,
+			/obj/item/cell/lasgun/volkite/powerpack/marine/backpack = -1,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_rifle = -1,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_sniper = -1,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_carbine = -1,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_mlaser = -1,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_pistol = -1,
+			/obj/item/weapon/gun/energy/lasgun/lasrifle/tesla = 2,
 		),
 		"SMGs" = list(
 			/obj/item/weapon/gun/smg/som = -1,
@@ -541,7 +550,7 @@
 /obj/machinery/vending/som/armor_supply
 	name = "\improper High Quality Mining Equipment"
 	faction = FACTION_SOM
-	desc = "An automated equipment rack hooked up to a colossal storage of armor and accessories. Ninetails designed a new vendor that utilizes bluespace technology to send surplus equipment from outer colonies' sweatshops to your hands! Be grateful."
+	desc = "An automated equipment rack hooked up to a colossal storage of armor and accessories. SFMC designed a new vendor that utilizes bluespace technology to send surplus equipment from outer colonies' sweatshops to your hands! Be grateful."
 	icon_state = "surplus_armor"
 	icon_vend = "surplus_armor_vend"
 	icon_deny = "surplus_armor_deny"
@@ -669,7 +678,7 @@
 /obj/machinery/vending/som/uniform_supply
 	name = "\improper SOMdrobe"
 	faction = FACTION_SOM
-	desc = "An automated equipment rack hooked up to a colossal storage of clothing and accessories. Ninetails designed a new vendor that utilizes bluespace technology to send surplus equipment from outer colonies' sweatshops to your hands! Be grateful."
+	desc = "An automated equipment rack hooked up to a colossal storage of clothing and accessories. SFMC designed a new vendor that utilizes bluespace technology to send surplus equipment from outer colonies' sweatshops to your hands! Be grateful."
 	icon_state = "surplus_clothes"
 	icon_vend = "surplus_clothes_vend"
 	icon_deny = "surplus_clothes_deny"
