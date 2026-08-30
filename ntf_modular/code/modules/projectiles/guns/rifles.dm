@@ -1618,7 +1618,7 @@
 	shell_speed = 3
 	max_range = 10
 	damage = 60
-	penetration = 10
+	penetration = 15
 	sundering = 5
 
 /datum/ammo/bullet/shotgun/slug/sg/on_hit_mob(mob/target_mob, atom/movable/projectile/proj)
@@ -1650,7 +1650,7 @@
 	max_range = 10
 	damage = 20
 	penetration = 5
-	sundering = 2
+	sundering = 2.5
 
 	var/autocannon_wall_bonus = 20
 	///Damage done via airburst
