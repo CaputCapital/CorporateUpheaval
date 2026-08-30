@@ -257,6 +257,7 @@
 		/obj/item/attachable/flashlight/under,
 		/obj/item/attachable/gyro,
 		/obj/item/attachable/lasersight,
+		/obj/item/attachable/motiondetector,
 		/obj/item/attachable/motiondetector/advanced/pocket,
 	)
 
