@@ -43,8 +43,8 @@
 	)
 
 	evo_requirements = list(
-		/datum/xeno_caste/queen = 8,
-		/datum/xeno_caste/king = 12,
+		/datum/xeno_caste/queen = 10,
+		/datum/xeno_caste/king = 14,
 		/datum/xeno_caste/dragon = 18,
 	)
 
