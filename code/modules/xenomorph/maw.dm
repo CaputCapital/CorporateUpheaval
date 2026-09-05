@@ -180,14 +180,15 @@
 /datum/maw_ammo/minion
 	name = "ball of minions"
 	radial_icon_state = "minion"
-	cooldown_time = 10 MINUTES
-	impact_time = 12 SECONDS
+	cooldown_time = 15 MINUTES
+	impact_time = 15 SECONDS
 	/// range_turfs that minions will be dropped around the target
 	var/drop_range = 7
 	/// how many minions get dropped at once, does not stack on turfs if theres not enough turfs
-	var/minion_count = 16
+	var/minion_count = 8
 	///minions to choose to spawn
 	var/list/minion_options = list(
+		/mob/living/carbon/xenomorph/nymph/ai,
 		/mob/living/carbon/xenomorph/beetle/ai,
 		/mob/living/carbon/xenomorph/mantis/ai,
 		/mob/living/carbon/xenomorph/scorpion/ai,
