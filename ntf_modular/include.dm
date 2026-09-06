@@ -228,7 +228,6 @@
 #include "code\modules\mob\living\carbon\xenomorph\castes\behemoth\behemoth.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\behemoth\castedatum_behemoth.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\hunter\abilities_hunter.dm"
-#include "code\modules\mob\living\carbon\xenomorph\castes\hunter\castedatum_hunter.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\hunter\hunter.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\panther\abilities_panther.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\panther\castedatum_panther.dm"
