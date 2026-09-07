@@ -39,12 +39,12 @@
 	cost = 5
 
 /datum/supply_packs/weapons/smart_autopistol
-	name = "TX28 smart machinepistol"
+	name = "TX28 smart autopistol"
 	contains = list(/obj/item/weapon/gun/pistol/smart_fastpistol)
 	cost = 175
 
 /datum/supply_packs/weapons/smart_autopistol_ammo
-	name = "TX28 smart machinepistol ammo"
+	name = "TX28 smart autopistol ammo"
 	contains = list(/obj/item/ammo_magazine/pistol/standard_pistol/smart_fastpistol)
 	cost = 5
 
