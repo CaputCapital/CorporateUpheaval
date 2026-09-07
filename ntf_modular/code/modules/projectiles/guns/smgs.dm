@@ -317,7 +317,7 @@
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/magnetic_harness,
 	)
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 23,"rail_x" = 24, "rail_y" = 22, "under_x" = 34, "under_y" = 24, "stock_x" = 22, "stock_y" = 16)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 23,"rail_x" = 26, "rail_y" = 22, "under_x" = 35, "under_y" = 23, "stock_x" = 22, "stock_y" = 16)
 	actions_types = list(/datum/action/item_action/aim_mode)
 	aim_fire_delay = 0.15 SECONDS
 	aim_speed_modifier = 0.75
@@ -358,3 +358,7 @@
 	damage = 25
 	penetration = 2.5
 	sundering = 3
+
+/obj/item/weapon/gun/smg/huf_mfsmg_somvet
+	default_ammo_type = /obj/item/ammo_magazine/smg/mfsmg/extended
+	starting_attachment_types = list(/obj/item/attachable/reddot, /obj/item/attachable/lasersight,)
