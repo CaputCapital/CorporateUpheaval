@@ -490,6 +490,61 @@
 	contains = list(/obj/item/weapon/gun/rifle/icc_assaultcarbine/exportautorifle)
 	cost = 360
 
+/datum/supply_packs/imports/mfsmg
+	name = "MF-Express SMG"
+	contains = list(/obj/item/weapon/gun/smg/huf_mfsmg)
+	cost = 100
+
+/datum/supply_packs/imports/mfsmgmag
+	name = "MF-Express SMG magazine"
+	contains = list(/obj/item/weapon/gun/smg/huf_mfsmg)
+	cost = 3
+
+/datum/supply_packs/imports/mfsmgextmag
+	name = "MF-Express SMG extended magazine"
+	contains = list(/obj/item/weapon/gun/smg/huf_mfsmg)
+	cost = 5
+
+/datum/supply_packs/imports/sagr11
+	name = "SAGR11 Autorifle"
+	contains = list(/obj/item/weapon/gun/rifle/sagr11)
+	cost = 300
+
+/datum/supply_packs/imports/sagr11mag
+	name = "SAGR11 Autorifle magazine"
+	contains = list(/obj/item/ammo_magazine/rifle/sagr11)
+	cost = 5
+
+/datum/supply_packs/imports/sagr11rubbermag
+	name = "SAGR11 Autorifle Rubber magazine"
+	contains = list(/obj/item/ammo_magazine/rifle/sagr11/rubber)
+	cost = 5
+
+/datum/supply_packs/imports/pp98
+	name = "PP98 Pistol"
+	contains = list(/obj/item/weapon/gun/pistol/huf_pp98)
+	cost = 35
+
+/datum/supply_packs/imports/pp98mag
+	name = "PP98 Magazine"
+	contains = list(/obj/item/ammo_magazine/pistol/standard_pistol/huf_pp98)
+	cost = 3
+
+/datum/supply_packs/imports/pp98extmag
+	name = "PP98 Extended Magazine"
+	contains = list(/obj/item/ammo_magazine/pistol/standard_pistol/huf_pp98/extended)
+	cost = 6
+
+/datum/supply_packs/imports/mf45
+	name = "MF45 Pistol"
+	contains = list(/obj/item/weapon/gun/pistol/huf_mf45)
+	cost = 35
+
+/datum/supply_packs/imports/mf45mag
+	name = "MF45 Magazine"
+	contains = list(/obj/item/ammo_magazine/pistol/standard_pistol/huf_mf45)
+	cost = 3
+
 /datum/supply_packs/imports/apssmartpistol
 	name = "APS Smartpistol"
 	contains = list(/obj/item/weapon/gun/pistol/apsmart_pistol)
@@ -885,6 +940,18 @@
 	faction_lock = list(FACTION_VSD)
 	cost = 50
 
+/datum/supply_packs/imports/autocannonat
+	name = "GSW CC/AT32 Autocannon AT (Grunwald-Svarog Werke Supply)"
+	contains = list(/obj/item/ammo_magazine/rifle/vsd_autocannon/at)
+	faction_lock = list(FACTION_VSD)
+	cost = 40
+
+/datum/supply_packs/imports/autocannonhe
+	name = "GSW CC/AT32 Autocannon HE (Grunwald-Svarog Werke Supply)"
+	contains = list(/obj/item/ammo_magazine/rifle/vsd_autocannon/explosive)
+	faction_lock = list(FACTION_VSD)
+	cost = 40
+
 /datum/supply_packs/imports/antiballisticshieldfs
 	name = "GSW Anti Ballsitic Shield (Grunwald-Svarog Werke Supply)"
 	contains = list(/obj/item/armor_module/module/eshield/absorbant/ballistic)
@@ -908,6 +975,12 @@
 	contains = list(/obj/item/weapon/gun/energy/lasgun/lasrifle/volkite/charger)
 	faction_lock = list(FACTION_SOM)
 	cost = 200
+
+/datum/supply_packs/imports/vx16nachtreiher
+	name = "VX-16 Nachtreiher (Sons of Mars Supply)"
+	contains = list(/obj/item/weapon/gun/shotgun/pump/nachtreiher)
+	faction_lock = list(FACTION_SOM)
+	cost = 250
 
 /datum/supply_packs/imports/vx33caliver
 	name = "VX-33 Caliver (Sons of Mars Supply)"
