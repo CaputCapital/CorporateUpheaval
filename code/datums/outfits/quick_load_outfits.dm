@@ -2058,7 +2058,7 @@
 
 	wear_suit = /obj/item/clothing/suit/modular/som/heavy/lorica
 	belt = /obj/item/belt_harness
-	suit_store = /obj/item/weapon/gun/smg/huf_mfsmg_somvet
+	suit_store = /obj/item/weapon/gun/smg/huf_mfsmg/somvet
 	glasses = /obj/item/clothing/glasses/night_vision
 	l_hand = /obj/item/weapon/shield/riot/marine/som
 	r_hand = /obj/item/pamphlet/smg
