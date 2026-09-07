@@ -1993,6 +1993,66 @@
 	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/incendiary/som, SLOT_IN_ACCESSORY)
 	H.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, SLOT_IN_ACCESSORY)
 
+/datum/outfit/quick/som/veteran/sagr11
+	name = "MF-Express SMG Veteran"
+	desc = "A robust autorifleman class. Equipped with the SAYAIR Grim Reaper 11, munitions and overclocked aegis light battle armor. The SAGR-11 allows the veteran to reliably suppress enemies from afar with increased survivability in the field. Also comes with a rifle instruction pamphlet to instruct the veteran on better shot placement and grouping."
+
+	wear_suit = /obj/item/clothing/suit/modular/som/shield_overclocked
+	belt = 	belt = /obj/item/storage/belt/marine/som
+	suit_store = /obj/item/weapon/gun/rifle/sagr11_somvet
+	glasses = /obj/item/clothing/glasses/hud/health
+	r_hand = /obj/item/pamphlet/rifleman
+
+/datum/outfit/quick/som/veteran/sagr11/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	. = ..()
+
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/sagr11, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/sagr11, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/sagr11, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/sagr11, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/sagr11, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/sagr11, SLOT_IN_BELT)
+
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/sagr11, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/sagr11, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/sagr11, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/sagr11, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/sagr11, SLOT_IN_BACKPACK)
+
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/som, SLOT_IN_ACCESSORY)
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/som, SLOT_IN_ACCESSORY)
+	H.equip_to_slot_or_del(new /obj/item/storage/box/MRE/som, SLOT_IN_ACCESSORY)
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/incendiary/som, SLOT_IN_ACCESSORY)
+	H.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, SLOT_IN_ACCESSORY)
+
+/datum/outfit/quick/som/veteran/mfexpresssmg
+	name = "MF-Express SMG Veteran"
+	desc = "A heavily-armored breaching class. Equipped with the MF-Express SMG, extended ammo, heavy lorica and a breaching shield. The SMG allows the soldier to lead first into a building to suppress the enemy and soak up hits at close quarters. Also comes with an SMG instruction pamphlet to instruct the veteran on effective recoil dampening techniques."
+
+	wear_suit = /obj/item/clothing/suit/modular/som/heavy/lorica
+	belt = /obj/item/belt_harness
+	suit_store = /obj/item/weapon/gun/smg/huf_mfsmg_somvet
+	glasses = /obj/item/clothing/glasses/night_vision
+	l_hand = /obj/item/weapon/shield/riot/marine/som
+	r_hand = /obj/item/pamphlet/smg
+
+/datum/outfit/quick/som/veteran/mfexpresssmg/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	. = ..()
+
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mfsmg/extended, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mfsmg/extended, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mfsmg/extended, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mfsmg/extended, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mfsmg/extended, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mfsmg/extended, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mfsmg/extended, SLOT_IN_BACKPACK)
+
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/som, SLOT_IN_ACCESSORY)
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/som, SLOT_IN_ACCESSORY)
+	H.equip_to_slot_or_del(new /obj/item/storage/box/MRE/som, SLOT_IN_ACCESSORY)
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/incendiary/som, SLOT_IN_ACCESSORY)
+	H.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, SLOT_IN_ACCESSORY)
+
 //Base SOM leader outfit
 /datum/outfit/quick/som/squad_leader
 	name = "SOM Squad Leader"
