@@ -43,7 +43,7 @@
 	starting_attachment_types = list(/obj/item/attachable/reddot, /obj/item/attachable/lasersight)
 
 /datum/ammo/energy/volkite/shotgun
-	name = "small thermal energy bolt"
+	name = "volkite groupshot"
 	handful_icon = 'ntf_modular/icons/obj/items/ammo/handful.dmi'
 	handful_icon_state = "volkite_groupshot"
 	icon_state = "overchargedlaser_small"
@@ -77,8 +77,9 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	icon_state_mini = "incendiary"
 
-/obj/item/ammo_magazine/handful/volkite/buck
-	name = "handful of shotgun volkite buckshot (12 gauge)"
+/obj/item/ammo_magazine/handful/volkite
+	name = "handful of shotgun volkite groupshot (12 gauge)"
+	icon = 'ntf_modular/icons/obj/items/ammo/handful.dmi'
 	icon_state = "volkite_groupshot"
 	current_rounds = 5
 	max_rounds = 5
