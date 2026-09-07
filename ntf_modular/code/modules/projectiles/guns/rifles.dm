@@ -1721,7 +1721,7 @@
 	aim_slowdown = 0.5
 	movement_acc_penalty_mult = 8
 
-/obj/item/weapon/gun/rifle/sagr11_somvet
+/obj/item/weapon/gun/rifle/sagr11/somvet
 	starting_attachment_types = list(
 		/obj/item/attachable/scope/tac,
 		/obj/item/attachable/lasersight,
