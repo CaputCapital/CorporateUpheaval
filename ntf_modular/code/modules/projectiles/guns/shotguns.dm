@@ -39,7 +39,7 @@
 	cock_delay = 1 SECONDS
 	aim_slowdown = 0.5
 
-/obj/item/weapon/gun/shotgun/pump/nachtreiher_somvet
+/obj/item/weapon/gun/shotgun/pump/nachtreiher/somvet
 	starting_attachment_types = list(/obj/item/attachable/reddot, /obj/item/attachable/lasersight)
 
 /datum/ammo/energy/volkite/shotgun
