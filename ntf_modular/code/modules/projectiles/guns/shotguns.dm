@@ -16,7 +16,8 @@
 	fire_sound = 'sound/weapons/guns/fire/volkite_nachtreiher.ogg'
 	reload_sound = 'sound/weapons/guns/interact/shotgun_cmb_insert.ogg'
 	cocked_sound = 'sound/weapons/guns/interact/shotgun_cmb_pump.ogg'
-	default_ammo_type = /obj/item/ammo_magazine/shotgun/volkite
+	allowed_ammo_types = list(/datum/ammo/energy/volkite/shotgun,/obj/item/ammo_magazine/handful/volkite)
+	default_ammo_type = /datum/ammo/energy/volkite/shotgun
 	attachable_allowed = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/lasersight,
