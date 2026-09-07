@@ -1662,7 +1662,7 @@
 /datum/ammo/bullet/shotgun/flak/sg/do_at_max_range(turf/target_turf, atom/movable/projectile/proj)
 	airburst(target_turf, proj, burst_damage)
 
-obj/item/weapon/gun/rifle/sagr11
+/obj/item/weapon/gun/rifle/sagr11
 	name = "\improper SAGR-11 SAYAIR autorifle"
 	desc = "The SAGR-11 is an abbreviation for the SAYAIR Grim Reaper, a high capacity autorifle repurposed off of stolen K&H schematics. On Qilin-24, SAGR-11 rifles are often found in the hands of SAYAIR assault and kill teams, on rarer occasions they are found in the possession of SOM Veterans and Ground Down agents. The major comparison between the SAGR-11 and AR-11 is that the SAGR-11 can fit a muzzle attachment, provide rapid automatic suppressive fire at the expense of being heavier and bulkier than its K&H counterpart. Instead of using 4.92×34mm caseless HV ammunition like its counterpart, the rifle is chambered in 5.8×42mm caseless MV ammunition."
 	icon = 'ntf_modular/icons/obj/items/guns/rifles64.dmi'
@@ -1721,7 +1721,7 @@ obj/item/weapon/gun/rifle/sagr11
 	aim_slowdown = 0.5
 	movement_acc_penalty_mult = 8
 
-obj/item/weapon/gun/rifle/sagr11_somvet
+/obj/item/weapon/gun/rifle/sagr11_somvet
 	starting_attachment_types = list(
 		/obj/item/attachable/scope/tac,
 		/obj/item/attachable/lasersight,
