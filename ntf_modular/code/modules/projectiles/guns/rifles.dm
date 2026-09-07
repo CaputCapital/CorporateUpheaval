@@ -1721,6 +1721,13 @@ obj/item/weapon/gun/rifle/sagr11
 	aim_slowdown = 0.5
 	movement_acc_penalty_mult = 8
 
+obj/item/weapon/gun/rifle/sagr11_somvet
+	starting_attachment_types = list(
+		/obj/item/attachable/scope/tac,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/heavy_barrel,
+	)
+
 /obj/item/ammo_magazine/rifle/sagr11
 	name = "\improper SAGR-11 autorifle magazine"
 	desc = "A magazine filled with 5.8x42mm caseless rifle rounds for the SAGR-11."
@@ -1740,14 +1747,16 @@ obj/item/weapon/gun/rifle/sagr11
 /datum/ammo/bullet/rifle/sahv
 	name = "medium-velocity autorifle bullet"
 	hud_state = "hivelo"
+	accurate_range = 18
 	shell_speed = 3
-	damage = 25
+	max_range = 30
+	damage = 27.5
 	penetration = 5
-	sundering = 1
+	sundering = 1.5
 
 /datum/ammo/bullet/rifle/sahv/rubber
 	name = "medium-velocity autorifle rubber bullet"
 	shell_speed = 3
-	damage = 20
+	damage = 22.5
 	damage_type = STAMINA
 	shrapnel_chance = 0
