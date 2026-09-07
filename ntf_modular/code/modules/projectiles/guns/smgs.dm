@@ -348,7 +348,7 @@
 	desc = "An extended magazine for the MF-SMG."
 	icon_state = "mf_smg_ext"
 	max_rounds = 45
-	w_class = WEIGHT_CLASS_NORMAL
+	w_class = WEIGHT_CLASS_SMALL
 	bonus_overlay = "mf_smg_ext"
 	icon_state_mini = "mag_smg_dark"
 
