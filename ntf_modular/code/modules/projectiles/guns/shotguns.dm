@@ -44,6 +44,7 @@
 	handful_icon = 'ntf_modular/icons/obj/items/ammo/handful.dmi'
 	handful_icon_state = "volkite_groupshot"
 	icon_state = "overchargedlaser_small"
+	icon = 'ntf_modular/icons/obj/items/projectiles.dmi'
 	hud_state = "laser_heat"
 	handful_amount = 5
 	hud_state_empty = "battery_empty_flash"
