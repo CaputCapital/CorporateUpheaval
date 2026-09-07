@@ -497,12 +497,12 @@
 
 /datum/supply_packs/imports/mfsmgmag
 	name = "MF-Express SMG magazine"
-	contains = list(/obj/item/weapon/gun/smg/huf_mfsmg)
+	contains = list(/obj/item/ammo_magazine/smg/mfsmg)
 	cost = 3
 
 /datum/supply_packs/imports/mfsmgextmag
 	name = "MF-Express SMG extended magazine"
-	contains = list(/obj/item/weapon/gun/smg/huf_mfsmg)
+	contains = list(/obj/item/ammo_magazine/smg/mfsmg/extended)
 	cost = 5
 
 /datum/supply_packs/imports/sagr11
