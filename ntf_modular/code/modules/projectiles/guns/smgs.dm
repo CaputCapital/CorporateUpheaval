@@ -332,7 +332,7 @@
 	wield_delay = 0.5 SECONDS
 	damage_mult = 1
 
-/obj/item/weapon/gun/smg/huf_mfsmg_somvet
+/obj/item/weapon/gun/smg/huf_mfsmg/somvet
 	default_ammo_type = /obj/item/ammo_magazine/smg/mfsmg/extended
 	starting_attachment_types = list(/obj/item/attachable/reddot, /obj/item/attachable/lasersight,)
 
