@@ -2025,7 +2025,7 @@
 	desc = "A robust autorifleman class. Equipped with the SAYAIR Grim Reaper 11, munitions and overclocked aegis light battle armor. The SAGR-11 allows the veteran to reliably suppress enemies from afar with increased survivability in the field. Also comes with a rifle instruction pamphlet to instruct the veteran on better shot placement and grouping."
 
 	wear_suit = /obj/item/clothing/suit/modular/som/shield_overclocked
-	belt = 	belt = /obj/item/storage/belt/marine/som
+	belt = /obj/item/storage/belt/marine/som
 	suit_store = /obj/item/weapon/gun/rifle/sagr11_somvet
 	glasses = /obj/item/clothing/glasses/hud/health
 	r_hand = /obj/item/pamphlet/rifleman
