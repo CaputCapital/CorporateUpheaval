@@ -1966,7 +1966,7 @@
 
 	wear_suit = /obj/item/clothing/suit/modular/som/light/autodoc
 	belt = /obj/item/storage/belt/shotgun/som
-	suit_store = /obj/item/weapon/gun/shotgun/pump/nachtreiher_somvet
+	suit_store = /obj/item/weapon/gun/shotgun/pump/nachtreiher/somvet
 	glasses = /obj/item/clothing/glasses/night_vision
 	r_hand = /obj/item/pamphlet/shotgun
 
@@ -2021,12 +2021,12 @@
 	H.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, SLOT_IN_ACCESSORY)
 
 /datum/outfit/quick/som/veteran/sagr11
-	name = "MF-Express SMG Veteran"
+	name = "SAGR-11 Autorifle Veteran"
 	desc = "A robust autorifleman class. Equipped with the SAYAIR Grim Reaper 11, munitions and overclocked aegis light battle armor. The SAGR-11 allows the veteran to reliably suppress enemies from afar with increased survivability in the field. Also comes with a rifle instruction pamphlet to instruct the veteran on better shot placement and grouping."
 
 	wear_suit = /obj/item/clothing/suit/modular/som/shield_overclocked
 	belt = /obj/item/storage/belt/marine/som
-	suit_store = /obj/item/weapon/gun/rifle/sagr11_somvet
+	suit_store = /obj/item/weapon/gun/rifle/sagr11/somvet
 	glasses = /obj/item/clothing/glasses/hud/health
 	r_hand = /obj/item/pamphlet/rifleman
 
