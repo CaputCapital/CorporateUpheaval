@@ -1592,7 +1592,6 @@
 	aim_slowdown = 0.75
 	wield_delay = 1.35 SECONDS
 	burst_amount = 1
-	movement_acc_penalty_mult = 2
 
 /obj/item/ammo_magazine/rifle/sg_autoshotgun
 	name = "\improper SG-12 Autoshotgun slug drum magazine (12G)"
