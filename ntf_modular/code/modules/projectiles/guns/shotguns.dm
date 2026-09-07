@@ -19,15 +19,15 @@
 	default_ammo_type = /obj/item/ammo_magazine/shotgun/volkite
 	attachable_allowed = list(
 		/obj/item/attachable/reddot,
-		/obj/item/attachable/gyro,
+		/obj/item/attachable/lasersight,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/flashlight/under,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/motiondetector
+		/obj/item/attachable/motiondetector,
 	)
 	item_map_variant_flags = NONE
-	attachable_offset = list("muzzle_x" = 38, "muzzle_y" = 19,"rail_x" = 14, "rail_y" = 19, "under_x" = 37, "under_y" = 16, "stock_x" = 15, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 38, "muzzle_y" = 19,"rail_x" = 21, "rail_y" = 21, "under_x" = 41, "under_y" = 12, "stock_x" = 15, "stock_y" = 14)
 
 	fire_delay = 1 SECONDS
 	damage_mult = 1
@@ -38,6 +38,9 @@
 	recoil_unwielded = 0
 	cock_delay = 1 SECONDS
 	aim_slowdown = 0.5
+
+/obj/item/weapon/gun/shotgun/pump/nachtreiher_somvet
+	starting_attachment_types = list(/obj/item/attachable/reddot, /obj/item/attachable/lasersight)
 
 /datum/ammo/energy/volkite/shotgun
 	name = "small thermal energy bolt"
@@ -50,12 +53,12 @@
 	hud_state_empty = "battery_empty_flash"
 	ammo_behavior_flags = AMMO_ENERGY|AMMO_SOUND_PITCH
 	bonus_projectiles_type = /datum/ammo/energy/volkite/shotgun/volkite_spread
-	bonus_projectiles_amount = 5
+	bonus_projectiles_amount = 4
 	bonus_projectiles_scatter = 2
 	bullet_color = COLOR_TAN_ORANGE
 	armor_type = ENERGY
 	max_range = 14
-	accurate_range = 4 //for nachtreiher
+	accurate_range = 5 //for nachtreiher
 	shell_speed = 4.5
 	accuracy_variation = 5
 	accuracy = 5
