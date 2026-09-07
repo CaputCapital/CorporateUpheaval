@@ -1734,7 +1734,7 @@ obj/item/weapon/gun/rifle/sagr11
 /obj/item/ammo_magazine/rifle/sagr11/rubber
 	name = "\improper SAGR-11 autorifle rubber magazine"
 	icon = 'ntf_modular/icons/obj/ammo/ammo.dmi'
-	icon_state = "tx11_r"
+	icon_state = "sagr11"
 	default_ammo = /datum/ammo/bullet/rifle/sahv/rubber
 
 /datum/ammo/bullet/rifle/sahv
