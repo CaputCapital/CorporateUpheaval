@@ -1480,6 +1480,7 @@
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/flashlight/under,
 		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/motiondetector,
 		/obj/item/attachable/bayonet/converted,
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/som,
@@ -1496,6 +1497,7 @@
 		/obj/item/weapon/gun/flamer/hydro_cannon,
 		/obj/item/attachable/foldable/bipod,
 		/obj/item/attachable/motiondetector/advanced/sg,
+		/obj/item/attachable/shoulder_mount,
 	)
 
 	starting_attachment_types = list(/obj/item/attachable/motiondetector/advanced/sg)
@@ -1567,12 +1569,14 @@
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/som,
 		/obj/item/attachable/reddot,
+		/obj/item/attachable/motiondetector,
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/angledgrip,
 		/obj/item/attachable/gyro,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/flashlight/under,
+		/obj/item/attachable/shoulder_mount,
 	)
 
 	gun_features_flags = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_IFF|GUN_WIELDED_FIRING_ONLY|GUN_SMOKE_PARTICLES //Its a shotgun type weapon effectively, most shotgun type weapons shouldn't be able to point blank 1 handed.
@@ -1615,8 +1619,8 @@
 	shell_speed = 3
 	max_range = 10
 	damage = 60
-	penetration = 10
-	sundering = 4
+	penetration = 15
+	sundering = 5
 
 /datum/ammo/bullet/shotgun/slug/sg/on_hit_mob(mob/target_mob, atom/movable/projectile/proj)
 	if(ishuman(target_mob))
@@ -1647,7 +1651,7 @@
 	max_range = 10
 	damage = 20
 	penetration = 5
-	sundering = 2
+	sundering = 2.5
 
 	var/autocannon_wall_bonus = 20
 	///Damage done via airburst
