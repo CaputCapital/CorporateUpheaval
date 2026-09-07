@@ -332,6 +332,10 @@
 	wield_delay = 0.5 SECONDS
 	damage_mult = 1
 
+/obj/item/weapon/gun/smg/huf_mfsmg_somvet
+	default_ammo_type = /obj/item/ammo_magazine/smg/mfsmg/extended
+	starting_attachment_types = list(/obj/item/attachable/reddot, /obj/item/attachable/lasersight,)
+
 /obj/item/ammo_magazine/smg/mfsmg
 	name = "\improper MF-SMG magazine (4.6x30mm HP)"
 	desc = "A magazine for the MF-SMG."
@@ -358,7 +362,3 @@
 	damage = 25
 	penetration = 2.5
 	sundering = 3
-
-/obj/item/weapon/gun/smg/huf_mfsmg_somvet
-	default_ammo_type = /obj/item/ammo_magazine/smg/mfsmg/extended
-	starting_attachment_types = list(/obj/item/attachable/reddot, /obj/item/attachable/lasersight,)
