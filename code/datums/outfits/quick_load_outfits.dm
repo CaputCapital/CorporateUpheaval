@@ -1837,8 +1837,8 @@
 
 	backpack_contents = list(
 		/obj/item/storage/box/MRE/som = 1,
-		/obj/item/weapon/gun/pistol/huf_pp98/modded = 1,
-		/obj/item/ammo_magazine/pistol/standard_pistol/huf_pp98 = 1,
+		/obj/item/weapon/gun/pistol/apsmart_pistol/onehanded = 1,
+		/obj/item/ammo_magazine/pistol/standard_pistol/apsmart_pistol = 1,
 		/obj/item/ammo_magazine/rifle/mpi_km/extended = 1,
 		/obj/item/tool/extinguisher = 1,
 		/obj/item/skillsoft/constitution_one = 1,
@@ -2033,7 +2033,7 @@
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltclip/dragoon, SLOT_IN_BACKPACK)
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltclip/dragoon, SLOT_IN_BACKPACK)
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltclip/dragoon, SLOT_IN_BACKPACK)
-	H.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/apsmart_pistol, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/apsmart_pistol/modded, SLOT_IN_BACKPACK)
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/standard_pistol/apsmart_pistol, SLOT_IN_BACKPACK)
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/standard_pistol/apsmart_pistol, SLOT_IN_BACKPACK)
 
