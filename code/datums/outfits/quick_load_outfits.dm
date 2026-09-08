@@ -1680,8 +1680,10 @@
 
 /datum/outfit/quick/som/veteran/standard_assaultrifle
 	name = "V-31 Veteran Infantryman"
-	desc = "Heavily armed and armored SOM elite. Equipped with a V-31 assault rifle with integrated 'micro grenade' rail launcher, heavy armor, a large variety of grenades as well as AP ammunition. Excellent performance against heavily armored targets, while the plentiful grenade provide greater tactical flexibility."
+	desc = "Heavily armed and armored SOM elite. Equipped with a V-31 assault rifle with integrated 'micro grenade' rail launcher, heavy armor upgraded with 'Lorica' armor reinforcements, night vision and a large variety of grenades as well as AP ammunition. Excellent performance against heavily armored targets, while the plentiful grenade provide greater tactical flexibility."
 
+	wear_suit = /obj/item/clothing/suit/modular/som/heavy/lorica
+	glasses = /obj/item/clothing/glasses/night_vision
 	back = /obj/item/storage/backpack/som
 	suit_store = /obj/item/weapon/gun/rifle/som/veteran
 	belt = /obj/item/storage/belt/marine/som/som_rifle_ap
@@ -1706,10 +1708,12 @@
 
 /datum/outfit/quick/som/veteran/standard_smg
 	name = "V-21 Veteran Infantryman"
-	desc = "Close range high damage, high speed. Equipped with a V-21 submachine gun with variable firerate allowing for extreme rates of fire when properly wielded, heavy armor, a good variety of grenades and AP ammunition. Allows for excellent close to medium range firepower, especially against heavily armored targets, and is surprisingly mobile."
+	desc = "Close range high damage, high speed. Equipped with a V-21 submachine gun with variable firerate allowing for extreme rates of fire when properly wielded, lightfooted skill soft, light armor equipped with an overclocked shield, a good variety of grenades and AP ammunition. Allows for excellent close to medium range firepower, especially against heavily armored targets, perfect for hit and runs."
 
+	wear_suit = /obj/item/clothing/suit/modular/som/light/shield_overclocked
 	suit_store = /obj/item/weapon/gun/smg/som/veteran
 	belt = /obj/item/storage/belt/marine/som/som_smg_ap
+	l_hand = /obj/item/skillsoft/lightfooted
 	r_hand = /obj/item/pamphlet/smg
 
 	backpack_contents = list(
@@ -1825,7 +1829,7 @@
 
 /datum/outfit/quick/som/veteran/mpi
 	name = "MPI_KM Veteran Infantryman"
-	desc = "Heavily armed and armored SOM elite, with a taste for nostalgia. Equipped with an MPI_KM assault rifle, with under barrel grenade launcher and a large supply of grenades. An old weapon that was a common sight during the original Martian rebellion, the MPI's good stopping power, reliability and a healthy dose of nostalgia means it is still seen in use by some among the SOM despite its age."
+	desc = "Heavily armed and armored SOM elite, with a taste for nostalgia. Equipped with an MPI_KM assault rifle, with under barrel grenade launcher, a large supply of grenades and a constitution 1 skillsoft. The MPI_KM was a common sight during the original Martian rebellion, the MPI's good stopping power, reliability and a healthy dose of nostalgia means it is still seen in use by some among the SOM despite its age."
 
 	suit_store = /obj/item/weapon/gun/rifle/mpi_km/grenadier
 	belt = /obj/item/storage/belt/marine/som/mpi_plum
@@ -1837,6 +1841,7 @@
 		/obj/item/weapon/gun/pistol/som/standard = 1,
 		/obj/item/ammo_magazine/rifle/mpi_km/extended = 1,
 		/obj/item/tool/extinguisher = 1,
+		/obj/item/skillsoft/constitution_one = 1,
 	)
 
 	webbing_contents = list(
@@ -1846,18 +1851,22 @@
 
 /datum/outfit/quick/som/veteran/carbine
 	name = "V-34 Veteran Infantryman"
-	desc = "Heavily armed and armored SOM elite, with a taste for nostalgia. Equipped with an heirloom V-34 carbine, and a large supply of grenades. An old weapon that saw extensive use during the original Martian rebellion, this one has been preserved and passed down the generations. The V-34 is largely surpassed by the VX-32, however with its high calibre rounds and good rate of fire, it cannot be underestimated."
+	desc = "Armed and light SOM elite, with a taste for nostalgia. Equipped with an heirloom V-34 carbine, a large supply of grenades, an Apollo medical module, a small assortment of special medicine and a light footed skillsoft. The V-34 was an old carbine that saw extensive use during the original Martian rebellion, this one has been preserved and passed down the generations. The V-34 is largely surpassed by the VX-32, however with its high calibre rounds and good rate of fire, it cannot be underestimated."
 
+	wear_suit = /obj/item/clothing/suit/modular/som/light/autodoc
 	suit_store = /obj/item/weapon/gun/rifle/som_carbine/mag_harness
 	belt = /obj/item/storage/belt/marine/som/carbine
 	r_hand = /obj/item/pamphlet/rifleman
 
 	backpack_contents = list(
 		/obj/item/storage/box/MRE/som = 1,
-		/obj/item/ammo_magazine/pistol/som = 2,
+		/obj/item/ammo_magazine/pistol/som = 1,
 		/obj/item/weapon/gun/pistol/som/standard = 1,
-		/obj/item/ammo_magazine/rifle/mpi_km/carbine = 1,
+		/obj/item/storage/pill_bottle/zoom = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/quickclotplus = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/peridaxon_plus = 1,
 		/obj/item/tool/extinguisher = 1,
+		/obj/item/skillsoft/lightfooted = 1,
 	)
 
 	webbing_contents = list(
@@ -1875,7 +1884,7 @@
 	back = /obj/item/cell/lasgun/volkite/powerpack
 
 	webbing_contents = list(
-		/obj/item/pamphlet/shotgun = 1,
+		/obj/item/pamphlet/heavyweapons = 1,
 		/obj/item/ammo_magazine/handful/buckshot = 2,
 		/obj/item/tool/extinguisher/mini = 1,
 		/obj/item/storage/box/MRE/som = 1,
@@ -1936,7 +1945,7 @@
 
 /datum/outfit/quick/som/veteran/v35breacher
 	name = "V-35 Veteran Breacher"
-	desc = "Heavy armored breaching configuration. Equipped with a V-35 Battle Rifle."
+	desc = "Heavy armored breaching configuration. Equipped with a V-35 Battle Rifle and a lorica module for increased protection."
 
 	head = /obj/item/clothing/head/modular/som/lorica
 	glasses = /obj/item/clothing/glasses/welding
