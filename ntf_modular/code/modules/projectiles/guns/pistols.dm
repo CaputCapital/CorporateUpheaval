@@ -215,6 +215,7 @@
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/flashlight/under,
 		/obj/item/attachable/lasersight,
+		/obj/item/attachable/gyro,
 	)
 
 	gun_features_flags = GUN_AMMO_COUNTER|GUN_IFF|GUN_SMOKE_PARTICLES
@@ -232,6 +233,12 @@
 	scatter = 1
 	scatter_unwielded = 8
 	recoil_unwielded = 1
+
+/obj/item/weapon/gun/pistol/apsmart_pistol/modded
+	starting_attachment_types = list(/obj/item/attachable/reddot,/obj/item/attachable/lasersight)
+
+/obj/item/weapon/gun/pistol/apsmart_pistol/onehanded
+	starting_attachment_types = list(/obj/item/attachable/reddot,/obj/item/attachable/gyro)
 
 // Full auto smart pistol, based on the G18
 /obj/item/weapon/gun/pistol/smart_fastpistol
