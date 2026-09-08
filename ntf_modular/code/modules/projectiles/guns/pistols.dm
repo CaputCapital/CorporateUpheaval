@@ -278,6 +278,9 @@
 	recoil_unwielded = 1
 	damage_mult = 0.75
 
+/obj/item/weapon/gun/pistol/smart_fastpistol/modded
+	starting_attachment_types = list(/obj/item/attachable/reddot,/obj/item/attachable/gyro)
+
 /obj/item/ammo_magazine/pistol/standard_pistol/smart_fastpistol
 	name = "\improper SP-28 magazine (9mm AP)"
 	icon = 'ntf_modular/icons/obj/items/ammo/pistol.dmi'
@@ -329,6 +332,9 @@
 	recoil = -1
 	recoil_unwielded = -1
 	akimbo_scatter_mod = 12
+
+/obj/item/weapon/gun/pistol/smart_ap_pistol/modded
+	starting_attachment_types = list(/obj/item/attachable/reddot,/obj/item/attachable/lasersight)
 
 /obj/item/ammo_magazine/pistol/standard_pistol/smart_ap_pistol
 	name = "\improper SP-57 magazine (5.7mm AP)"
@@ -395,6 +401,16 @@
 	recoil = -1
 	recoil_unwielded = -1
 	akimbo_scatter_mod = 12
+
+/obj/item/weapon/gun/pistol/huf_pp98/modded
+	starting_attachment_types = list(/obj/item/attachable/reddot,/obj/item/attachable/compensator,/obj/item/attachable/lasersight)
+
+/obj/item/weapon/gun/pistol/huf_pp98/hostilityuf
+	starting_attachment_types = list(/obj/item/attachable/suppressor,/obj/item/attachable/lasersight)
+
+/obj/item/weapon/gun/pistol/huf_pp98/pp99r
+	default_ammo_type = /obj/item/ammo_magazine/pistol/standard_pistol/huf_pp98
+	starting_attachment_types = list(/obj/item/attachable/reddot,/obj/item/attachable/compensator,/obj/item/attachable/burstfire_assembly)
 
 /obj/item/ammo_magazine/pistol/standard_pistol/huf_pp98
 	name = "\improper PP-98 magazine (9mm HP)"
@@ -466,6 +482,12 @@
 	recoil = -1
 	recoil_unwielded = -1
 	akimbo_scatter_mod = 12
+
+/obj/item/weapon/gun/pistol/huf_mf45/modded
+	starting_attachment_types = list(/obj/item/attachable/reddot,/obj/item/attachable/compensator)
+
+/obj/item/weapon/gun/pistol/huf_mf45/stealth
+	starting_attachment_types = list(/obj/item/attachable/motiondetector/advanced/pocket,/obj/item/attachable/suppressor)
 
 /obj/item/ammo_magazine/pistol/standard_pistol/huf_mf45
 	name = "\improper MF-45 magazine (.45 ACP)"
