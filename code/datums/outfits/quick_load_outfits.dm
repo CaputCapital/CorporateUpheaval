@@ -1675,6 +1675,8 @@
 	head_contents = list(
 		/obj/item/reagent_containers/hypospray/autoinjector/russian_red = 1,
 		/obj/item/reagent_containers/hypospray/autoinjector/combat_advanced = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/synaptizine = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/synaptizine = 1,
 	)
 
 
@@ -1692,7 +1694,7 @@
 	backpack_contents = list(
 		/obj/item/explosive/plastique = 1,
 		/obj/item/weapon/gun/pistol/huf_pp98/pp99r = 1,
-		/obj/item/ammo_magazine/pistol/standard_pistol/huf_pp98/extended = 1,
+		/obj/item/ammo_magazine/pistol/standard_pistol/huf_pp98/extended = 2,
 		/obj/item/ammo_magazine/rifle/som/ap = 2,
 		/obj/item/explosive/grenade/som = 2,
 		/obj/item/storage/box/MRE/som = 1,
@@ -2001,7 +2003,7 @@
 	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/bullet/volkite, SLOT_IN_BACKPACK)
 	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/bullet/volkite, SLOT_IN_BACKPACK)
 	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/bullet/volkite, SLOT_IN_BACKPACK)
-	H.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/huf_mf45, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/huf_mf45/modded, SLOT_IN_BACKPACK)
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/standard_pistol/huf_mf45, SLOT_IN_BACKPACK)
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/standard_pistol/huf_mf45, SLOT_IN_BACKPACK)
 
@@ -2065,7 +2067,7 @@
 
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/sagr11, SLOT_IN_BACKPACK)
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/sagr11, SLOT_IN_BACKPACK)
-	H.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/huf_mf45, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/huf_mf45/modded, SLOT_IN_BACKPACK)
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/standard_pistol/huf_mf45, SLOT_IN_BACKPACK)
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/standard_pistol/huf_mf45, SLOT_IN_BACKPACK)
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/standard_pistol/huf_mf45, SLOT_IN_BACKPACK)
@@ -2078,7 +2080,7 @@
 
 /datum/outfit/quick/som/veteran/mfexpresssmg
 	name = "MF-Express SMG Veteran"
-	desc = "A heavily-armored breaching class. Equipped with the MF-Express SMG, extended ammo, heavy lorica and a breaching shield. The SMG allows the soldier to lead first into a building to suppress the enemy and soak up hits at close quarters. Also comes with an SMG instruction pamphlet to instruct the veteran on effective recoil dampening techniques."
+	desc = "A heavily-armored breaching class. Equipped with the MF-Express SMG, extended ammo, heavy lorica and a breaching shield. The SMG allows the soldier to push first into a building, suppress the enemy and soak up hits at close quarters. Also comes with an SMG instruction pamphlet to instruct the veteran on effective recoil dampening techniques."
 
 	wear_suit = /obj/item/clothing/suit/modular/som/heavy/lorica
 	belt = /obj/item/belt_harness
@@ -2100,8 +2102,8 @@
 
 	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/bullet/volkite, SLOT_IN_ACCESSORY)
 	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/bullet/volkite, SLOT_IN_ACCESSORY)
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/bullet/volkite, SLOT_IN_ACCESSORY)
 	H.equip_to_slot_or_del(new /obj/item/storage/box/MRE/som, SLOT_IN_ACCESSORY)
-	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/incendiary/som, SLOT_IN_ACCESSORY)
 	H.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, SLOT_IN_ACCESSORY)
 
 //Base SOM leader outfit
@@ -2132,6 +2134,8 @@
 	head_contents = list(
 		/obj/item/reagent_containers/hypospray/autoinjector/russian_red = 1,
 		/obj/item/reagent_containers/hypospray/autoinjector/combat_advanced = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/synaptizine = 1,
+		/obj/item/pinpointer = 1,
 	)
 
 
