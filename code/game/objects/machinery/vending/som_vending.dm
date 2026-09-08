@@ -182,7 +182,7 @@
 			/obj/item/explosive/grenade/smokebomb/sleep = 10,
 			/obj/item/explosive/grenade/chem_grenade/teargas = 10,
 			/obj/item/explosive/grenade/bullet/laser = 30,
-			/obj/item/explosive/grenade/bullet/volkite 10,
+			/obj/item/explosive/grenade/bullet/volkite = 10,
 			/obj/item/explosive/grenade/bullet/hefa = 5,
 			/obj/item/explosive/grenade/emp = 5,
 			/obj/item/explosive/grenade/cagenade = 3,
