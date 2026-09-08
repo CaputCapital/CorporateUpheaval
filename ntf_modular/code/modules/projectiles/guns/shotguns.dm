@@ -93,3 +93,16 @@
 	sundering = 1.25
 	penetration = 12.5
 	deflagrate_mult = 0.5
+
+/datum/ammo/energy/volkite/shotgun/vx30_spread
+	name = "small thermal energy bolt"
+	damage = 20
+	deflag_damage = 5
+	shell_speed = 5
+	bonus_projectiles_amount = 0
+	penetration = 15
+	sundering = 1.5
+	accuracy_variation = 9
+	accurate_range = 5
+	max_range = 20
+	damage_falloff = 0
