@@ -409,7 +409,7 @@
 	starting_attachment_types = list(/obj/item/attachable/suppressor,/obj/item/attachable/lasersight)
 
 /obj/item/weapon/gun/pistol/huf_pp98/pp99r
-	default_ammo_type = /obj/item/ammo_magazine/pistol/standard_pistol/huf_pp98
+	default_ammo_type = /obj/item/ammo_magazine/pistol/standard_pistol/huf_pp98/extended
 	starting_attachment_types = list(/obj/item/attachable/reddot,/obj/item/attachable/compensator,/obj/item/attachable/burstfire_assembly)
 
 /obj/item/ammo_magazine/pistol/standard_pistol/huf_pp98
