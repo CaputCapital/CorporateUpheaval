@@ -988,6 +988,30 @@
 	faction_lock = list(FACTION_SOM)
 	cost = 325
 
+/datum/supply_packs/imports/v35battlerifle
+	name = "V-35 battle rifle (Sons of Mars Supply)"
+	contains = list(/obj/item/weapon/gun/rifle/som_big)
+	faction_lock = list(FACTION_SOM)
+	cost = 350
+
+/datum/supply_packs/imports/v35at
+	name = "V-35 AT magazine (Sons of Mars Supply)"
+	contains = list(/obj/item/ammo_magazine/rifle/som_big/anti_armour)
+	faction_lock = list(FACTION_SOM)
+	cost = 20
+
+/datum/supply_packs/imports/v35inc
+	name = "V-35 incendiary magazine (Sons of Mars Supply)"
+	contains = list(/obj/item/ammo_magazine/rifle/som_big/incendiary)
+	faction_lock = list(FACTION_SOM)
+	cost = 20
+
+/datum/supply_packs/imports/volkitegrenadebox
+	name = "VX-30 Volkite grenade box (Sons of Mars Supply)"
+	contains = list(/obj/item/storage/box/visual/grenade/volkite)
+	faction_lock = list(FACTION_SOM)
+	cost = 500
+
 /datum/supply_packs/imports/somsmgammo
 	name = "V-21 AP submachinegun magazine (10x20mm) (Sons of Mars Supply)"
 	contains = list(/obj/item/ammo_magazine/smg/som/ap)
