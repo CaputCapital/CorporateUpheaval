@@ -64,7 +64,7 @@
 	accuracy_variation = 5
 	accuracy = 5
 	point_blank_range = 2
-	damage = 20
+	damage = 15
 	penetration = 12.5
 	sundering = 1.25
 	deflagrate_mult = 0.5
@@ -89,7 +89,7 @@
 
 /datum/ammo/energy/volkite/shotgun/volkite_spread
 	name = "additional small thermal energy bolt"
-	damage = 20
+	damage = 15
 	sundering = 1.25
 	penetration = 12.5
 	deflagrate_mult = 0.5
