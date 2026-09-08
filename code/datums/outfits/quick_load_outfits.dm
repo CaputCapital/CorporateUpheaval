@@ -1691,8 +1691,8 @@
 
 	backpack_contents = list(
 		/obj/item/explosive/plastique = 1,
-		/obj/item/ammo_magazine/pistol/som = 1,
-		/obj/item/weapon/gun/pistol/som/standard = 1,
+		/obj/item/weapon/gun/pistol/huf_pp98/pp99r = 1,
+		/obj/item/ammo_magazine/pistol/standard_pistol/huf_pp98/extended = 1,
 		/obj/item/ammo_magazine/rifle/som/ap = 2,
 		/obj/item/explosive/grenade/som = 2,
 		/obj/item/storage/box/MRE/som = 1,
@@ -1718,8 +1718,8 @@
 
 	backpack_contents = list(
 		/obj/item/explosive/plastique = 1,
-		/obj/item/ammo_magazine/pistol/som = 1,
-		/obj/item/weapon/gun/pistol/som/standard = 1,
+		/obj/item/ammo_magazine/pistol/standard_pistol/huf_mf45 = 1,
+		/obj/item/weapon/gun/pistol/huf_mf45/modded = 1,
 		/obj/item/ammo_magazine/smg/som/ap = 3,
 	)
 
@@ -1837,8 +1837,8 @@
 
 	backpack_contents = list(
 		/obj/item/storage/box/MRE/som = 1,
-		/obj/item/ammo_magazine/pistol/som = 1,
-		/obj/item/weapon/gun/pistol/som/standard = 1,
+		/obj/item/weapon/gun/pistol/huf_pp98/modded = 1,
+		/obj/item/ammo_magazine/pistol/standard_pistol/huf_pp98 = 1,
 		/obj/item/ammo_magazine/rifle/mpi_km/extended = 1,
 		/obj/item/tool/extinguisher = 1,
 		/obj/item/skillsoft/constitution_one = 1,
@@ -1860,8 +1860,8 @@
 
 	backpack_contents = list(
 		/obj/item/storage/box/MRE/som = 1,
-		/obj/item/ammo_magazine/pistol/som = 1,
-		/obj/item/weapon/gun/pistol/som/standard = 1,
+		/obj/item/weapon/gun/pistol/huf_pp98/modded = 1,
+		/obj/item/ammo_magazine/pistol/standard_pistol/huf_pp98 = 1,
 		/obj/item/storage/pill_bottle/zoom = 1,
 		/obj/item/reagent_containers/hypospray/autoinjector/quickclotplus = 1,
 		/obj/item/reagent_containers/hypospray/autoinjector/peridaxon_plus = 1,
@@ -1982,11 +1982,26 @@
 /datum/outfit/quick/som/veteran/nachtreiher/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	. = ..()
 
-	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/som, SLOT_IN_BACKPACK)
-	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/som, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/volkite, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/volkite, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/volkite, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/volkite, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/volkite, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/volkite, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/volkite, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/volkite, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/volkite, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/volkite, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/volkite, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/volkite, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/volkite, SLOT_IN_BELT)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/volkite, SLOT_IN_BELT)
+
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/bullet/volkite, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/bullet/volkite, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/bullet/volkite, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/bullet/volkite, SLOT_IN_BACKPACK)
 	H.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/huf_mf45, SLOT_IN_BACKPACK)
-	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/standard_pistol/huf_mf45, SLOT_IN_BACKPACK)
-	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/standard_pistol/huf_mf45, SLOT_IN_BACKPACK)
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/standard_pistol/huf_mf45, SLOT_IN_BACKPACK)
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/standard_pistol/huf_mf45, SLOT_IN_BACKPACK)
 
@@ -2018,10 +2033,9 @@
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltclip/dragoon, SLOT_IN_BACKPACK)
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltclip/dragoon, SLOT_IN_BACKPACK)
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltclip/dragoon, SLOT_IN_BACKPACK)
-	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltclip/dragoon, SLOT_IN_BACKPACK)
-	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltclip/dragoon, SLOT_IN_BACKPACK)
-	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltclip/dragoon, SLOT_IN_BACKPACK)
-	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltclip/dragoon, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/apsmart_pistol, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/standard_pistol/apsmart_pistol, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/standard_pistol/apsmart_pistol, SLOT_IN_BACKPACK)
 
 	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/som, SLOT_IN_ACCESSORY)
 	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/som, SLOT_IN_ACCESSORY)
@@ -2051,9 +2065,10 @@
 
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/sagr11, SLOT_IN_BACKPACK)
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/sagr11, SLOT_IN_BACKPACK)
-	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/sagr11, SLOT_IN_BACKPACK)
-	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/sagr11, SLOT_IN_BACKPACK)
-	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/sagr11, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/huf_mf45, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/standard_pistol/huf_mf45, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/standard_pistol/huf_mf45, SLOT_IN_BACKPACK)
+	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/standard_pistol/huf_mf45, SLOT_IN_BACKPACK)
 
 	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/som, SLOT_IN_ACCESSORY)
 	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/som, SLOT_IN_ACCESSORY)
@@ -2083,8 +2098,8 @@
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mfsmg/extended, SLOT_IN_BACKPACK)
 	H.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mfsmg/extended, SLOT_IN_BACKPACK)
 
-	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/som, SLOT_IN_ACCESSORY)
-	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/som, SLOT_IN_ACCESSORY)
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/bullet/volkite, SLOT_IN_ACCESSORY)
+	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/bullet/volkite, SLOT_IN_ACCESSORY)
 	H.equip_to_slot_or_del(new /obj/item/storage/box/MRE/som, SLOT_IN_ACCESSORY)
 	H.equip_to_slot_or_del(new /obj/item/explosive/grenade/incendiary/som, SLOT_IN_ACCESSORY)
 	H.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, SLOT_IN_ACCESSORY)
